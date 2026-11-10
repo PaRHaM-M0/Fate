@@ -515,7 +515,7 @@ function secureRandomInt(min,max){ return secureRandBelow(max-min+1)+min; }
 
 /* ===================== موتور جهت کارت‌ها (راست/وارونه) — فقط تاروت ===================== */
 // نام انگلیسی هر چیدمان برای نام فایل خروجی
-const SPREAD_EN={free:'Free Draw',one:'One Card',two:'Crossroads',yesno:'Yes or No',blind:'Johari Window',cross5:'Simple Cross',compat:'Compatibility',karma:'Karmic Lessons',horseshoe:'Horseshoe',mirror:'Relationship Mirror',fork:'Fork of Fate',ankh:'Ankh',celtic:'Celtic Cross',tree:'Tree of Life',zodiac:'Year Wheel',houses:'12 Houses',matrix:'Life Matrix',custom:'Custom 3-Card',romany:'Romany Spread',decan36:'36 Decans',gt:'Grand Tableau'};
+const SPREAD_EN={free:'Free Draw',one:'One Card',two:'Crossroads',yesno:'Yes or No',blind:'Johari Window',cross5:'Simple Cross',compat:'Compatibility',karma:'Karmic Lessons',horseshoe:'Horseshoe',mirror:'Relationship Mirror',fork:'Fork of Fate',ankh:'Ankh',celtic:'Celtic Cross',tree:'Tree of Life',zodiac:'Year Wheel',houses:'12 Houses',matrix:'Life Matrix',custom:'Custom 3-Card',wealth:'Wealth Path',tetractys:'Tetractys',dhyani:'Five Dhyani Buddhas',chakra:'Seven Chakras',valleys:'Seven Valleys',samsara:'Wheel of Samsara',loshu:'Lo Shu Square',portrait9:'Lenormand Portrait',romany:'Romany Spread',decan36:'36 Decans',gt:'Grand Tableau'};
 
 // کارت‌های ذاتاً تاریک: وارونه‌شدنشان «منفی در منفی» است و از شدت معنیِ سخت می‌کاهد
 const DARK_CARDS=new Set(['The Tower','The Devil','Death','Three of Swords','Nine of Swords','Ten of Swords','Five of Pentacles','Five of Cups']);
@@ -1107,6 +1107,15 @@ const SPREADS = [
      {t:'واکنش اشتباه تو', h:'چه می‌کنی که حل نمی‌شود'},
      {t:'راه رهایی', h:'شکستن چرخه'}]}]},
 
+  {id:'wealth', group:'تحلیلی (۴ تا ۷ کارت)', name:'مسیر ثروت / کسب‌وکار', icon:'💰', cards:5,
+   why:'مخصوص پول، شغل، سرمایه‌گذاری و پروژه: کجا ایستاده‌ای، کجا اشتباه می‌کنی، فرصت پنهان کجاست، چه اقدامی لازم است و بازدهی نهایی چیست.',
+   rows:[{label:null, cols:5, pos:[
+     {t:'وضعیت فعلی مالی/شغلی', h:'کجای مسیر ایستاده‌ای'},
+     {t:'مانع رشد / نشت مالی', h:'کجا داری اشتباه می‌کنی'},
+     {t:'فرصت پنهان', h:'کجا پول و موفقیت خوابیده که نمی‌بینی'},
+     {t:'اقدام استراتژیک', h:'کاری که باید انجام دهی'},
+     {t:'بازدهی و نتیجهٔ مالی', h:'خروجی مسیر'}]}]},
+
   {id:'horseshoe', group:'تحلیلی (۴ تا ۷ کارت)', name:'نعل اسب', icon:'🧲', cards:7,
    why:'قدرتمند برای بررسی روند یک اتفاق در حال تکامل (پروژه، رابطهٔ نو، مسیر کاری): از گذشته تا نتیجهٔ نهایی.',
    rows:[{label:null, cols:7, pos:[
@@ -1199,6 +1208,24 @@ const SPREADS = [
        {t:'یِسود — بنیان', h:'ناخودآگاه و ریشه‌ها'},
        {t:'مَلخوت — ملکوت', h:'زندگی مادی و نتیجه'}]}]},
 
+  {id:'tetractys', group:'عمیق و جامع (۹ تا ۱۵ کارت)', name:'تتراکتیس — هرم فیثاغورث', icon:'🔺', cards:10,
+   why:'هرم مقدس فیثاغورث: ۴ کارت خاک (واقعیت مادی)، ۳ کارت آب (احساس)، ۲ کارت باد (ذهن) و ۱ کارت آتش در قله (حقیقت نهایی). برنامه هم‌خوانی عنصر هر کارت با عنصر ردیفش را خودکار می‌سنجد.',
+   rows:[
+     {label:'پایهٔ هرم — عنصر خاک 🌍 (واقعیت مادی)', cols:4, pos:[
+       {t:'جسم و ماده', h:'وضعیت فیزیکی موضوع'},
+       {t:'منابع مالی', h:'پشتوانه و دارایی'},
+       {t:'محیط', h:'بستر و شرایط بیرونی'},
+       {t:'پتانسیل عملی', h:'آنچه عملاً شدنی است'}]},
+     {label:'ردیف دوم — عنصر آب 💧 (بُعد احساسی)', cols:3, pos:[
+       {t:'احساس درونی', h:'دل تو چه می‌گوید'},
+       {t:'تأثیر دیگران', h:'احساسی که از بیرون می‌آید'},
+       {t:'آرزوی قلبی', h:'خواستهٔ عمیق'}]},
+     {label:'ردیف سوم — عنصر باد 💨 (بُعد ذهنی)', cols:2, pos:[
+       {t:'منطق موافق', h:'دلیل عقلی له'},
+       {t:'منطق مخالف / چالش فکری', h:'دلیل عقلی علیه'}]},
+     {label:'قلهٔ هرم — عنصر آتش 🔥', cols:1, pos:[
+       {t:'جرقهٔ الهی — حقیقت نهایی و سرنوشت', h:'پیام تقدیر دربارهٔ موضوع'}]}]},
+
   {id:'zodiac', group:'عمیق و جامع (۹ تا ۱۵ کارت)', name:'چرخ سال — ۱۲ ماه', icon:'🕰️', cards:12,
    why:'یک نگاه به سال آیندهٔ تو: هر کارت دست‌مایهٔ اصلی و حال‌وهوای یک ماه از سال است.',
    rows:[{label:null, cols:4, pos:[
@@ -1248,6 +1275,88 @@ const SPREADS = [
   {id:'custom', group:'شخصی‌سازی', name:'فال شخصی — ۳ کارت با تیتر دلخواه', icon:'✍️', cards:3,
    why:'چیدمان خودت را بساز: قبلش تیتر سه کارت را می‌نویسی (مثلاً وضعیت موتور / وضعیت بدنه / آیا قیمت منصفانه است؟) و کارت‌ها با همان جایگاه‌ها می‌آیند.',
    rows:[{label:null, cols:3, pos:[]}], custom:true},
+
+  /* ---------- شرقی و عرفانی ---------- */
+  {id:'dhyani', group:'شرقی و عرفانی', name:'ماندالای پنج بودا (تبت)', icon:'☸️', cards:5,
+   why:'ماندالای تبتی پنج خرد: مرکز + چهار دروازه با عناصرشان؛ هر جایگاه نشان می‌دهد یکی از پنج سمّ ذهنی (جهل، خشم، غرور، طمع، حسادت) چطور به خرد تبدیل می‌شود. هم‌خوانی عنصر کارت با عنصر هر دروازه خودکار سنجیده می‌شود.',
+   rows:[
+     {label:'مرکز ماندالا', cols:1, pos:[
+       {t:'مرکز — وایروچانا (اثیر/روح)', h:'جهل و توهم چطور به خردِ حقیقت مطلق تبدیل می‌شود'}]},
+     {label:'چهار دروازه', cols:4, pos:[
+       {t:'شرق — آکشوبیا (آب 💧)', h:'ریشهٔ خشم و ترس → آرامش و وضوح آینه‌وار'},
+       {t:'جنوب — راتناسامباوا (خاک 🌍)', h:'ریشهٔ غرور و احساس کمبود → غنای درونی و برابری'},
+       {t:'غرب — آمیتابها (آتش 🔥)', h:'ریشهٔ وابستگی و طمع → تشخیص درست و رهایی'},
+       {t:'شمال — آموگاسیدی (باد 💨)', h:'ریشهٔ حسادت و مقایسه → عمل خالص و بی‌نقص'}]}]},
+
+  {id:'chakra', group:'شرقی و عرفانی', name:'هفت چاکرا — کالبد انرژی', icon:'🧘', cards:7,
+   why:'کالبد انرژی هند باستان از ریشه تا تاج. برنامه خودکار علامت می‌زند: کارت راست = چاکرای باز 🟢، وارونه = انسداد انرژی 🔴، آرکانای کبیر = تمرکز کوندالینی ⚡.',
+   rows:[{label:'از پایین (ریشه) به بالا (تاج)', cols:4, pos:[
+     {t:'۱ ریشه — مولادارا (خاک 🌍)', h:'امنیت، بقا، پول، خانواده، سلامت جسم'},
+     {t:'۲ خاجی — سوادیشتانا (آب 💧)', h:'احساسات، لذت، رابطهٔ جنسی، خلاقیت'},
+     {t:'۳ شبکهٔ خورشیدی — مانیپورا (آتش 🔥)', h:'اراده، قدرت شخصی، اعتمادبه‌نفس، کنترل'},
+     {t:'۴ قلب — آناهاتا (باد 💨)', h:'عشق بی‌قیدوشرط، بخشش، شفقت، غم‌های عاطفی'},
+     {t:'۵ گلو — ویشودا', h:'بیان حقیقت، ارتباط، حرف‌های نگفته'},
+     {t:'۶ چشم سوم — آجنا', h:'شهود، درک حقیقت، تمرکز ذهنی، توهمات'},
+     {t:'۷ تاج — ساهاسرارا', h:'اتصال به کائنات، معنا، رسالت روحی'}]}]},
+
+  {id:'valleys', group:'شرقی و عرفانی', name:'هفت وادی سلوک (عطار)', icon:'🕊️', cards:7,
+   why:'هفت شهر عشق عطار نیشابوری برای سوال‌های وجودی، سیر و سلوک شخصی یا عبور از بحران عمیق: هر کارت یک مرحله از سفر روح توست، از طلب تا فقر و فنا.',
+   rows:[{label:'مراحل سفر روح', cols:4, pos:[
+     {t:'وادی طلب', h:'آنچه در عمق وجودت دنبالش هستی و دنیایی که باید پشت سر بگذاری'},
+     {t:'وادی عشق', h:'نیرویی که بی‌حساب‌وکتابِ عقلی به حرکتت وامی‌دارد'},
+     {t:'وادی معرفت', h:'حقیقتی که فقط چشم دل تو می‌بیند'},
+     {t:'وادی استغنا', h:'وابستگی یا ترسی که باید از آن بی‌نیاز شوی'},
+     {t:'وادی توحید', h:'آشتی تضادهای درونی: خوب و بد، تاریکی و روشنایی'},
+     {t:'وادی حیرت', h:'جایی که عقل از کار می‌افتد و تسلیم حکمت کائنات می‌شوی'},
+     {t:'وادی فقر و فنا', h:'بخشی از منیّت که باید بمیرد تا سیمرغِ حقیقی‌ات متولد شود'}]}]},
+
+  {id:'samsara', group:'شرقی و عرفانی', name:'چرخ سامسارا / باردو (تبت)', icon:'♻️', cards:9,
+   why:'چرخ حیات تبتی برای وقتی در تکرار رنج یا برزخ روحی گیر کرده‌ای: سه سمّ بنیادین در هستهٔ چرخ و شش قلمرو روانی اطرافش؛ کارت ۹ (قلمرو انسان) تنها راه خروج و بیداری است.',
+   rows:[
+     {label:'هستهٔ چرخ — سه سمّ بنیادین', cols:3, pos:[
+       {t:'خوک — جهل', h:'حقیقتی که چشمت را به رویش بسته‌ای'},
+       {t:'مار — خشم و نفرت', h:'آنچه در درون با آن می‌جنگی و پس می‌زنی'},
+       {t:'خروس — طمع و دلبستگی', h:'آنچه به آن چسبیده‌ای و رها نمی‌کنی'}]},
+     {label:'شش قلمرو وجود', cols:3, pos:[
+       {t:'قلمرو خدایان — توهم خوشبختی', h:'غرور و غفلت؛ جایی که فکر می‌کنی همه‌چیز امن است'},
+       {t:'قلمرو نیمه‌خدایان — حسادت و جنگ', h:'انرژی‌ای که صرف رقابت و مقایسه می‌شود'},
+       {t:'قلمرو اشباح گرسنه — تشنگی سیری‌ناپذیر', h:'خلئی که هرچه به دست می‌آوری پر نمی‌شود'},
+       {t:'قلمرو دوزخ — رنج خالص', h:'عمیق‌ترین زخم روانی یا ترس فعلی تو'},
+       {t:'قلمرو حیوانات — غریزه و بقا', h:'جایی که از عادت کور عمل می‌کنی، نه آگاهی'},
+       {t:'قلمرو انسان — بیداری و رهایی', h:'تنها قلمرویی که امکان بیداری دارد؛ راه خروج تو از چرخ'}]}]},
+
+  {id:'loshu', group:'شرقی و عرفانی', name:'مربع جادویی لو شو (چین)', icon:'🐢', cards:9,
+   why:'کهن‌ترین مربع جادویی چین باستان و پایهٔ فنگ‌شویی: ۹ قصر زندگی در جدول ۳×۳ که جمع اعداد هر خطش ۱۵ است؛ برنامه سه محور آسمان، زمین و انسان را خودکار استخراج می‌کند.',
+   rows:[
+     {label:'ردیف بالا', cols:3, pos:[
+       {t:'ثروت و برکت', h:'جنوب‌شرقی • عدد ۴ • عنصر چوب — فراوانی'},
+       {t:'شهرت و دیده‌شدن', h:'جنوب • عدد ۹ • عنصر آتش — آبرو'},
+       {t:'عشق و شراکت', h:'جنوب‌غربی • عدد ۲ • عنصر خاک — ازدواج'}]},
+     {label:'ردیف وسط', cols:3, pos:[
+       {t:'خانواده و سلامت', h:'شرق • عدد ۳ • عنصر چوب — ریشه‌ها و گذشته'},
+       {t:'تای‌چی — قلب تائو', h:'مرکز • عدد ۵ • عنصر خاک — وضعیت کلی روح و جسم تو'},
+       {t:'فرزندان و خلاقیت', h:'غرب • عدد ۷ • عنصر فلز — پروژه‌های آینده'}]},
+     {label:'ردیف پایین', cols:3, pos:[
+       {t:'دانش و حکمت', h:'شمال‌شرقی • عدد ۸ • عنصر خاک — تزکیهٔ نفس'},
+       {t:'مسیر شغلی و جریان زندگی', h:'شمال • عدد ۱ • عنصر آب'},
+       {t:'حامیان غیبی و سفر', h:'شمال‌غربی • عدد ۶ • عنصر فلز — اساتید و یاری‌گران'}]}]},
+
+  /* ---------- لنورماند کاربردی ---------- */
+  {id:'portrait9', group:'لنورماند کاربردی', name:'پرترهٔ لنورماند — مربع ۳×۳', icon:'🖼️', cards:9, deck:'lenormand', ltr:true,
+   why:'معروف‌ترین چیدمان واقعی لنورماند برای یک سوال مشخص: ستون‌ها زمان‌اند (چپ: گذشته، وسط: حال، راست: آینده) و ردیف‌ها لایه‌ها (بالا: افکار، وسط: واقعیت مادی، پایین: ریشه و ناخودآگاه). کارت ۵ قلب ماجراست و برنامه گوشه‌ها و قطرها را هم خودکار استخراج می‌کند. مثل میز واقعی از چپ به راست.',
+   rows:[
+     {label:'ردیف بالا — افکار و آگاهی', cols:3, pos:[
+       {t:'افکار × گذشته', h:'ذهنیتی که از قبل آمده'},
+       {t:'افکار × حال', h:'آنچه الان ذهن را پر کرده'},
+       {t:'افکار × آینده', h:'ذهنیت در حال شکل‌گیری'}]},
+     {label:'ردیف وسط — واقعیت مادی', cols:3, pos:[
+       {t:'واقعیت × گذشته', h:'آنچه عملاً رخ داد'},
+       {t:'قلب ماجرا (مرکز)', h:'موضوع اصلی سوال'},
+       {t:'واقعیت × آینده', h:'آنچه عملاً رخ می‌دهد'}]},
+     {label:'ردیف پایین — ریشه و ناخودآگاه', cols:3, pos:[
+       {t:'ناخودآگاه × گذشته', h:'ریشهٔ پنهان قدیمی'},
+       {t:'ناخودآگاه × حال', h:'جریان زیرپوستی الان'},
+       {t:'ناخودآگاه × آینده', h:'آنچه از زیر آماده می‌شود'}]}]},
 
   /* ---------- ⛔ NOT RECOMMENDED ---------- */
   {id:'romany', group:NRG, name:'چیدمان رومانیایی / فال کولی‌ها (Romany)', icon:'🧿', cards:21, notRecommended:true, dense:true,
@@ -1568,7 +1677,14 @@ function render(data, requested, keepStats){
   if(spread.deck!=='lenormand' && !data._tmeta) data._tmeta=prepareTarotMeta(data.numbers, spread);
   const tmeta = spread.deck==='lenormand'? null : data._tmeta;
   // کارت پرنده در لنورماند (تمام‌دسته): ۲٪، دیده و ثبت می‌شود و به دسته برمی‌گردد
-  if(spread.deck==='lenormand' && !data._lmeta) data._lmeta={jumper: secureRandBelow(50)===0? {number:secureRandomInt(1,deck.length)} : null};
+  if(spread.deck==='lenormand' && !data._lmeta){
+    let lj=null;
+    if(secureRandBelow(50)===0){
+      if(data.numbers.length>=deck.length){ lj={number:secureRandomInt(1,deck.length), returned:true}; }
+      else{ const dn=new Set(data.numbers); let n; do{ n=secureRandomInt(1,deck.length); }while(dn.has(n)); lj={number:n, returned:false}; }
+    }
+    data._lmeta={jumper:lj};
+  }
   const lmeta = spread.deck==='lenormand'? data._lmeta : null;
   // قانون قفل دربار: اگر کارتِ جایگاه «نتیجه» یکی از ۱۶ کارت دربار (یک شخص) باشد، یک کارت مکمل خودکار کشیده می‌شود
   if(tmeta && !('_clar' in data)){
@@ -1615,7 +1731,7 @@ function render(data, requested, keepStats){
   if(tmeta && tmeta.shadow) xItems.push(['🌑','کارت سایه — زیرِ دسته: تم پنهان و جوّ حاکم بر فال', tmeta.shadow.number, tmeta.shadow.rev]);
   if(tmeta && tmeta.jumper) xItems.push(['⚡', tmeta.jumper.returned? 'کارت پرنده — بیرون پرید، ثبت شد و به دسته برگشت (در چیدمان هم نشسته)' : 'کارت پرنده — حین بُر زدن بیرون پرید و کنار میز ماند: پیام فوری', tmeta.jumper.number, tmeta.jumper.rev]);
   if(clar) xItems.push(['🔓','کارت مکمل خودکار (قفل دربار) — نتیجهٔ فال یک «شخص» بود؛ این کارت نیت و عملکرد او را روشن می‌کند', clar.number, clar.rev]);
-  if(lmeta && lmeta.jumper) xItems.push(['⚡','کارت پرنده — بیرون پرید، ثبت شد و به دسته برگشت (پیام هشدار اولیه)', lmeta.jumper.number, null]);
+  if(lmeta && lmeta.jumper) xItems.push(['⚡', lmeta.jumper.returned? 'کارت پرنده — بیرون پرید، ثبت شد و به دسته برگشت (پیام هشدار اولیه)' : 'کارت پرنده — حین بُر زدن بیرون پرید و کنار میز ماند: پیام فوری', lmeta.jumper.number, null]);
   if(xItems.length){
     const xg=document.createElement('div'); xg.className='group';
     const xl=document.createElement('div'); xl.className='glabel'; xl.textContent='🌒 حاشیهٔ فال — خارج از چیدمان';
@@ -1650,7 +1766,7 @@ function render(data, requested, keepStats){
     shadowCard: (tmeta&&tmeta.shadow)? {number:tmeta.shadow.number, en:deck[tmeta.shadow.number-1].en, fa:deck[tmeta.shadow.number-1].fa, orientation:tmeta.shadow.rev?'reversed':'upright',
       gaze:(function(){const g=gazeOf(deck[tmeta.shadow.number-1].en, tmeta.shadow.rev?'rev':'up'); return g? gazeKey(g):undefined;})()} : undefined,
     jumperCard: (tmeta&&tmeta.jumper)? {number:tmeta.jumper.number, en:deck[tmeta.jumper.number-1].en, fa:deck[tmeta.jumper.number-1].fa, orientation:tmeta.jumper.rev?'reversed':'upright', returnedToDeck:!!tmeta.jumper.returned}
-      : ((spread.deck==='lenormand'&&data._lmeta&&data._lmeta.jumper)? {number:data._lmeta.jumper.number, en:deck[data._lmeta.jumper.number-1].en, fa:deck[data._lmeta.jumper.number-1].fa, returnedToDeck:true} : undefined),
+      : ((spread.deck==='lenormand'&&data._lmeta&&data._lmeta.jumper)? {number:data._lmeta.jumper.number, en:deck[data._lmeta.jumper.number-1].en, fa:deck[data._lmeta.jumper.number-1].fa, returnedToDeck:!!data._lmeta.jumper.returned} : undefined),
     clarifierCard: (tmeta&&data._clar)? {number:data._clar.number, en:deck[data._clar.number-1].en, fa:deck[data._clar.number-1].fa, orientation:data._clar.rev?'reversed':'upright', reason:'court-card-in-outcome'} : undefined,
     drawMethod: (spread.deck==='lenormand'||requested>=10)? 'sequential-top-of-deck' : 'fan-pick',
     formattedLines:cards.map((c,i)=>formatLine(i, c, positions[i]? positions[i].t : null, isLenor? ' #'+data.numbers[i] : '', tmeta? oriTag(tmeta.orient[i], c.en) : '')
@@ -1678,7 +1794,7 @@ function render(data, requested, keepStats){
     lastResult.extraLines=ex;
   }else if(lmeta && lmeta.jumper){
     const jc=deck[lmeta.jumper.number-1];
-    lastResult.extraLines=['⚡ کارت پرنده (حین بُر زدن بیرون پرید، ثبت شد و به دسته برگشت — پیام هشدار اولیه): '+jc.en+' - '+jc.fa+' #'+lmeta.jumper.number];
+    lastResult.extraLines=['⚡ کارت پرنده ('+(lmeta.jumper.returned? 'بیرون پرید، ثبت شد و به دسته برگشت — پیام هشدار اولیه':'حین بُر زدن بیرون پرید و کنار میز ماند — پیام فوری')+'): '+jc.en+' - '+jc.fa+' #'+lmeta.jumper.number];
   }
 
   // تحلیل خودکار چیدمان‌های سنگین (تابلوی بزرگ / چرخ دکان)
@@ -1708,6 +1824,11 @@ function gtNameAt(idx, data){
 
 function buildAnalysis(spread, data, cards, cells, tmeta){
   if(spread.id==='romany') return romanyAnalysis(data, cards, tmeta);
+  if(spread.id==='portrait9') return portraitAnalysis(data, cards);
+  if(spread.id==='chakra') return chakraAnalysis(cards, tmeta);
+  if(spread.id==='tetractys') return tetractysAnalysis(cards, tmeta);
+  if(spread.id==='dhyani') return dhyaniAnalysis(cards, tmeta);
+  if(spread.id==='loshu') return loShuAnalysis(cards, tmeta);
   if(spread.id==='decan36') return decanAnalysis(data, cards);
   if(spread.gt && gtConfig) return gtAnalysis(data, cards, cells);
   if(spread.deck!=='lenormand' && data.numbers.length>=2 && data.numbers.length<=7) return dignityAnalysis(cards, tmeta);
@@ -1810,6 +1931,96 @@ function dignityAnalysis(cards, tmeta){
   if(!out.length) return null;
   return {el:analysisBlock('⚖️ تعامل عناصر و جهت نگاه کارت‌ها', out),
           text:'— تعامل عناصر و نگاه‌ها (کارت‌های کنار هم) —\n'+out.join('\n')};
+}
+
+// رابطهٔ خام دو عنصر (برای سنجش کارت با عنصرِ جایگاه)
+function elemKind(e1,e2){
+  if(!e1||!e2) return null;
+  if(e1===e2) return 'same';
+  const p=[e1,e2].sort().join('+');
+  if(p==='Air+Fire'||p==='Earth+Water') return 'friend';
+  if(p==='Fire+Water'||p==='Air+Earth') return 'enemy';
+  return 'neutral';
+}
+function elemKindTxt(k){
+  return k==='same'? 'هم‌خوانِ کامل ✓ (تشدید)' : k==='friend'? 'هم‌افزا 🤝' : k==='enemy'? 'در تضاد ⚠️' : 'خنثی';
+}
+// هفت چاکرا: راست=باز 🟢 ، وارونه=انسداد 🔴 ، کبیر=کوندالینی ⚡ + هم‌خوانی عنصر چاکراهای ۱–۴
+function chakraAnalysis(cards, tmeta){
+  if(cards.length!==7 || !tmeta) return null;
+  const names=['ریشه','خاجی','شبکهٔ خورشیدی','قلب','گلو','چشم سوم','تاج'];
+  const chElem=['Earth','Water','Fire','Air',null,null,null];
+  const L=[]; let open=0, blocked=0, kundalini=0;
+  cards.forEach((c,i)=>{
+    const m=cardMeta(c.en); const rev=tmeta.orient[i]==='rev';
+    let line='   • چاکرای '+faNum(i+1)+' ('+names[i]+'): '+c.fa+' → '+(rev? '🔴 انسداد انرژی (بسته یا کم‌کار)':'🟢 باز و در جریان');
+    if(rev) blocked++; else open++;
+    if(m.major){ kundalini++; line+=' • ⚡ تمرکز کوندالینی (تحول بزرگ کارمایی)'; }
+    if(chElem[i]){ const k=elemKind(m.elem, chElem[i]); line+=' • عنصر کارت با عنصر چاکرا: '+elemKindTxt(k); }
+    L.push(line);
+  });
+  L.push('   ◦ شمارش: '+faNum(open)+' چاکرای باز 🟢 / '+faNum(blocked)+' مسدود 🔴 / '+faNum(kundalini)+' کانون کوندالینی ⚡');
+  return {el:analysisBlock('🧘 نقشهٔ انرژی چاکراها', L), text:'— نقشهٔ انرژی چاکراها —\n'+L.join('\n')};
+}
+
+// تتراکتیس: هم‌خوانی عنصر هر کارت با عنصر ردیفش
+function tetractysAnalysis(cards, tmeta){
+  if(cards.length!==10 || !tmeta) return null;
+  const rowOf=i=> i<4? ['Earth','خاک 🌍'] : i<7? ['Water','آب 💧'] : i<9? ['Air','باد 💨'] : ['Fire','آتش 🔥'];
+  const L=[];
+  cards.forEach((c,i)=>{
+    const m=cardMeta(c.en), r=rowOf(i);
+    L.push('   • کارت '+faNum(i+1)+' ('+c.fa+' — عنصر '+ELEM_FA[m.elem].el+') در ردیف '+r[1]+': '+elemKindTxt(elemKind(m.elem, r[0])));
+  });
+  const apex=cardMeta(cards[9].en);
+  L.push('   ◦ قلهٔ هرم: '+cards[9].fa+(apex.major? ' — آرکانای کبیر در قله: حقیقت نهایی وزن سرنوشتی دارد ⚡':''));
+  return {el:analysisBlock('🔺 هم‌خوانی عناصر با ردیف‌های هرم', L), text:'— هم‌خوانی عناصر با ردیف‌های هرم —\n'+L.join('\n')};
+}
+
+// ماندالای پنج بودا: هم‌خوانی عنصر کارت با عنصر هر دروازه
+function dhyaniAnalysis(cards, tmeta){
+  if(cards.length!==5 || !tmeta) return null;
+  const gates=[['شرق — آکشوبیا','Water'],['جنوب — راتناسامباوا','Earth'],['غرب — آمیتابها','Fire'],['شمال — آموگاسیدی','Air']];
+  const L=[];
+  const cm=cardMeta(cards[0].en);
+  L.push('   • مرکز (وایروچانا): '+cards[0].fa+(cm.major? ' — آرکانای کبیر در مرکز ماندالا: هستهٔ ماجرا کارمایی است ⚡':''));
+  gates.forEach((g,k)=>{
+    const i=k+1, m=cardMeta(cards[i].en);
+    L.push('   • '+g[0]+' ('+ELEM_FA[g[1]].el+' '+ELEM_FA[g[1]].icon+'): '+cards[i].fa+' (عنصر '+ELEM_FA[m.elem].el+') → '+elemKindTxt(elemKind(m.elem, g[1])));
+  });
+  return {el:analysisBlock('☸️ هم‌خوانی عناصر با دروازه‌های ماندالا', L), text:'— هم‌خوانی عناصر با دروازه‌های ماندالا —\n'+L.join('\n')};
+}
+
+// مربع لو شو: سه محور آسمان / زمین / انسان
+function loShuAnalysis(cards, tmeta){
+  if(cards.length!==9) return null;
+  const nm=i=>cards[i].fa+(tmeta&&tmeta.orient[i]==='rev'? ' (وارونه)':'');
+  const L=[
+    '   • محور آسمان / تقدیر (جایگاه ۱←۵←۹): ثروت و برکت ← تای‌چی ← حامیان غیبی: '+nm(0)+' ← '+nm(4)+' ← '+nm(8),
+    '   • محور زمین (جایگاه ۳←۵←۷): عشق و شراکت ← تای‌چی ← دانش و حکمت: '+nm(2)+' ← '+nm(4)+' ← '+nm(6),
+    '   • محور انسان — یین و یانگ (جایگاه ۲←۵←۸): شهرت (آتش) ← تای‌چی ← مسیر زندگی (آب): '+nm(1)+' ← '+nm(4)+' ← '+nm(7),
+    '   ◦ قلب تائو (مرکز مربع): '+nm(4)
+  ];
+  return {el:analysisBlock('🐢 محورهای مربع لو شو', L), text:'— محورهای مربع لو شو —\n'+L.join('\n')};
+}
+
+// پرترهٔ ۳×۳ لنورماند: مرکز، ستون‌های زمان، ردیف‌های لایه، گوشه‌ها و قطرها (فقط استخراج داده)
+function portraitAnalysis(data, cards){
+  if(cards.length!==9) return null;
+  const nm=i=>cards[i].fa+' (#'+data.numbers[i]+')';
+  const L=[
+    '   🎯 قلب ماجرا (کارت ۵ — مرکز): '+nm(4),
+    '   • ستون گذشته (۱، ۴، ۷): '+nm(0)+' / '+nm(3)+' / '+nm(6),
+    '   • ستون حال (۲، ۵، ۸): '+nm(1)+' / '+nm(4)+' / '+nm(7),
+    '   • ستون آینده (۳، ۶، ۹): '+nm(2)+' / '+nm(5)+' / '+nm(8),
+    '   • ردیف افکار و آگاهی (۱، ۲، ۳): '+nm(0)+' / '+nm(1)+' / '+nm(2),
+    '   • ردیف واقعیت مادی (۴، ۵، ۶): '+nm(3)+' / '+nm(4)+' / '+nm(5),
+    '   • ردیف ریشه و ناخودآگاه (۷، ۸، ۹): '+nm(6)+' / '+nm(7)+' / '+nm(8),
+    '   • چهار گوشه — چهارچوب و پیام پنهان (۱، ۳، ۷، ۹): '+nm(0)+' / '+nm(2)+' / '+nm(6)+' / '+nm(8),
+    '   • قطر ۱←۵←۹: '+nm(0)+' ← '+nm(4)+' ← '+nm(8),
+    '   • قطر ۳←۵←۷: '+nm(2)+' ← '+nm(4)+' ← '+nm(6)
+  ];
+  return {el:analysisBlock('🖼️ هندسهٔ پرترهٔ ۳×۳', L), text:'— هندسهٔ پرترهٔ ۳×۳ —\n'+L.join('\n')};
 }
 
 // چرخ دکان: جفت‌های مخالفت و مثلث‌های شانس با کارت‌های همین فال
