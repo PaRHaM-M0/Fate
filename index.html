@@ -560,6 +560,13 @@ function secureRandomInt(min,max){ return secureRandBelow(max-min+1)+min; }
 
 /* ===================== موتور جهت کارت‌ها (راست/وارونه) — فقط تاروت ===================== */
 // نام انگلیسی هر چیدمان برای نام فایل خروجی
+// خطِ توضیح نوع خوانش برای فال‌های اقتباسی شرقی (TXT/Copy)
+const READING_NOTE={
+  dhyani:'نوع خوانش: چیدمانِ درون‌نگری و کهن‌الگویی (اقتباسِ مدرنِ تاروت از سنتِ شرقی — تمرکز بر کالبدشکافیِ روانی و معنوی، نه پیش‌بینیِ حوادثِ مادی).',
+  valleys:'نوع خوانش: چیدمانِ درون‌نگری و کهن‌الگویی (اقتباسِ مدرنِ تاروت از سنتِ شرقی — تمرکز بر کالبدشکافیِ روانی و معنوی، نه پیش‌بینیِ حوادثِ مادی).',
+  samsara:'نوع خوانش: چیدمانِ درون‌نگری و کهن‌الگویی (اقتباسِ مدرنِ تاروت از سنتِ شرقی — تمرکز بر کالبدشکافیِ روانی و معنوی، نه پیش‌بینیِ حوادثِ مادی).',
+  loshu:'نوع خوانش: چیدمانِ اقتباسی (مربع جادویی لو شو به‌عنوان قابِ تاروت — نقشهٔ حوزه‌های زندگی و فنگ‌شویی؛ ترکیبی از درون‌نگری و ارزیابیِ زمینه‌های مادی).'
+};
 const SPREAD_EN={free:'Free Draw',one:'One Card',two:'Crossroads',yesno:'Yes or No',blind:'Johari Window',cross5:'Simple Cross',compat:'Compatibility',karma:'Karmic Lessons',horseshoe:'Horseshoe',mirror:'Relationship Mirror',fork:'Fork of Fate',ankh:'Ankh',celtic:'Celtic Cross',tree:'Tree of Life',zodiac:'Year Wheel',houses:'12 Houses',matrix:'Life Matrix',custom:'Custom 3-Card',wealth:'Wealth Path',tetractys:'Tetractys',chakra:'Seven Chakras',dhyani:'Five Dhyani Buddhas',valleys:'Seven Valleys',samsara:'Wheel of Samsara',loshu:'Lo Shu Square',iching:'I Ching (Three-Coin Method)',tmo:'Tibetan Mo (Mipham 36)',portrait9:'Lenormand Portrait',romany:'Romany Spread',decan36:'36 Decans',gt:'Grand Tableau'};
 
 // کارت‌های ذاتاً تاریک: وارونه‌شدنشان «منفی در منفی» است و از شدت معنیِ سخت می‌کاهد
@@ -2363,7 +2370,11 @@ function buildCopyText(){
   const body=lastResult.formattedLines.join('\n');
   let out;
   if(lastResult.spread.id==='free') out=body;
-  else out='فال: '+lastResult.spread.name+'  ('+lastResult.requested+' کارت)\n\n'+body;
+  else {
+    out='فال: '+lastResult.spread.name+'  ('+lastResult.requested+' کارت)\n'
+      +(READING_NOTE[lastResult.spread.id]? 'ⓘ '+READING_NOTE[lastResult.spread.id]+'\n' : '')
+      +'\n'+body;
+  }
   if(lastResult.extraLines && lastResult.extraLines.length) out+='\n\n'+lastResult.extraLines.join('\n');
   if(lastResult.analysis) out+='\n\n'+lastResult.analysis;
   return out;
@@ -2988,6 +2999,7 @@ function downloadFile(content, filename, mime){
 document.getElementById('dlTxt').addEventListener('click', ()=>{
   if(!lastResult){ toast('اول کارت بکش','bad'); return; }
   const head='فال: '+lastResult.spread.name+'\n'
+    +(READING_NOTE[lastResult.spread.id]? 'ⓘ '+READING_NOTE[lastResult.spread.id]+'\n' : '')
     +((lastResult.deck==='iching-64'||lastResult.deck==='tmo-36')? 'واحد: '+lastResult.requested+(lastResult.deck==='iching-64'?' خط (۶ خط × ۳ سکه)':' پرتاب تاس')+'\n' : 'تعداد: '+lastResult.requested+' کارت\n')
     +'منبع: '+lastResult.source+'\n'
     +'روش کشیدن: '+(lastResult.drawMethod==='fan-pick'? 'بادبزنی — انتخاب تصادفی از دستهٔ پهن‌شده' : 'متوالی از بالای دستهٔ بُرخورده')+'\n'
