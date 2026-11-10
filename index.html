@@ -265,6 +265,51 @@
   .p33 > div{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:9px;padding:7px 5px;font-size:10.5px;line-height:1.7;text-align:center;color:#ddd6fe;direction:rtl}
   .p33 > div.ctr{background:rgba(251,191,36,0.16);border-color:rgba(251,191,36,0.75);color:#fde68a;font-weight:800}
   .p33 > div.wall{background:transparent;border-style:dashed;border-color:rgba(255,255,255,0.1);color:#475569}
+  /* موتورهای بومی شرق (ای‌چینگ / فال مو) */
+  .engine-wrap{display:flex;flex-direction:column;gap:12px;margin:10px 0}
+  .hexwrap{display:flex;gap:14px;justify-content:center;align-items:stretch;flex-wrap:wrap}
+  .hexcard{background:rgba(0,0,0,0.35);border:1px solid rgba(251,191,36,0.35);box-shadow:0 0 26px rgba(251,191,36,0.08) inset;border-radius:18px;padding:14px 18px;min-width:225px;text-align:center;display:flex;flex-direction:column;gap:8px}
+  .hexcard-t{font-size:12.5px;color:#fcd34d;font-weight:800;line-height:1.9}
+  .hexsub{font-size:10.5px;color:#a5b4fc;font-weight:600}
+  .hexbig{font-size:62px;line-height:1.05;color:#fde68a}
+  .hexlines{display:flex;flex-direction:column;gap:7px}
+  .hxl{display:flex;align-items:center;gap:9px}
+  .hxl-vis{width:112px}
+  .hyb{height:9px;border-radius:3px;background:#e7e5f4}
+  .hyi{display:flex;gap:13px}
+  .hyi span{flex:1;height:9px;border-radius:3px;background:#e7e5f4}
+  .hxl.mv .hyb,.hxl.mv .hyi span{background:#fbbf24;box-shadow:0 0 9px rgba(251,191,36,0.6)}
+  .hxl.chg .hyb,.hxl.chg .hyi span{background:#67e8f9;box-shadow:0 0 8px rgba(103,232,249,0.5)}
+  .hxl-cap{font-size:10px;color:#a1a1bd;flex:1;text-align:right}
+  .hxl.mv .hxl-cap{color:#fde68a}
+  .hxl.chg .hxl-cap{color:#a5f3fc}
+  .hex-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:24px;color:#fbbf24;gap:4px}
+  .hex-arrow span{font-size:10px;color:#c4b5fd;text-align:center;line-height:1.7}
+  .hexkw{font-size:12px;color:#e9d5ff;font-weight:800}
+  .hexkw span{display:block;font-size:10px;color:#a5b4fc;font-weight:600;margin-top:2px}
+  .hex-static{justify-content:center;border-color:rgba(125,211,252,0.3)}
+  .hex-static-t{font-size:13px;color:#7dd3fc;font-weight:800}
+  .hexsub2{font-size:11px;color:#bae6fd;line-height:2}
+  .engine-strip{background:rgba(0,0,0,0.28);border:1px solid rgba(167,139,250,0.22);border-radius:12px;padding:8px 12px;font-size:11.5px;line-height:2.1;color:#ddd6fe}
+  .engine-rule{background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.4);border-radius:12px;padding:9px 13px;font-size:12px;line-height:2.15;color:#fef3c7}
+  .mo-tiles{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .mo-tile{flex:1;min-width:230px;max-width:340px}
+  .mo-syl{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:62px;gap:2px}
+  .mo-syl-t{font-size:52px;line-height:1.1;color:#fde68a;font-family:'Microsoft Himalaya','Noto Serif Tibetan','Noto Sans Tibetan','Kailasa',serif}
+  .mo-syl-en{font-size:15px;font-weight:800;color:#a5b4fc;letter-spacing:2px}
+  .mo-arrow{align-self:center;font-size:26px;color:#fbbf24;font-weight:900}
+  .mo-omen{border-radius:18px;text-align:center;padding:16px 18px;border:1px solid;display:flex;flex-direction:column;gap:6px;background:rgba(0,0,0,0.35)}
+  .mo-omen-n{font-size:11px;color:#c4b5fd;font-weight:700}
+  .mo-omen-en{font-size:19px;font-weight:900;color:#fff}
+  .mo-omen-fa{font-size:16px;color:#fde68a;font-weight:800}
+  .mo-omen-grade{font-size:13.5px;font-weight:800}
+  .mo-omen-img{font-size:11.5px;color:#c7d2fe;line-height:2}
+  .mo-omen.g-supreme{border-color:#fbbf24;box-shadow:0 0 30px rgba(251,191,36,0.28)} .mo-omen.g-supreme .mo-omen-grade{color:#fbbf24}
+  .mo-omen.g-great{border-color:rgba(52,211,153,0.5);box-shadow:0 0 26px rgba(52,211,153,0.13)} .mo-omen.g-great .mo-omen-grade{color:#34d399}
+  .mo-omen.g-good{border-color:rgba(74,222,128,0.4)} .mo-omen.g-good .mo-omen-grade{color:#4ade80}
+  .mo-omen.g-mid{border-color:rgba(250,204,21,0.4)} .mo-omen.g-mid .mo-omen-grade{color:#facc15}
+  .mo-omen.g-dual{border-color:rgba(251,146,60,0.5)} .mo-omen.g-dual .mo-omen-grade{color:#fb923c}
+  .mo-omen.g-bad{border-color:rgba(248,113,113,0.5);box-shadow:0 0 22px rgba(248,113,113,0.12)} .mo-omen.g-bad .mo-omen-grade{color:#f87171}
 </style>
 </head>
 <body>
@@ -515,7 +560,7 @@ function secureRandomInt(min,max){ return secureRandBelow(max-min+1)+min; }
 
 /* ===================== موتور جهت کارت‌ها (راست/وارونه) — فقط تاروت ===================== */
 // نام انگلیسی هر چیدمان برای نام فایل خروجی
-const SPREAD_EN={free:'Free Draw',one:'One Card',two:'Crossroads',yesno:'Yes or No',blind:'Johari Window',cross5:'Simple Cross',compat:'Compatibility',karma:'Karmic Lessons',horseshoe:'Horseshoe',mirror:'Relationship Mirror',fork:'Fork of Fate',ankh:'Ankh',celtic:'Celtic Cross',tree:'Tree of Life',zodiac:'Year Wheel',houses:'12 Houses',matrix:'Life Matrix',custom:'Custom 3-Card',wealth:'Wealth Path',tetractys:'Tetractys',dhyani:'Five Dhyani Buddhas',chakra:'Seven Chakras',valleys:'Seven Valleys',samsara:'Wheel of Samsara',loshu:'Lo Shu Square',portrait9:'Lenormand Portrait',romany:'Romany Spread',decan36:'36 Decans',gt:'Grand Tableau'};
+const SPREAD_EN={free:'Free Draw',one:'One Card',two:'Crossroads',yesno:'Yes or No',blind:'Johari Window',cross5:'Simple Cross',compat:'Compatibility',karma:'Karmic Lessons',horseshoe:'Horseshoe',mirror:'Relationship Mirror',fork:'Fork of Fate',ankh:'Ankh',celtic:'Celtic Cross',tree:'Tree of Life',zodiac:'Year Wheel',houses:'12 Houses',matrix:'Life Matrix',custom:'Custom 3-Card',wealth:'Wealth Path',tetractys:'Tetractys',chakra:'Seven Chakras',dhyani:'Five Dhyani Buddhas',valleys:'Seven Valleys',samsara:'Wheel of Samsara',loshu:'Lo Shu Square',iching:'I Ching (Three-Coin Method)',tmo:'Tibetan Mo (Mipham 36)',portrait9:'Lenormand Portrait',romany:'Romany Spread',decan36:'36 Decans',gt:'Grand Tableau'};
 
 // کارت‌های ذاتاً تاریک: وارونه‌شدنشان «منفی در منفی» است و از شدت معنیِ سخت می‌کاهد
 const DARK_CARDS=new Set(['The Tower','The Devil','Death','Three of Swords','Nine of Swords','Ten of Swords','Five of Pentacles','Five of Cups']);
@@ -1116,6 +1161,17 @@ const SPREADS = [
      {t:'اقدام استراتژیک', h:'کاری که باید انجام دهی'},
      {t:'بازدهی و نتیجهٔ مالی', h:'خروجی مسیر'}]}]},
 
+  {id:'chakra', group:'تحلیلی (۴ تا ۷ کارت)', name:'هفت چاکرا — کالبد انرژی', icon:'🧘', cards:7,
+   why:'کالبد انرژی هند باستان از ریشه تا تاج. برنامه خودکار علامت می‌زند: کارت راست = چاکرای باز 🟢، وارونه = انسداد انرژی 🔴، آرکانای کبیر = تمرکز کوندالینی ⚡.',
+   rows:[{label:'از پایین (ریشه) به بالا (تاج)', cols:4, pos:[
+     {t:'۱ ریشه — مولادارا (خاک 🌍)', h:'امنیت، بقا، پول، خانواده، سلامت جسم'},
+     {t:'۲ خاجی — سوادیشتانا (آب 💧)', h:'احساسات، لذت، رابطهٔ جنسی، خلاقیت'},
+     {t:'۳ شبکهٔ خورشیدی — مانیپورا (آتش 🔥)', h:'اراده، قدرت شخصی، اعتمادبه‌نفس، کنترل'},
+     {t:'۴ قلب — آناهاتا (باد 💨)', h:'عشق بی‌قیدوشرط، بخشش، شفقت، غم‌های عاطفی'},
+     {t:'۵ گلو — ویشودا', h:'بیان حقیقت، ارتباط، حرف‌های نگفته'},
+     {t:'۶ چشم سوم — آجنا', h:'شهود، درک حقیقت، تمرکز ذهنی، توهمات'},
+     {t:'۷ تاج — ساهاسرارا', h:'اتصال به کائنات، معنا، رسالت روحی'}]}]},
+
   {id:'horseshoe', group:'تحلیلی (۴ تا ۷ کارت)', name:'نعل اسب', icon:'🧲', cards:7,
    why:'قدرتمند برای بررسی روند یک اتفاق در حال تکامل (پروژه، رابطهٔ نو، مسیر کاری): از گذشته تا نتیجهٔ نهایی.',
    rows:[{label:null, cols:7, pos:[
@@ -1276,6 +1332,23 @@ const SPREADS = [
    why:'چیدمان خودت را بساز: قبلش تیتر سه کارت را می‌نویسی (مثلاً وضعیت موتور / وضعیت بدنه / آیا قیمت منصفانه است؟) و کارت‌ها با همان جایگاه‌ها می‌آیند.',
    rows:[{label:null, cols:3, pos:[]}], custom:true},
 
+  /* ---------- ⛩️ پیش‌گویی‌های بومی شرق ---------- */
+  {id:'iching', group:'⛩️ پیش‌گویی‌های بومی شرق', name:'ای‌چینگ — کتاب تغییرات (روش ۳ سکه)', icon:'☯️', cards:6, engine:'iching', engineTag:'۶ خط • ۱۸ سکه',
+   why:'کهن‌ترین متن پیش‌گویی جهان (سوزندِ چین، حدود ۱۲۰۰ پیش از میلاد): شش خط از پرتاب سه سکهٔ باستانی ساخته می‌شود؛ هگزاگرام اصلی، هسته‌ای (互卦)، متحول (之卦)، وارونه (Zong) و متضاد (Cuo) + قانون چو شی + چرخهٔ پنج عنصرِ وو شینگ. هیچ کارتی کشیده نمی‌شود؛ همان سیستم رندوم برنامه سکه‌ها را می‌سازد.',
+   rows:[{label:'۶ خط — از خط ۱ (پایه) تا خط ۶ (اوج)', cols:6, pos:[
+     {t:'خط ۱ (پایه / پایین‌ترین)', h:'ریشهٔ وضعیت'},
+     {t:'خط ۲', h:'بنیان'},
+     {t:'خط ۳', h:'درگاه درون/بیرونِ سه‌خطیِ پایین'},
+     {t:'خط ۴', h:'درگاه سه‌خطیِ بالا'},
+     {t:'خط ۵ (فرمانروا)', h:'موقعیت مرکزیِ بیرون'},
+     {t:'خط ۶ (اوج / بالاترین)', h:'نتیجه و اوج'}]}]},
+
+  {id:'tmo', group:'⛩️ پیش‌گویی‌های بومی شرق', name:'فال مو — تاس مانجوشری (میپام رینپوچه)', icon:'⛩️', cards:2, engine:'mo', engineTag:'۲ پرتاب تاس',
+   why:'اصیل‌ترین روش پیش‌گویی بودیسمِ تبت (اثرِ جامگون میپام رینپوچه بر پایهٔ مانترای ཨ་ར་པ་ཙ་ན་དྷཱིཿ): یک تاسِ ۶ وجهی با ۶ هجای مقدس، دو بار پیاپی پرتاب می‌شود (ترتیب جابه‌جا نمی‌شود)؛ جدولِ اصیل ۳۶ طالع + تحلیلِ تعاملِ دو عنصر (درون × بیرون) + خانوادهٔ بوداییِ حاکم.',
+   rows:[{label:'دو پرتاب متوالی', cols:2, pos:[
+     {t:'پرتاب اول — ریشه / درون / فاعل', h:'ذات و بنیاد'},
+     {t:'پرتاب دوم — شاخه / بیرون / نتیجه', h:'بازتاب و شکلِ بیرونی'}]}]},
+
   /* ---------- شرقی و عرفانی ---------- */
   {id:'dhyani', group:'شرقی و عرفانی', name:'ماندالای پنج بودا (تبت)', icon:'☸️', cards:5,
    why:'ماندالای تبتی پنج خرد: مرکز + چهار دروازه با عناصرشان؛ هر جایگاه نشان می‌دهد یکی از پنج سمّ ذهنی (جهل، خشم، غرور، طمع، حسادت) چطور به خرد تبدیل می‌شود. هم‌خوانی عنصر کارت با عنصر هر دروازه خودکار سنجیده می‌شود.',
@@ -1287,17 +1360,6 @@ const SPREADS = [
        {t:'جنوب — راتناسامباوا (خاک 🌍)', h:'ریشهٔ غرور و احساس کمبود → غنای درونی و برابری'},
        {t:'غرب — آمیتابها (آتش 🔥)', h:'ریشهٔ وابستگی و طمع → تشخیص درست و رهایی'},
        {t:'شمال — آموگاسیدی (باد 💨)', h:'ریشهٔ حسادت و مقایسه → عمل خالص و بی‌نقص'}]}]},
-
-  {id:'chakra', group:'شرقی و عرفانی', name:'هفت چاکرا — کالبد انرژی', icon:'🧘', cards:7,
-   why:'کالبد انرژی هند باستان از ریشه تا تاج. برنامه خودکار علامت می‌زند: کارت راست = چاکرای باز 🟢، وارونه = انسداد انرژی 🔴، آرکانای کبیر = تمرکز کوندالینی ⚡.',
-   rows:[{label:'از پایین (ریشه) به بالا (تاج)', cols:4, pos:[
-     {t:'۱ ریشه — مولادارا (خاک 🌍)', h:'امنیت، بقا، پول، خانواده، سلامت جسم'},
-     {t:'۲ خاجی — سوادیشتانا (آب 💧)', h:'احساسات، لذت، رابطهٔ جنسی، خلاقیت'},
-     {t:'۳ شبکهٔ خورشیدی — مانیپورا (آتش 🔥)', h:'اراده، قدرت شخصی، اعتمادبه‌نفس، کنترل'},
-     {t:'۴ قلب — آناهاتا (باد 💨)', h:'عشق بی‌قیدوشرط، بخشش، شفقت، غم‌های عاطفی'},
-     {t:'۵ گلو — ویشودا', h:'بیان حقیقت، ارتباط، حرف‌های نگفته'},
-     {t:'۶ چشم سوم — آجنا', h:'شهود، درک حقیقت، تمرکز ذهنی، توهمات'},
-     {t:'۷ تاج — ساهاسرارا', h:'اتصال به کائنات، معنا، رسالت روحی'}]}]},
 
   {id:'valleys', group:'شرقی و عرفانی', name:'هفت وادی سلوک (عطار)', icon:'🕊️', cards:7,
    why:'هفت شهر عشق عطار نیشابوری برای سوال‌های وجودی، سیر و سلوک شخصی یا عبور از بحران عمیق: هر کارت یک مرحله از سفر روح توست، از طلب تا فقر و فنا.',
@@ -1380,6 +1442,493 @@ const SPREADS = [
 const spreadSel=document.getElementById('spreadSelect');
 const input=document.getElementById('countInput');
 const sourceSel=document.getElementById('sourceSelect');
+
+/* ===================== موتورِ پیش‌گوییِ بومیِ شرق ===================== */
+/* ای‌چینگ (روش سه‌سکه) و فال مو (تاس میپام) از همان منبع رندوم برنامه تغذیه می‌شوند. */
+
+/* ---------- جداول ای‌چینگ: King Wen + هشت سه‌خطی (راستی‌آزمایی‌شده) ---------- */
+const I_CHING_KW={
+'111111':{n:1,en:'Qian',enFull:'The Creative',ch:'乾',fa:'آفرینشگر — آسمان',uni:'䷀'},
+'000000':{n:2,en:'Kun',enFull:'The Receptive',ch:'坤',fa:'پذیرنده — زمین',uni:'䷁'},
+'100010':{n:3,en:'Zhun',enFull:'Difficulty at the Beginning',ch:'屯',fa:'دشواریِ آغاز',uni:'䷂'},
+'010001':{n:4,en:'Meng',enFull:'Youthful Folly',ch:'蒙',fa:'خامیِ جوانی',uni:'䷃'},
+'111010':{n:5,en:'Xu',enFull:'Waiting (Nourishment)',ch:'需',fa:'انتظارِ آگاهانه',uni:'䷄'},
+'010111':{n:6,en:'Song',enFull:'Conflict',ch:'訟',fa:'نزاع و کشمکش',uni:'䷅'},
+'010000':{n:7,en:'Shi',enFull:'The Army',ch:'師',fa:'سپاه — نظم و انضباط',uni:'䷆'},
+'000010':{n:8,en:'Bi',enFull:'Holding Together (Union)',ch:'比',fa:'همبستگی و اتحاد',uni:'䷇'},
+'111011':{n:9,en:'Xiao Chu',enFull:'The Taming Power of the Small',ch:'小畜',fa:'مهارِ کوچک',uni:'䷈'},
+'110111':{n:10,en:'Lu',enFull:'Treading (Conduct)',ch:'履',fa:'گام برداشتنِ محتاطانه',uni:'䷉'},
+'111000':{n:11,en:'Tai',enFull:'Peace',ch:'泰',fa:'صلح و شکوفایی',uni:'䷊'},
+'000111':{n:12,en:'Pi',enFull:'Standstill (Stagnation)',ch:'否',fa:'رکود و انسداد',uni:'䷋'},
+'101111':{n:13,en:'Tong Ren',enFull:'Fellowship with Men',ch:'同人',fa:'همراهی با مردمان',uni:'䷌'},
+'111101':{n:14,en:'Da You',enFull:'Possession in Great Measure',ch:'大有',fa:'داراییِ بزرگ',uni:'䷍'},
+'001000':{n:15,en:'Qian',enFull:'Modesty',ch:'謙',fa:'فروتنی',uni:'䷎'},
+'000100':{n:16,en:'Yu',enFull:'Enthusiasm',ch:'豫',fa:'شور و شوق',uni:'䷏'},
+'100110':{n:17,en:'Sui',enFull:'Following',ch:'隨',fa:'پیروی و انعطاف',uni:'䷐'},
+'011001':{n:18,en:'Gu',enFull:'Work on the Decayed',ch:'蠱',fa:'اصلاحِ تباهی‌ها',uni:'䷑'},
+'110000':{n:19,en:'Lin',enFull:'Approach',ch:'臨',fa:'نزدیک شدن (تقرب)',uni:'䷒'},
+'000011':{n:20,en:'Guan',enFull:'Contemplation (View)',ch:'觀',fa:'نظاره و تأمل',uni:'䷓'},
+'100101':{n:21,en:'Shi He',enFull:'Biting Through',ch:'噬嗑',fa:'عبور از مانع',uni:'䷔'},
+'101001':{n:22,en:'Bi',enFull:'Grace',ch:'賁',fa:'زیبایی و آراستگی',uni:'䷕'},
+'000001':{n:23,en:'Bo',enFull:'Splitting Apart',ch:'剝',fa:'فروپاشی و پوست‌اندازی',uni:'䷖'},
+'100000':{n:24,en:'Fu',enFull:'Return (The Turning Point)',ch:'復',fa:'بازگشت — نقطهٔ عطف',uni:'䷗'},
+'100111':{n:25,en:'Wu Wang',enFull:'Innocence (The Unexpected)',ch:'無妄',fa:'بی‌گناهی — امرِ غیرمنتظره',uni:'䷘'},
+'111001':{n:26,en:'Da Chu',enFull:'The Taming Power of the Great (Great Storage)',ch:'大畜',fa:'مهارِ بزرگ — اندوختهٔ عظیم',uni:'䷙'},
+'100001':{n:27,en:'Yi',enFull:'Nourishment',ch:'頤',fa:'تغذیه و پرورش',uni:'䷚'},
+'011110':{n:28,en:'Da Guo',enFull:'Preponderance of the Great',ch:'大過',fa:'بارِ سنگین — فزونیِ از حد',uni:'䷛'},
+'010010':{n:29,en:'Kan',enFull:'The Abysmal (Water)',ch:'坎',fa:'پرتگاهِ تکرارشونده',uni:'䷜'},
+'101101':{n:30,en:'Li',enFull:'The Clinging (Fire)',ch:'離',fa:'روشنایی و آتش',uni:'䷝'},
+'001110':{n:31,en:'Xian',enFull:'Influence (Wooing)',ch:'咸',fa:'جاذبه و تأثیرِ متقابل',uni:'䷞'},
+'011100':{n:32,en:'Heng',enFull:'Duration',ch:'恆',fa:'پایداری و استمرار',uni:'䷟'},
+'001111':{n:33,en:'Dun',enFull:'Retreat',ch:'遯',fa:'عقب‌نشینیِ هوشمندانه',uni:'䷠'},
+'111100':{n:34,en:'Da Zhuang',enFull:'The Power of the Great',ch:'大壯',fa:'قدرتِ عظیم',uni:'䷡'},
+'000101':{n:35,en:'Jin',enFull:'Progress',ch:'晉',fa:'پیشرفت و طلوع',uni:'䷢'},
+'101000':{n:36,en:'Ming Yi',enFull:'Darkening of the Light',ch:'明夷',fa:'کسوفِ روشنایی',uni:'䷣'},
+'101011':{n:37,en:'Jia Ren',enFull:'The Family (The Clan)',ch:'家人',fa:'خانواده و پیوندِ درونی',uni:'䷤'},
+'110101':{n:38,en:'Kui',enFull:'Opposition',ch:'睽',fa:'تضاد و بیگانگی',uni:'䷥'},
+'001010':{n:39,en:'Jian',enFull:'Obstruction',ch:'蹇',fa:'مانع و دشواریِ راه',uni:'䷦'},
+'010100':{n:40,en:'Xie',enFull:'Deliverance',ch:'解',fa:'رهایی و گشایشِ گره‌ها',uni:'䷧'},
+'110001':{n:41,en:'Sun',enFull:'Decrease',ch:'損',fa:'کاستن',uni:'䷨'},
+'100011':{n:42,en:'Yi',enFull:'Increase',ch:'益',fa:'افزودن و برکت',uni:'䷩'},
+'111110':{n:43,en:'Guai',enFull:'Breakthrough (Resoluteness)',ch:'夬',fa:'عزمِ قاطع — شکافتن',uni:'䷪'},
+'011111':{n:44,en:'Gou',enFull:'Coming to Meet',ch:'姤',fa:'برخوردِ ناگهانی',uni:'䷫'},
+'000110':{n:45,en:'Cui',enFull:'Gathering Together',ch:'萃',fa:'گردهمایی و تمرکز',uni:'䷬'},
+'011000':{n:46,en:'Sheng',enFull:'Pushing Upward',ch:'升',fa:'صعودِ آرام و پیوسته',uni:'䷭'},
+'010110':{n:47,en:'Kun',enFull:'Oppression (Exhaustion)',ch:'困',fa:'تنگنا و فرسودگی',uni:'䷮'},
+'011010':{n:48,en:'Jing',enFull:'The Well',ch:'井',fa:'چاهِ آب — منبع پایان‌ناپذیر',uni:'䷯'},
+'101110':{n:49,en:'Ge',enFull:'Revolution (Molting)',ch:'革',fa:'انقلاب و دگرگونی بنیادین',uni:'䷰'},
+'011101':{n:50,en:'Ding',enFull:'The Cauldron',ch:'鼎',fa:'دیگِ مقدس — پختگی',uni:'䷱'},
+'100100':{n:51,en:'Zhen',enFull:'The Arousing (Shock, Thunder)',ch:'震',fa:'تندرِ بیدارگر',uni:'䷲'},
+'001001':{n:52,en:'Gen',enFull:'Keeping Still (Mountain)',ch:'艮',fa:'کوهِ ساکن — مراقبه',uni:'䷳'},
+'001011':{n:53,en:'Jian',enFull:'Development (Gradual Progress)',ch:'漸',fa:'تکاملِ تدریجی',uni:'䷴'},
+'110100':{n:54,en:'Gui Mei',enFull:'The Marrying Maiden',ch:'歸妹',fa:'وصالِ شتاب‌زده',uni:'䷵'},
+'101100':{n:55,en:'Feng',enFull:'Abundance (Fullness)',ch:'豐',fa:'فراوانی و اوج',uni:'䷶'},
+'001101':{n:56,en:'Lu',enFull:'The Wanderer',ch:'旅',fa:'مسافر و غریب',uni:'䷷'},
+'011011':{n:57,en:'Xun',enFull:'The Gentle (The Penetrating, Wind)',ch:'巽',fa:'بادِ نافذ و ملایم',uni:'䷸'},
+'110110':{n:58,en:'Dui',enFull:'The Joyous (Lake)',ch:'兌',fa:'دریاچهٔ شادمانی',uni:'䷹'},
+'010011':{n:59,en:'Huan',enFull:'Dispersion (Dissolution)',ch:'渙',fa:'پراکندنِ یخ‌ها',uni:'䷺'},
+'110010':{n:60,en:'Jie',enFull:'Limitation',ch:'節',fa:'اندازه‌نگهداری و مرزبندی',uni:'䷻'},
+'110011':{n:61,en:'Zhong Fu',enFull:'Inner Truth',ch:'中孚',fa:'حقیقتِ درونی',uni:'䷼'},
+'001100':{n:62,en:'Xiao Guo',enFull:'Preponderance of the Small',ch:'小過',fa:'برتریِ امورِ کوچک',uni:'䷽'},
+'101010':{n:63,en:'Ji Ji',enFull:'After Completion',ch:'既濟',fa:'پس از به‌سرانجام‌رسیدن',uni:'䷾'},
+'010101':{n:64,en:'Wei Ji',enFull:'Before Completion',ch:'未濟',fa:'پیش از به‌سرانجام‌رسیدن',uni:'䷿'},
+};
+const I_CHING_TRIGRAMS={
+'111':{en:'Qian',ch:'乾',uni:'☰',fa:'آسمان',elem:'فلز',nat:'خلاقیت، قدرت و رهبری'},
+'000':{en:'Kun',ch:'坤',uni:'☷',fa:'زمین',elem:'خاک',nat:'پذیرش، فروتنی و حمایت'},
+'100':{en:'Zhen',ch:'震',uni:'☳',fa:'تندر',elem:'چوب',nat:'حرکت، تکانه و بیداری'},
+'010':{en:'Kan',ch:'坎',uni:'☵',fa:'آب',elem:'آب',nat:'خطر، عمق و پرتگاه'},
+'001':{en:'Gen',ch:'艮',uni:'☶',fa:'کوه',elem:'خاک',nat:'سکون، توقف و مراقبه'},
+'011':{en:'Xun',ch:'巽',uni:'☴',fa:'باد / چوب',elem:'چوب',nat:'نفوذِ ملایم و انعطاف'},
+'101':{en:'Li',ch:'離',uni:'☲',fa:'آتش',elem:'آتش',nat:'روشنایی، دلبستگی و آگاهی'},
+'110':{en:'Dui',ch:'兌',uni:'☱',fa:'دریاچه',elem:'فلز',nat:'شادی، گشودگی و گفتگو'},
+};
+
+const IC_TRAD={1:['Nine at the Beginning','初九','Six at the Beginning','初六'],
+2:['Nine in the Second Place','九二','Six in the Second Place','六二'],
+3:['Nine in the Third Place','九三','Six in the Third Place','六三'],
+4:['Nine in the Fourth Place','九四','Six in the Fourth Place','六四'],
+5:['Nine in the Fifth Place','九五','Six in the Fifth Place','六五'],
+6:['Nine at the Top','上九','Six at the Top','上六']};
+const EL_CN={wood:'چوب',fire:'آتش',earth:'خاک',metal:'فلز',water:'آب'};
+const EL_KEY_CN={'فلز':'metal','خاک':'earth','چوب':'wood','آب':'water','آتش':'fire'};
+const SHENG_CN={wood:'fire',fire:'earth',earth:'metal',metal:'water',water:'wood'};
+const KE_CN={wood:'earth',earth:'water',water:'fire',fire:'metal',metal:'wood'};
+function icTrad(l){ const t=IC_TRAD[l.idx]; const fr=(l.idx===5)? ' — جایگاه فرمانروا':''; return l.bit===1? t[0]+fr+' ('+t[1]+')' : t[2]+fr+' ('+t[3]+')'; }
+
+/* ---------- جداول فال مو میپام رینپوچه ---------- */
+const MO_FACES=[
+{syl:'ཨ',en:'AH',fa:'فضا',el:'فضا / آسمان',key:'space',family:'خانوادهٔ تاتاگاتا — وایروچانا (Vairochana)',color:'خنثی (بدون رنگ خاص)',shape:'بدون شکل خاص',dir:'مرکزی / همه‌سویه',gender:'خنثی',sense:'گوش و صدا',act:'بر همهٔ فعالیت‌ها ساری است — گشایشِ دیدگاه و رهاسازی'},
+{syl:'ར',en:'RA',fa:'آتش',el:'آتش',key:'fire',family:'خانوادهٔ پادما — آمیتابها (Amitabha)',color:'قرمز',shape:'مثلث',dir:'غرب',gender:'مردانه',sense:'چشم و صورت',act:'اقتدار و مهار (قدرت — power/subduing) — جذب، نفوذ و روشنگری'},
+{syl:'པ',en:'PA',fa:'آب',el:'آب',key:'water',family:'خانوادهٔ راتنا — راتناسامباوا (Ratnasambhava)',color:'سفید',shape:'دایره',dir:'جنوب',gender:'زنانه',sense:'زبان و مزه',act:'صلح و پاک‌سازی (peace/purification) — آرامش‌بخشی، شفا و کمکِ بی‌منت'},
+{syl:'ཙ',en:'TSA',fa:'باد',el:'باد / هوا',key:'air',family:'خانوادهٔ کارما — آموگاسیدی (Amoghasiddhi)',color:'سبز',shape:'نیم‌دایره',dir:'شمال',gender:'مردانه',sense:'بدن و لامسه',act:'اقدامِ سریع و قاطع (all-accomplishing) — حرکت و تثبیت؛ روی دیگر: خشونت و انهدام'},
+{syl:'ན',en:'NA',fa:'خاک',el:'خاک',key:'earth',family:'خانوادهٔ واجرا — آکشوبیا (Akshobhya)',color:'زرد',shape:'مربع',dir:'شرق',gender:'زنانه',sense:'بینی و بو',act:'فزونی و کامیابی (enriching) — توسعه، ثروت و پایداری'},
+{syl:'དྷཱིཿ',en:'DHI',fa:'خرد فراترنام',el:'خرد فراترنام',key:'wisdom',family:'خانوادهٔ هروکا — واجردهره (Vajradhara)',color:'چندرنگ',shape:'شکل‌های گوناگون',dir:'مرکزی',gender:'خنثی',sense:'ذهن و اندیشه',act:'تعالی و برتری (excellence) — بریدنِ قاطعِ موانع و توهمات با تیغِ خرد'}
+];
+/* ۳۶ طالع اصیل میپام رینپوچه (به‌ترتیب ردیف‌ـ‌ستونی: AH/RA/PA/TSA/NA/DHI) — نام انگلیسی از متن میپام/گلدبرگ، ترجمهٔ فارسی + تصویر سنتی، درجهٔ سعد/نحس از سنت */
+const MO_OMENS=[
+{en:'The Stainless Sky',fa:'آسمان بی‌ابر',img:'خلوصِ مطلق و گشودگی بدون مانع',g:'great'},
+{en:'The Flaming Rays of the Sun',fa:'پرتوهای سوزان خورشید',img:'روشن‌شدن ابهامات و موفقیت آشکار',g:'mid'},
+{en:'The Nectar Rays of the Moon',fa:'پرتوهای نوشین ماه',img:'آرامش، شفا و کمکِ دوستانه',g:'mid'},
+{en:'The Bright Star',fa:'ستارهٔ فروزان',img:'حرکتِ سریع؛ نیازمندِ تمرکز',g:'mid'},
+{en:'The Ground of Gold',fa:'زمین زرین',img:'ثبات مالی و ثمرهٔ ماندگارِ کار',g:'good'},
+{en:'The Tone of Vajras',fa:'آوای وجراها',img:'فتح فکری و راه‌حلِ قطعی',g:'good'},
+{en:'The Bright Lamp',fa:'چراغ فروزان',img:'راهنمایی در تاریکی و خبرِ روشن',g:'good'},
+{en:'Adding Butter to the Burning Flames',fa:'افزودن کره به شعلهٔ افروخته',img:'رشدِ شدیدِ قدرت؛ اما خطرِ خشم و شتاب‌زدگی',g:'dual'},
+{en:'The Demon of Death',fa:'دیو مرگ',img:'تضاد و ناکامیِ موقت — آتش که در آب می‌افتد',g:'bad'},
+{en:'The King of Power',fa:'شاه قدرت',img:'پیشرفتِ پرشتاب؛ نیازمندِ مهار تا نسوزد',g:'good'},
+{en:'The Dried-up Tree',fa:'درخت خشک‌شده',img:'تأخیر در نتیجه؛ نیازمند صبر فراوان',g:'bad'},
+{en:'The Door of Auspicious Visions',fa:'دروازهٔ رؤیاهای فرخنده',img:'خنجرِ آتشینِ خرد؛ پیروزی و رفع قاطع مشکل',g:'good'},
+{en:'The Vase of Nectar',fa:'کوزهٔ نوش‌آگین',img:'برکت، آرامش عاطفی و کامیابی',g:'great'},
+{en:'The Pool Without a Source of Water',fa:'برکهٔ بی‌سرچشمه',img:'تحلیل‌رفتنِ منابع؛ پرهیز از ریسک',g:'bad'},
+{en:'The Ocean of Nectar',fa:'اقیانوس شهد',img:'فراوانی، اتحاد و هم‌افزایی؛ عالی برای روابط و شراکت',g:'great'},
+{en:'The Demon of Afflictions',fa:'دیو اختلال‌ها (کِلِشاها)',img:'نوسان فکر و عاطفه؛ تغییرِ ناگهانی شرایط',g:'bad'},
+{en:'The Golden Lotus',fa:'نیلوفر زرین',img:'شکوفایی و نتیجهٔ نیک با صبر',g:'good'},
+{en:'The Nectar-like Medicine',fa:'داروی نوش‌آگین',img:'رشد، باروریِ ایده‌ها و گشایشِ تدریجی',g:'great'},
+{en:'The White Umbrella of Good Fortune',fa:'چتر سپیدِ نیک‌بختی',img:'سفر یا جابجایی؛ اما بدون دستاوردِ فوری',g:'good'},
+{en:'The Great Fiery Weapon',fa:'سلاحِ آتشینِ بزرگ',img:'بی‌قراری و تصمیماتِ پرشتاب؛ درگیریِ گفتاری',g:'bad'},
+{en:'Empty of Intelligence',fa:'خالی از خرد',img:'اشتباهی زاده از ناآگاهی؛ درنگ قبل از اقدام',g:'bad'},
+{en:'The Streamer of Fame',fa:'بیرقِ شهرت',img:'دیده‌شدن و اعتبار؛ اما بی‌قرار و گذرا',g:'good'},
+{en:'The Mara Demon of the Aggregates',fa:'مارای دیو پنج آگرگا',img:'پراکندگیِ تمرکز؛ طوفان در گذرگاه',g:'bad'},
+{en:'The House of Good Tidings',fa:'خانهٔ اخبار خوش',img:'شهرت، موفقیت در رقابت و پیام مهم',g:'good'},
+{en:'The Golden Mountain',fa:'کوه زرین',img:'امنیت کامل؛ جایگاه رفیع و حمایت بزرگ',g:'great'},
+{en:'The Demon of the Heavenly Son',fa:'دیو پسر آسمانی',img:'سختی اولیه که به استحکام و دوام می‌انجامد',g:'bad'},
+{en:'The Overflowing Jeweled Vessel',fa:'کوزهٔ جواهر لبریز',img:'ثروت، رشد تجاری و آسایش',g:'great'},
+{en:'The Scattered Mountain of Sand',fa:'کوه شنیِ پراکنده',img:'تار شدن دید، شایعات و نگرانی بی‌مورد',g:'bad'},
+{en:'The Mansion of Gold',fa:'کاخ زرین',img:'ثبات مطلق؛ برای نگه‌داشتن عالی، برای تغییر سنگین',g:'great'},
+{en:'The Treasury of Jewels',fa:'خزانهٔ جواهر',img:'کشفِ راه‌حل یا منبع مالیِ پنهان',g:'great'},
+{en:'Manjushri Appears',fa:'ظهور مانجوشری',img:'روشن‌بینی، بیداری روحی و تحقق نیت',g:'great'},
+{en:'The Endless Auspicious Knot',fa:'گره بی‌پایانِ فرخنده',img:'پیروزیِ قاطع، شهرت و درخشش ماندگار',g:'great'},
+{en:'The Golden Female Fish',fa:'ماهی طلایی ماده',img:'برکت و خوشبختی (ازدواج و شراکت)',g:'great'},
+{en:'The White Conch',fa:'صدف سفید',img:'سرعت در رسیدن به مقصود و اعلام خبر',g:'good'},
+{en:'The Golden Wheel',fa:'چرخ زرین',img:'چرخشِ قانون و دستیابی کامل به مقصود',g:'great'},
+{en:'The Jeweled Banner of Victory',fa:'بیرق جواهرنشان پیروزی',img:'پیروزی مطلق در همهٔ ابعاد',g:'supreme'}
+];
+const MO_GRADE={supreme:{e:'👑',t:'فوق‌العاده — بالاترین طالع'},great:{e:'🌟',t:'عالی'},good:{e:'🟢',t:'مساعد / خوب'},mid:{e:'🟡',t:'متوسط'},dual:{e:'🟠',t:'دوگانه — پرقدرت ولی پرخطر'},bad:{e:'🔴',t:'نامساعد'}};
+
+/* ---------- دریافت اعداد خام uint16 از همان سه منبع برنامه ---------- */
+const ENGINE_RAW_NEED=40;
+async function fetchRawAqn(n, useKey){
+  if(useKey){
+    const key=getAnuKey();
+    const resp=await fetchWithTimeout('https://api.quantumnumbers.anu.edu.au/?length='+n+'&type=uint16',15000,{headers:{'x-api-key':key}});
+    aqnBump(1);
+    if(!resp.ok){
+      if(resp.status===403) throw new Error('کلید ANU رد شد (HTTP 403) — کلید را چک کن');
+      if(resp.status===429) throw new Error('سهمیه/سرعت کلیدت موقتاً پر شده (HTTP 429)');
+      throw new Error('API کلیددار خطا داد (HTTP '+resp.status+')');
+    }
+    let json=null; try{ json=await resp.json(); }catch(e){}
+    if(!json||json.success===false||!Array.isArray(json.data)) throw new Error('جواب API کلیددار نامعتبر بود');
+    return {raw:json.data.slice(), source:'anu-quantum-key', apiCalls:1};
+  }
+  await waitForAnuWindow();
+  anuNextAllowed=Date.now()+62000;
+  const resp=await fetchWithTimeout('https://qrng.anu.edu.au/API/jsonI.php?length='+n+'&type=uint16',15000);
+  const body=await resp.text();
+  if(!resp.ok || body.indexOf('limited to')>-1) throw new Error('free-busy');
+  let json=null; try{ json=JSON.parse(body); }catch(e){}
+  if(!json||json.success!==true||!Array.isArray(json.data)) throw new Error('free-bad');
+  return {raw:json.data.slice(), source:'anu-quantum', apiCalls:1};
+}
+async function acquireEngineRaw(src){
+  const n=ENGINE_RAW_NEED;
+  if(src==='local'){
+    const a=new Uint16Array(n); crypto.getRandomValues(a);
+    return {raw:Array.from(a), source:'local-secure', apiCalls:0};
+  }
+  if(src==='quantum'){
+    const key=useKeyOn()? getAnuKey() : '';
+    if(key){
+      if(Date.now()>=anuNextAllowed){
+        try{ return await fetchRawAqn(n,false); }
+        catch(e){ showStatus('سرویس رایگان در دسترس نبود؛ برای معطل‌نشدن از کلید شخصی استفاده می‌کنم...'); await sleep(900); }
+      }else{ showStatus('سهمیهٔ این دقیقهٔ سرویس رایگان مصرف شده؛ از کلید شخصی استفاده می‌کنم...'); await sleep(900); }
+      return await fetchRawAqn(n,true);
+    }
+    try{ return await fetchRawAqn(n,false); }
+    catch(e){ throw new Error(netErrText('کوانتومی ANU')); }
+  }
+  try{
+    const r=await fetchWithTimeout('https://www.random.org/integers/?num='+n+'&min=0&max=65535&col=1&base=10&format=plain&rnd=new',15000);
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const arr=(await r.text()).trim().split(/\s+/).map(Number).filter(x=>Number.isInteger(x)&&x>=0&&x<=65535);
+    if(arr.length<8) throw new Error('too-few');
+    return {raw:arr, source:'random.org-atmospheric', apiCalls:1};
+  }catch(e1){
+    try{
+      const r=await fetchWithTimeout('https://www.randomnumberapi.com/api/v1.0/random?min=0&max=65535&count='+Math.min(100,n),15000);
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      const arr=await r.json();
+      if(!Array.isArray(arr)||arr.length<8) throw new Error('bad');
+      return {raw:arr, source:'randomnumberapi', apiCalls:1};
+    }catch(e2){ throw new Error(netErrText('اتمسفری (random.org و randomnumberapi)')); }
+  }
+}
+
+/* ---------- ای‌چینگ: محاسبه ---------- */
+function ichingCompute(raw){
+  const lines=[]; let ri=0;
+  for(let i=0;i<6;i++){
+    const coins=[raw[ri]&1, raw[ri+1]&1, raw[ri+2]&1].map(b=> b? 3:2);   // ۳ = یانگ (شیر/رو) • ۲ = یین (خط/پشت)
+    ri+=3;
+    const sum=coins[0]+coins[1]+coins[2];
+    let bit, future, movable;
+    if(sum===6){bit=0;future=1;movable=true;}        // یین پیر — خط متغیر
+    else if(sum===7){bit=1;future=1;movable=false;}  // یانگ جوان
+    else if(sum===8){bit=0;future=0;movable=false;}  // یین جوان
+    else {bit=1;future=0;movable=true;}              // ۹ — یانگ پیر — خط متغیر
+    lines.push({idx:i+1, coins:coins, sum:sum, bit:bit, future:future, movable:movable});
+  }
+  const bitsKey=lines.map(l=>l.bit).join('');
+  const futKey=lines.map(l=>l.future).join('');
+  const main=I_CHING_KW[bitsKey];
+  const changed=lines.some(l=>l.movable)? I_CHING_KW[futKey] : null;
+  const huKey=''+lines[1].bit+lines[2].bit+lines[3].bit+lines[2].bit+lines[3].bit+lines[4].bit;
+  const hu=I_CHING_KW[huKey];
+  const zong=I_CHING_KW[bitsKey.split('').reverse().join('')];
+  const cuo=I_CHING_KW[bitsKey.split('').map(b=> b==='1'?'0':'1').join('')];
+  const moving=lines.filter(l=>l.movable).map(l=>l.idx);
+  const N=moving.length;
+  let zhuXi;
+  if(N===0) zhuXi='حکمِ کلیِ هگزاگرامِ اصلی (Gua Ci) ملاکِ مطلق است — هیچ خطِ متغیری نیست.';
+  else if(N===1) zhuXi='تمرکزِ اصلیِ فال دقیقاً رویِ متنِ همان خطِ متغیرِ شماره '+faNum(moving[0])+' در هگزاگرامِ اصلی است.';
+  else if(N===2) zhuXi='متنِ هر دو خطِ متغیر در هگزاگرامِ اصلی خوانده شود؛ خطِ متغیرِ بالاتر (شماره '+faNum(moving[1])+') حکمِ اصلی و غالب را دارد.';
+  else if(N===3) zhuXi='تعادلِ کامل بین بنیان و مقصد: حکمِ کلیِ هگزاگرامِ اصلی (بنیان) و حکمِ کلیِ هگزاگرامِ متحول (مقصد) هر دو با هم خوانده شوند.';
+  else if(N===4){ const fx=lines.filter(l=>!l.movable); zhuXi='تمرکز از هگزاگرامِ اصلی خارج شده است؛ دو خطِ ثابت در هگزاگرامِ متحول خوانده شوند؛ خطِ ثابتِ پایین‌تر (شماره '+faNum(fx[0].idx)+') حکمِ غالب را دارد.'; }
+  else if(N===5){ const fx=lines.filter(l=>!l.movable); zhuXi='فقط تک خطِ ثابت (غیرمتغیرِ شماره '+faNum(fx[0].idx)+') در هگزاگرامِ متحول ملاکِ خوانش است.'; }
+  else zhuXi='دگردیسیِ کامل: حکمِ کلیِ هگزاگرامِ متحول (آینده) ملاک است'+((changed.n===1||changed.n===2)?' — چون هگزاگرام ۱ یا ۲ است، متنِ ویژهٔ Yong Jiu / Yong Liu نیز خوانده شود.':'.');
+  // درستیِ جایگاه (Dang Wei) و هم‌نوایی (Ying) — برای خطوط متغیر
+  const YPAIRS={1:4,2:5,3:6,4:1,5:2,6:3};
+  const dangWei=l=> ((l.bit===1) === (l.idx%2===1));
+  const hasYing=l=> lines[YPAIRS[l.idx]-1].bit !== l.bit;
+  const lowerKey=bitsKey.slice(0,3), upperKey=bitsKey.slice(3);
+  const loT=I_CHING_TRIGRAMS[lowerKey], upT=I_CHING_TRIGRAMS[upperKey];
+  const eL=EL_KEY_CN[loT.elem], eU=EL_KEY_CN[upT.elem];
+  let wu;
+  if(eL===eU) wu='✨ هم‌ذاتی و هماهنگیِ کاملِ درون و بیرون (Bi He) — عنصرِ هر دو سه‌خطی یکسان است ('+EL_CN[eL]+').';
+  else if(SHENG_CN[eU]===eL) wu='🟢 محیطِ بیرونی حامی و تغذیه‌کنندهٔ توست ('+upT.fa+' '+EL_CN[eU]+' ← '+loT.fa+' '+EL_CN[eL]+') — مطلوب‌ترین حالت.';
+  else if(SHENG_CN[eL]===eU) wu='🟡 انرژیِ تو صرفِ تغذیهٔ محیط می‌شود ('+loT.fa+' '+EL_CN[eL]+' ← '+upT.fa+' '+EL_CN[eU]+') — فرسایشِ انرژی.';
+  else if(KE_CN[eU]===eL) wu='🔴 فشار و مانع از سمتِ محیطِ بیرونی بر تو ('+EL_CN[eU]+' بر '+EL_CN[eL]+') — هشیار باش.';
+  else wu='🔵 تسلط و چیرگیِ تو بر شرایطِ بیرونی ('+EL_CN[eL]+' بر '+EL_CN[eU]+') — به تدبیر و تلاش.';
+  // ---------- گزارش متنی کامل ----------
+  const L=[];
+  L.push('هگزاگرام اصلی: #'+faNum(main.n)+' «'+main.ch+' '+main.en+'» — '+main.enFull);
+  L.push('ترجمهٔ فارسی: '+main.fa+'   '+main.uni);
+  L.push('سه‌خطیِ پایین (Ti 體 — خود / درون): '+loT.uni+' '+loT.ch+' '+loT.en+' ('+loT.fa+') — عنصر '+loT.elem+' • '+loT.nat);
+  L.push('سه‌خطیِ بالا (Yong 用 — محیط / بیرون): '+upT.uni+' '+upT.ch+' '+upT.en+' ('+upT.fa+') — عنصر '+upT.elem+' • '+upT.nat);
+  L.push('چرخهٔ وو شینگ (بیرون × درون): '+wu);
+  L.push('');
+  L.push('خطوط (از پایین به بالا — خط ۱ پایه است):');
+  lines.forEach(l=>{
+    L.push('   خط '+faNum(l.idx)+': '+(l.bit===1?'یانگ ⚊':'یین ⚋')+' — '+icTrad(l)+(l.movable? (l.sum===9?'  [○ یانگ پیر — خطِ متغیر]':'  [× یین پیر — خطِ متغیر]') : '  (ثابت)'));
+  });
+  L.push('');
+  L.push('تعداد خطوط متغیر: '+faNum(N));
+  L.push('قاعدهٔ چو شی (Zhu Xi 朱熹): '+zhuXi);
+  if(N>0){
+    lines.filter(l=>l.movable).forEach(l=>{
+      L.push('   ◦ خط '+faNum(l.idx)+' ('+icTrad(l)+'): '+(dangWei(l)? '✅ در جایگاهِ درست (Dang Wei — هم‌جنس با جایگاه)':'⚠️ خارج از جایگاهِ طبیعی (Bu Dang Wei)')+' • هم‌نوایی با جفتِ خط '+faNum(YPAIRS[l.idx])+': '+(hasYing(l)? '🔗 You Ying — هم‌نوایی و حمایت':'⚡ Wu Ying — فاقد هم‌نوایی'));
+    });
+  }
+  L.push('');
+  L.push('هگزاگرام هسته‌ای (Hu Gua 互卦 — ریشهٔ درونی، خطوط ۲-۳-۴ و ۳-۴-۵): #'+faNum(hu.n)+' «'+hu.ch+'» '+hu.en+' — '+hu.fa+'  '+hu.uni);
+  if(changed) L.push('هگزاگرام متحول (Zhi Gua 之卦 — مقصد / آینده): #'+faNum(changed.n)+' «'+changed.ch+'» '+changed.en+' — '+changed.fa+'  '+changed.uni);
+  else L.push('حالت ایستا — هیچ خط متغیری نیست؛ هگزاگرام متحول وجود ندارد.');
+  L.push('هگزاگرام وارونه (Zong Gua 綜卦 — زاویهٔ دیدِ مقابل): #'+faNum(zong.n)+' «'+zong.ch+'» '+zong.en+' — '+zong.fa+'  '+zong.uni);
+  L.push('هگزاگرام متضاد (Cuo Gua 錯卦 — سایه / مکمل): #'+faNum(cuo.n)+' «'+cuo.ch+'» '+cuo.en+' — '+cuo.fa+'  '+cuo.uni);
+  L.push('');
+  L.push('روش: سه سکهٔ باستانی — هر پرتاب ۳=یانگ (شیر) و ۲=یین (خط)؛ مجموع ۶=یین پیر متغیر، ۷=یانگ جوان، ۸=یین جوان، ۹=یانگ پیر متغیر. خط ۱ از اولین پرتاب ساخته می‌شود و هگزاگرام از پایین به بالا رسم می‌شود. منبع رندوم: همان سیستم Q/A/O برنامه.');
+  return {lines:lines, bitsKey:bitsKey, futKey:futKey, huKey:huKey, main:main, hu:hu, changed:changed, zong:zong, cuo:cuo,
+          moving:moving, N:N, zhuXi:zhuXi, lower:loT, upper:upT, wu:wu, reportLines:L, consumed:18};
+}
+
+/* ---------- فال مو: محاسبه ---------- */
+const MO_DOUBLE_WARN={fire:'⚡ تشدیدِ مضاعفِ عنصرِ تند (RA-RA): پرهیزِ جدی از عجله، خشم و پراکندگیِ ذهن.', air:'⚡ تشدیدِ مضاعفِ عنصرِ تند (TSA-TSA): پرهیزِ جدی از عجله، خشم و پراکندگیِ ذهن.'};
+function moElemRelation(a,b){
+  if(a.key===b.key) return {t:'هم‌عنصر — تشدیدِ خالصِ '+a.fa, d:'دو وجهِ یکسان؛ ماهیتِ عنصرِ '+a.fa+' دوچندان و خالص‌تر دیده می‌شود.'};
+  if(a.key==='wisdom'||b.key==='wisdom') return {t:'همزیستی با خرد', d:'DHI (خرد فراترنام) بیرون از چرخهٔ عناصر است و بر هر عنصری غالب می‌شود؛ تعامل، زیر سایهٔ خرد است.'};
+  if(a.key==='space'||b.key==='space') return {t:'همزیستی با فضا', d:'AH (فضا) همه چیز را در بر می‌گیرد و محدودیت نمی‌گذارد؛ خوانشِ وجهِ دیگر تعیین‌کننده است.'};
+  const pair=[a.key,b.key].sort().join('+');
+  const map={'air+fire':{t:'هم‌افزا 🤝',d:'باد آتش را شعله‌ور می‌کند؛ درون و بیرون هم‌جهتند و شتاب می‌گیرند.'},
+             'earth+water':{t:'هم‌افزا 🤝',d:'آب خاک را بارور می‌کند؛ بستر آماده و نتیجه پایدار و زایاست.'},
+             'fire+water':{t:'تضاد عنصری ⚠️',d:'آتش و آب؛ درون و بیرون همدیگر را خنثی می‌کنند — انرژیِ یکی دیگری را خاموش می‌کند.'},
+             'air+earth':{t:'تضاد عنصری ⚠️',d:'باد و خاک؛ همدیگر را فرسوده می‌کنند — پیشرفتی کند و پر از اصطکاک.'},
+             'earth+fire':{t:'خنثی و مهارکننده',d:'آتش بر خاک اثر می‌کند و خاک آن را مهار؛ نتیجه وابسته به نیت و صبر است.'},
+             'air+water':{t:'خنثی و لرزان',d:'باد امواج آب را می‌سازد؛ فکر و احساس روی هم اثر می‌گذارند بدون تضاد یا هم‌افزاییِ قاطع.'}};
+  return map[pair] || {t:'خنثی', d:'تعامل خاصی گزارش نشده است.'};
+}
+function moCompute(rawIn){
+  let raw=rawIn.slice(), i=0;
+  const throws=[];
+  while(throws.length<2){
+    if(i>=raw.length){ const extra=new Uint16Array(16); crypto.getRandomValues(extra); raw=raw.concat(Array.from(extra)); }
+    const v=raw[i]; if(v>=65532){ i++; continue; }   // تاس ۶ وجهی بی‌بایاس: رد نمونه‌های بالای ۶۵۵۳۱
+    throws.push(v%6); i++;
+  }
+  const f1=MO_FACES[throws[0]], f2=MO_FACES[throws[1]];
+  const omen=MO_OMENS[throws[0]*6+throws[1]];
+  const g=MO_GRADE[omen.g];
+  const rel=moElemRelation(f1,f2);
+  const isDouble=throws[0]===throws[1];
+  let doubleLine=null;
+  if(isDouble) doubleLine = MO_DOUBLE_WARN[f1.key] || '🌟 تشدیدِ خالصِ خیر ('+f1.en+'-'+f2.en+'): ماهیتِ خیر و ثباتِ عنصر دوچندان است.';
+  const L=[];
+  L.push('طالعِ میپام رینپوچه — شماره '+faNum(throws[0]*6+throws[1]+1)+' از ۳۶');
+  L.push('نام اصیل: '+omen.en);
+  L.push('نام فارسی: '+omen.fa);
+  L.push('درجهٔ سعد/نحس: '+g.e+' '+g.t);
+  L.push('تصویر مرسوم: '+omen.img);
+  L.push('');
+  L.push('▸ پرتاب اول (ریشه / درون / فاعل): '+f1.syl+' «'+f1.en+'»');
+  L.push('   • عنصر: '+f1.el+'   |   خانوادهٔ: '+f1.family);
+  L.push('   • رنگ: '+f1.color+'   |   شکل: '+f1.shape+'   |   جهت: '+f1.dir+'   |   جنس: '+f1.gender+'   |   حس: '+f1.sense);
+  L.push('   • نوع عمل مرسوم (تانترای تبت): '+f1.act);
+  L.push('');
+  L.push('▸ پرتاب دوم (شاخه / بیرون / نتیجه): '+f2.syl+' «'+f2.en+'»');
+  L.push('   • عنصر: '+f2.el+'   |   خانوادهٔ: '+f2.family);
+  L.push('   • رنگ: '+f2.color+'   |   شکل: '+f2.shape+'   |   جهت: '+f2.dir+'   |   جنس: '+f2.gender+'   |   حس: '+f2.sense);
+  L.push('   • نوع عمل مرسوم (تانترای تبت): '+f2.act);
+  L.push('');
+  L.push('▸ تعاملِ دو عنصر (درون '+f1.fa+' × بیرون '+f2.fa+'): '+rel.t+' — '+rel.d);
+  L.push('▸ خانوادهٔ بوداییِ حاکم بر فال (بر اساس پرتاب اول): '+f1.family);
+  L.push('   نوعِ عملِ توصیه‌شده بر همین اساس: '+f1.act);
+  if(doubleLine) L.push(doubleLine);
+  L.push('');
+  L.push('قاعدهٔ سنتی «AH»: اگر AH در ابتدا بیاید، طالع معتدل ارزیابی می‌شود؛ اگر دوم بیاید، مانع از فال برطرف می‌شود. لفظ DHI در هر جای ترکیب → علامتِ خیر است.');
+  L.push('ترتیب پرتاب‌ها جابه‌جا نمی‌شود ('+f1.en+'-'+f2.en+' با '+f2.en+'-'+f1.en+' کاملاً متفاوت است). پرتاب اول خودت هستی، پرتاب دوم بازتابِ بیرونی — می‌توان پرتاب دوم را برای «دیگری» خواند.');
+  L.push('روش: یک تاسِ ۶ وجهی که هر هجای مانترای ཨ་ར་པ་ཙ་ན་དྷཱིཿ روی یک وجهش حک شده، دو بار پیاپی پرتاب می‌شود؛ مجموع ترکیب‌های ممکن = ۳۶ طالع. منبع رندوم: همان سیستم Q/A/O برنامه.');
+  const n=throws[0]*6+throws[1]+1;
+  return {throws:throws, f1:f1, f2:f2, omen:omen,omenIndex:n, isDouble:isDouble, doubleLine:doubleLine, rel:rel, reportLines:L, consumed:i, gClass:'g-'+omen.g};
+}
+
+/* ---------- رندر موتورهای بومی ---------- */
+function engineHexCard(titleHtml, kw, lines, isChanged){
+  let rows='';
+  for(let i=5;i>=0;i--){
+    const l=lines[i];
+    const bar=l.bit===1? '<div class="hyb"></div>' : '<div class="hyi"><span></span><span></span></div>';
+    const mk=l.movable? (l.sum===9? ' ○':' ×') : '';
+    rows+='<div class="hxl'+(l.movable&&!isChanged?' mv':(l.movable?' chg':''))+'"><div class="hxl-vis">'+bar+'</div><div class="hxl-cap">خط '+faNum(l.idx)+' · '+(l.bit===1?'یانگ ⚊':'یین ⚋')+mk+'</div></div>';
+  }
+  return '<div class="hexcard"><div class="hexcard-t">'+titleHtml+'</div><div class="hexbig">'+kw.uni+'</div><div class="hexlines">'+rows+'</div><div class="hexkw">#'+faNum(kw.n)+' · '+kw.ch+' '+kw.en+'<span>'+kw.enFull+'</span></div></div>';
+}
+function renderEngineIChing(spread, data, comp){
+  resultsDiv.innerHTML='';
+  const wrap=document.createElement('div'); wrap.className='engine-wrap';
+  let changedHtml;
+  if(comp.changed){
+    const chgLines=comp.lines.map(l=>({idx:l.idx, coins:l.coins, sum:l.sum, bit:l.future, future:l.future, movable:l.movable}));
+    changedHtml=engineHexCard('هگزاگرام متحول <b>Zhi Gua</b> 之卦<br><span class="hexsub">مقصد / آینده</span>', comp.changed, chgLines, true);
+  }else{
+    changedHtml='<div class="hexcard hex-static"><div class="hexcard-t">حالت ایستا</div><div class="hexbig" style="color:#7dd3fc">⚊</div><div class="hex-static-t">هیچ خط متغیری نیست</div><div class="hexsub2">هگزاگرام متحول وجود ندارد؛ وضعیت، پایدار و تکرارشونده است.</div></div>';
+  }
+  wrap.innerHTML='<div class="hexwrap">'
+    + engineHexCard('هگزاگرام اصلی <b>Ben Gua</b> 本卦<br><span class="hexsub">وضعیتِ حال</span>', comp.main, comp.lines, false)
+    + '<div class="hex-arrow">➜<span>خطوط متغیر<br>تبدیل</span></div>'
+    + changedHtml + '</div>'
+    + '<div class="engine-strip">🧬 <b>هسته‌ای (Hu Gua 互卦 — ریشهٔ درونی):</b> '+comp.hu.uni+' #'+faNum(comp.hu.n)+' «'+comp.hu.ch+'» '+comp.hu.en+' — '+comp.hu.fa+'</div>'
+    + '<div class="engine-strip">🔁 <b>وارونه (Zong Gua 綜卦 — زاویهٔ مقابل):</b> '+comp.zong.uni+' #'+faNum(comp.zong.n)+' «'+comp.zong.ch+'» '+comp.zong.en+' — '+comp.zong.fa
+    + ' &nbsp;•&nbsp; <b>متضاد (Cuo Gua 錯卦 — سایه/مکمل):</b> '+comp.cuo.uni+' #'+faNum(comp.cuo.n)+' «'+comp.cuo.ch+'» '+comp.cuo.en+' — '+comp.cuo.fa+'</div>'
+    + '<div class="engine-rule">📖 <b>قاعدهٔ چو شی — '+faNum(comp.N)+' خط متغیر:</b> '+comp.zhuXi+'</div>';
+  resultsDiv.appendChild(wrap);
+  const ana=analysisBlock('📜 گزارشِ کاملِ ای‌چینگ (روش سه‌سکه)', comp.reportLines);
+  resultsDiv.appendChild(ana);
+  return ana;
+}
+function moTileHtml(f, which, label, desc){
+  return '<div class="tarot-card mo-tile"><div class="mo-syl"><div class="mo-syl-t">'+f.syl+'</div><div class="mo-syl-en">'+f.en+'</div></div><div class="info">'
+    + '<div class="pos">'+label+'</div>'
+    + '<div class="en">'+f.en+' — '+f.el+'</div>'
+    + '<div class="fa">'+f.family+'</div>'
+    + '<div class="hint">'+desc+'<br>🎨 '+f.color+' &nbsp;|&nbsp; ◇ '+f.shape+' &nbsp;|&nbsp; 🧭 '+f.dir+'</div>'
+    + '<div class="num">هجای مانجوشری '+(which===1?'پرتاب ۱ از ۲ — ریشه/درون':'پرتاب ۲ از ۲ — شاخه/بیرون')+'</div>'
+    + '</div></div>';
+}
+function renderEngineMo(spread, data, comp){
+  resultsDiv.innerHTML='';
+  const wrap=document.createElement('div'); wrap.className='engine-wrap';
+  const g=MO_GRADE[comp.omen.g];
+  wrap.innerHTML='<div class="mo-tiles">'
+    + moTileHtml(comp.f1, 1, 'پرتاب اول — ریشه / درون / فاعل', 'انرژیِ بنیادینِ تو و بذرِ ماجراست')
+    + '<div class="mo-arrow">+</div>'
+    + moTileHtml(comp.f2, 2, 'پرتاب دوم — شاخه / بیرون / نتیجه', 'شکلِ بیرونی و بازتابِ ماجرا؛ وضعیتِ پرسش')
+    + '</div>'
+    + '<div class="mo-omen '+comp.gClass+'"><div class="mo-omen-n">طالعِ میپام رینپوچه — شماره '+faNum(comp.omenIndex)+' از ۳۶</div>'
+    + '<div class="mo-omen-en">'+comp.omen.en+'</div>'
+    + '<div class="mo-omen-fa">«'+comp.omen.fa+'»</div>'
+    + '<div class="mo-omen-grade">'+g.e+' '+g.t+'</div>'
+    + '<div class="mo-omen-img">تصویرِ مرسوم: '+comp.omen.img+'</div>'
+    + (comp.isDouble? '<div class="mo-omen-img" style="color:#fda4af">'+comp.doubleLine+'</div>' : '')
+    + '</div>';
+  resultsDiv.appendChild(wrap);
+  const ana=analysisBlock('📜 گزارشِ کاملِ فال مو (میپام رینپوچه)', comp.reportLines);
+  resultsDiv.appendChild(ana);
+  return ana;
+}
+function finishEngineStats(isI, consumed, apiCalls){
+  statsDiv.style.display='grid';
+  sCount.textContent=isI? '۶':'۲';
+  sAttempts.textContent=faNum(consumed);
+  sColl.textContent='۰';
+  sApi.textContent=apiCalls>0? apiCalls : '-';
+  const lbl=statsDiv.querySelectorAll('.stat span');
+  lbl[0].textContent=isI? 'خط (۶ خط)':'پرتابِ تاس';
+  lbl[1].textContent=isI? 'سکه (پرتاب خام)':'تاس (پرتاب خام)';
+  lbl[2].textContent='تکرار دور ریخته';
+  lbl[3].textContent='درخواست API';
+}
+function renderEngineResult(spread, data, isI, comp){
+  const ana = isI? renderEngineIChing(spread, data, comp) : renderEngineMo(spread, data, comp);
+  finishEngineStats(isI, comp.consumed, data.apiCalls);
+  const ts=new Date().toISOString();
+  const now=Date.now();
+  if(isI){
+    const mkCard=(ord,pos,kw)=> ({order:ord, position:pos, number:kw.n, en:kw.ch+' '+kw.en+' — '+kw.enFull, fa:kw.fa});
+    const tail = comp.changed? [mkCard(2,'هگزاگرام متحول (Zhi Gua 之卦)', comp.changed)] : [{order:2, position:'حالت ایستا — بدون خط متغیر', number:comp.main.n, en:comp.main.ch+' '+comp.main.en+' — '+comp.main.enFull, fa:comp.main.fa}];
+    const cards=[mkCard(1,'هگزاگرام اصلی (Ben Gua 本卦)', comp.main)].concat(tail)
+      .concat([mkCard(3,'هسته‌ای (Hu Gua 互卦)', comp.hu), mkCard(4,'وارونه (Zong Gua 綜卦)', comp.zong), mkCard(5,'متضاد (Cuo Gua 錯卦)', comp.cuo)]);
+    const lines=cards.map(c=> c.order+'. ['+c.position+'] '+c.en+' - '+c.fa);
+    lastResult={
+      spread:{id:spread.id, name:spreadLabel(spread), cards:6}, deck:'iching-64', requested:6,
+      positions:cards.map(c=>c.position),
+      numbers:[comp.main.n].concat(comp.changed? [comp.changed.n]:[]).concat([comp.hu.n, comp.zong.n, comp.cuo.n]),
+      cards:cards,
+      attempts:comp.consumed, collisions:0, apiCalls:data.apiCalls,
+      source:data.source, timestamp:ts,
+      drawMethod:'سه سکهٔ ای‌چینگ (۶ خط، از پایین به بالا)',
+      formattedLines:lines,
+      extraLines:['☯️ روش: سه سکهٔ باستانی — ۶=یین پیر متغیر، ۷=یانگ جوان، ۸=یین جوان، ۹=یانگ پیر متغیر؛ خط ۱ از اولین پرتاب ساخته می‌شود. منبع رندوم: '+data.source],
+      iching:{lines:comp.lines.map(l=>({line:l.idx, coins:l.coins, sum:l.sum, bit:l.bit, future:l.future, movable:l.movable, trad:icTrad(l)})),
+        moving:comp.moving, zhuXi:comp.zhuXi, mainBits:comp.bitsKey, huBits:comp.huKey, changedBits:comp.changed? comp.futKey : null}
+    };
+  }else{
+    const o=MO_OMENS[comp.omenIndex-1];
+    const cards=[
+      {order:1, position:'پرتاب اول (ریشه / درون / فاعل)', number:comp.throws[0]+1, en:comp.f1.syl+' ('+comp.f1.en+') — '+comp.f1.el, fa:'خانوادهٔ: '+comp.f1.family},
+      {order:2, position:'پرتاب دوم (شاخه / بیرون / نتیجه)', number:comp.throws[1]+1, en:comp.f2.syl+' ('+comp.f2.en+') — '+comp.f2.el, fa:'خانوادهٔ: '+comp.f2.family},
+      {order:3, position:'طالعِ میپام رینپوچه (شماره '+faNum(comp.omenIndex)+' از ۳۶)', number:comp.omenIndex, en:o.en, fa:o.fa+' ('+MO_GRADE[o.g].t+')'}
+    ];
+    const lines=cards.map(c=> c.order+'. ['+c.position+'] '+c.en+' - '+c.fa);
+    lastResult={
+      spread:{id:spread.id, name:spreadLabel(spread), cards:2}, deck:'mo-36', requested:2,
+      positions:cards.map(c=>c.position),
+      numbers:[comp.omenIndex],
+      cards:cards,
+      attempts:comp.consumed, collisions:0, apiCalls:data.apiCalls,
+      source:data.source, timestamp:ts,
+      drawMethod:'تاس میپام رینپوچه — ۲ پرتاب متوالی',
+      formattedLines:lines,
+      extraLines:['⛩️ روش: یک تاسِ ۶ وجهی با ۶ هجای مانجوشری، دو بار پیاپی؛ AH/RA/PA/TSA/NA/DHI. منبع رندوم: '+data.source],
+      mo:{throws:[comp.f1.en, comp.f2.en], omen:{n:comp.omenIndex, en:o.en, fa:o.fa, grade:o.g}, double:comp.isDouble, rel:comp.rel.t}
+    };
+  }
+  if(ana && ana.textContent) lastResult.analysis=(isI? '— گزارش ای‌چینگ —\n' : '— گزارش فال مو —\n')+comp.reportLines.join('\n');
+}
+async function runEngine(spread, src){
+  const isI=spread.engine==='iching';
+  btn.disabled=true;
+  btn.textContent=isI? '⏳ در حال ریختن سکه‌ها...' : '⏳ در حال پرتاب تاس...';
+  if(src!=='local' && !navigator.onLine){ showError('اینترنت وصل نیست؛ منبع آفلاین را انتخاب کن.'); btn.disabled=false; btn.textContent=defaultBtnLabel(); return; }
+  if(src!=='local') showStatus(isI? 'در حال اتصال به سرور رندوم برای پرتاب ۱۸ سکه...' : 'در حال اتصال به سرور رندوم برای ۲ پرتاب تاس...');
+  try{
+    const data=await acquireEngineRaw(src);
+    const comp=isI? ichingCompute(data.raw) : moCompute(data.raw);
+    lastData=data;
+    renderEngineResult(spread, data, isI, comp);
+    hideStatus();
+    if(src!=='local') showStatus('✅ از '+data.source+' — '+data.apiCalls+' درخواست خام.');
+  }catch(e){
+    hideStatus(); showError((e&&e.message)||String(e));
+  }finally{
+    btn.disabled=false; btn.textContent=defaultBtnLabel();
+  }
+}
+function defaultBtnLabel(){
+  const e=(typeof activeSpread!=='undefined' && activeSpread)? activeSpread.engine : null;
+  return e==='iching'? '☯️ سکه‌ها رو بریز' : e==='mo'? '🎲 تاس رو پرتاب کن' : '🔮 کارت‌ها رو بکش';
+}
+
 const btn=document.getElementById('generateBtn');
 const resultsDiv=document.getElementById('results');
 const errorDiv=document.getElementById('error');
@@ -1461,7 +2010,7 @@ function renderSpreadInfo(){
   spreadInfo.innerHTML=`
     <div class="si-head">
       <span class="si-name">${spreadLabel(s)}</span>
-      <span class="si-count">${cards} کارت</span>
+      ${s.engine? '<span class="si-count">'+s.engineTag+'</span>' : '<span class="si-count">'+cards+' کارت</span>'}
       ${s.deck==='lenormand'? '<span class="si-count">🃏 دستهٔ لنورماند (۳۶ کارت)</span>':''}
       ${s.notRecommended? '<span class="si-nr">⛔ NOT RECOMMENDED</span>':''}
       ${s.custom? '<button class="si-edit" id="editTitles">✏️ ویرایش تیترها</button>':''}
@@ -1510,6 +2059,7 @@ function applySpread(id, opts){
     input.value=lastFreeCount||10;
   }
   if(!opts.silent && s.id!=='custom' && !s.gt) prevSpreadId=s.id;
+  btn.textContent=defaultBtnLabel();
   renderSpreadInfo();
 }
 
@@ -1521,9 +2071,12 @@ input.addEventListener('input', ()=>{
 
 sourceSel.addEventListener('change', ()=>{
   const v=sourceSel.value;
-  netBadge.textContent = v==='local'? '🔮 تاروت • ۷۸ کارت • آفلاین امن'
-    : v==='quantum'? '⚛️ تاروت • منبع کوانتومی (نیاز به اینترنت)'
-    : '🌩️ تاروت • منبع اتمسفری (نیاز به اینترنت)';
+  const eng=activeSpread.engine;
+  netBadge.textContent = eng==='iching'? (v==='local'? '☯️ ای‌چینگ • ۳ سکه • آفلاین امن' : v==='quantum'? '☯️ ای‌چینگ • منبع کوانتومی (نیاز به اینترنت)' : '☯️ ای‌چینگ • منبع اتمسفری (نیاز به اینترنت)')
+    : eng==='mo'? (v==='local'? '⛩️ فال مو • تاس میپام • آفلاین امن' : v==='quantum'? '⛩️ فال مو • منبع کوانتومی (نیاز به اینترنت)' : '⛩️ فال مو • منبع اتمسفری (نیاز به اینترنت)')
+    : v==='local'? '🔮 تاروت/لنورماند • آفلاین امن'
+    : v==='quantum'? '⚛️ تاروت/لنورماند • منبع کوانتومی (نیاز به اینترنت)'
+    : '🌩️ تاروت/لنورماند • منبع اتمسفری (نیاز به اینترنت)';
   renderSpreadInfo();   // توضیح روش رندوم هم به‌روز شود
 });
 
@@ -1977,6 +2530,7 @@ function tetractysAnalysis(cards, tmeta){
   return {el:analysisBlock('🔺 هم‌خوانی عناصر با ردیف‌های هرم', L), text:'— هم‌خوانی عناصر با ردیف‌های هرم —\n'+L.join('\n')};
 }
 
+
 // ماندالای پنج بودا: هم‌خوانی عنصر کارت با عنصر هر دروازه
 function dhyaniAnalysis(cards, tmeta){
   if(cards.length!==5 || !tmeta) return null;
@@ -2277,6 +2831,7 @@ function gtAnalysis(data, cards, cells){
 async function run(){
   hideError(); hideStatus();
   const spread=activeSpread;
+  if(spread.engine){ await runEngine(spread, sourceSel.value); return; }
   const deckSize = spread.deck==='lenormand'? 36 : 78;
   let count = spread.cards || parseInt(input.value,10);
   if(isNaN(count)){ showError('تعداد کارت رو وارد کن'); return; }
@@ -2286,7 +2841,7 @@ async function run(){
   btn.disabled=true;
   const src=sourceSel.value;
   btn.textContent = src==='local'? '⏳ در حال بر زدن...' : '⏳ در حال دریافت از اینترنت...';
-  if(src!=='local' && !navigator.onLine){ showError('اینترنت وصل نیست؛ منبع آفلاین را انتخاب کن.'); btn.disabled=false; btn.textContent='🔮 کارت‌ها رو بکش'; return; }
+  if(src!=='local' && !navigator.onLine){ showError('اینترنت وصل نیست؛ منبع آفلاین را انتخاب کن.'); btn.disabled=false; btn.textContent=defaultBtnLabel(); return; }
   if(src!=='local') showStatus('در حال اتصال به سرور رندوم...');
 
   try{
@@ -2301,7 +2856,7 @@ async function run(){
   }catch(e){
     hideStatus(); showError(e.message);
   }finally{
-    btn.disabled=false; btn.textContent='🔮 کارت‌ها رو بکش';
+    btn.disabled=false; btn.textContent=defaultBtnLabel();
   }
 }
 btn.addEventListener('click', run);
@@ -2433,7 +2988,7 @@ function downloadFile(content, filename, mime){
 document.getElementById('dlTxt').addEventListener('click', ()=>{
   if(!lastResult){ toast('اول کارت بکش','bad'); return; }
   const head='فال: '+lastResult.spread.name+'\n'
-    +'تعداد: '+lastResult.requested+' کارت\n'
+    +((lastResult.deck==='iching-64'||lastResult.deck==='tmo-36')? 'واحد: '+lastResult.requested+(lastResult.deck==='iching-64'?' خط (۶ خط × ۳ سکه)':' پرتاب تاس')+'\n' : 'تعداد: '+lastResult.requested+' کارت\n')
     +'منبع: '+lastResult.source+'\n'
     +'روش کشیدن: '+(lastResult.drawMethod==='fan-pick'? 'بادبزنی — انتخاب تصادفی از دستهٔ پهن‌شده' : 'متوالی از بالای دستهٔ بُرخورده')+'\n'
     +'تاریخ: '+lastResult.timestamp+'\n'
