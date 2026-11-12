@@ -89,8 +89,8 @@
   .card{position:relative}
   .guide-btn{position:absolute;top:16px;left:16px;z-index:5;display:inline-flex;align-items:center;gap:6px;background:rgba(168,85,247,.16);border:1px solid rgba(168,85,247,.35);color:#d8b4fe;font-size:11px;font-weight:700;padding:7px 13px;border-radius:999px;cursor:pointer;transition:.2s}
   .guide-btn:hover{background:rgba(168,85,247,.28);color:#f3e8ff;box-shadow:0 0 18px rgba(168,85,247,.35)}
-  .history-btn{top:58px;background:rgba(251,191,36,.12);border-color:rgba(251,191,36,.35);color:#fde68a}
-  .history-btn:hover{background:rgba(251,191,36,.22);color:#fffbeb;box-shadow:0 0 18px rgba(251,191,36,.3)}
+  .guide-btn.history-btn{top:58px;background:rgba(251,191,36,.12);border-color:rgba(251,191,36,.35);color:#fde68a}
+  .guide-btn.history-btn:hover{background:rgba(251,191,36,.22);color:#fffbeb;box-shadow:0 0 18px rgba(251,191,36,.3)}
   /* ---- دکمهٔ تغییر تقویم (شمسی/میلادی) ---- */
   .caltoggle{background:rgba(251,191,36,.14);border:1px solid rgba(251,191,36,.4);color:#fde68a;font-size:10.5px;font-weight:800;border-radius:999px;padding:6px 12px;cursor:pointer;transition:.2s;white-space:nowrap}
   .caltoggle:hover{background:rgba(251,191,36,.26)}
@@ -144,7 +144,7 @@
   .g-en{text-align:center;font-family:'Barlow',sans-serif;font-size:9.5px;color:#8f86c0;letter-spacing:1.3px;margin-top:3px;text-transform:uppercase}
   .g-desc{margin-top:8px;font-size:11px;line-height:2.15;color:#c9c4ee;text-align:right}
   .g-foot{border-top:1px dashed rgba(252,211,77,.3);padding:10px 6px 2px;font-size:10.5px;line-height:2.15;color:#e7d9a8}
-  @media(max-width:640px){.guide-btn{top:10px;left:10px;font-size:10px;padding:6px 10px}}
+  @media(max-width:640px){.guide-btn{top:10px;left:10px;font-size:10px;padding:6px 10px}.guide-btn.history-btn{top:46px}}
   .si-pos{display:flex;flex-wrap:wrap;gap:6px}
   .chip{font-size:10.5px;line-height:1.6;color:#e9d5ff;background:rgba(15,10,26,0.5);border:1px solid rgba(167,139,250,0.3);border-radius:999px;padding:4px 10px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .chip i{color:#a78bfa;font-style:normal;margin-inline-end:4px}

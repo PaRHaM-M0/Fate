@@ -9,7 +9,7 @@
 
 ![PWA](https://img.shields.io/badge/PWA-installable-7c3aed?style=for-the-badge&labelColor=17112a)
 ![Offline](https://img.shields.io/badge/offline-ready-10b981?style=for-the-badge&labelColor=17112a)
-![Version](https://img.shields.io/badge/version-1.3.0-ec4899?style=for-the-badge&labelColor=17112a)
+![Version](https://img.shields.io/badge/version-1.3.1-ec4899?style=for-the-badge&labelColor=17112a)
 ![SemVer](https://img.shields.io/badge/semver-2.0-f59e0b?style=for-the-badge&labelColor=17112a)
 ![No build](https://img.shields.io/badge/build-none-22d3ee?style=for-the-badge&labelColor=17112a)
 
@@ -105,7 +105,8 @@ CHANGELOG.md     تاریخچهٔ نسخه‌ها (Keep a Changelog + SemVer)
 
 نگاه کن به **[CHANGELOG.md](CHANGELOG.md)** — قالب Keep a Changelog، نسخه‌بندی SemVer.
 
-**آخرین (v1.3.0):** دکمهٔ 🕘 تاریخچه + موتور تاریخچهٔ ماه (گروه‌بندی‌شده، قابل بازیابی، تقویم شمسی/میلادی).
+**آخرین (v1.3.1):** اصلاحِ جایگیری دکمه‌های راهنما و تاریخچه در موبایل.
+**v1.3.0:** دکمهٔ 🕘 تاریخچه + موتور تاریخچهٔ ماه (گروه‌بندی‌شده، قابل بازیابی، تقویم شمسی/میلادی).
 **v1.2.0:** نقطهٔ وضعیت زمانیِ لحظه‌ای + راهنمای فال‌ها + باکس زمان‌بندی در هر فال.
 
 ## 🛠️ توسعه
