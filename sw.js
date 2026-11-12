@@ -1,7 +1,7 @@
 /* Fate — Service Worker
    پوستهٔ برنامه هنگام نصب یک‌جا کش می‌شود تا اپ کاملاً آفلاین باز شود.
    درخواست‌های بیرونی (سرویس‌های رندوم آنلاین) هرگز کش نمی‌شوند. */
-const CACHE_VERSION = 'fate-v1.1.1';
+const CACHE_VERSION = 'fate-v1.3.0';
 const STATIC_CACHE = CACHE_VERSION + '-static';
 
 const CORE_URLS = [
