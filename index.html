@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fate</title>
-<meta name="description" content="فال تاروت، لنورماند، ای‌چینگ و فال مو با رندوم واقعی (کوانتومی، اتمسفری، آفلاین) — با راهنمای زمان‌بندی سنت‌ها">
+<title>Fate — فال تاروت، لنورماند، ای‌چینگ، لیتومانسی و رونزهای الدر فوتارک</title>
+<meta name="description" content="فال تاروت، لنورماند، ای‌چینگ، فال مو، لیتومانسی (شانزده سنگِ هرمسی) و رونزهای الدر فوتارک با رندوم واقعی (کوانتومی، اتمسفری، آفلاین) — با راهنمای زمان‌بندی سنت‌ها">
 <link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#17112a">
 <meta name="mobile-web-app-capable" content="yes">
@@ -385,10 +385,75 @@
   .mo-omen.g-dual{border-color:rgba(251,146,60,0.5)} .mo-omen.g-dual .mo-omen-grade{color:#fb923c}
   .mo-omen.g-bad{border-color:rgba(248,113,113,0.5);box-shadow:0 0 22px rgba(248,113,113,0.12)} .mo-omen.g-bad .mo-omen-grade{color:#f87171}
 </style>
+<style id="engine2-css">
+/* ===== موتورهای نوینِ فال‌های بومی و باستانی (لیتومانسی + رونزهای الدر فوتارک) ===== */
+@font-face{font-family:'Noto Sans Runic';font-style:normal;font-weight:400;font-display:swap;src:url(data:font/woff2;base64,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) format('woff2');unicode-range:U+16A0-16F8;}
+.rune-glyph{font-family:'Noto Sans Runic',ui-serif,serif;line-height:1}
+/* --- لیتومانسی --- */
+.litho-board-wrap{display:flex;flex-direction:column;align-items:center;gap:10px}
+.litho-svg{width:100%;max-width:410px;height:auto;display:block;filter:drop-shadow(0 10px 26px rgba(0,0,0,.5))}
+.lb-card{fill:#dfe6ff;font-size:6.6px;letter-spacing:.3px}
+.lb-ring-lbl{fill:#aab8ff;font-size:5.4px;opacity:.8;paint-order:stroke;stroke:#141b38;stroke-width:2.6}
+.lb-bary{fill:#fde68a;font-size:16px;font-weight:800;paint-order:stroke;stroke:#0b1030;stroke-width:2.6}
+.litho-legend{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.litho-stone{display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.32);border:1px solid rgba(167,139,250,.28);border-radius:999px;padding:4px 12px 4px 6px;font-size:11px;color:#e5e7eb}
+.litho-stone .dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,.4);flex:0 0 auto}
+.litho-stone b{color:#fff;font-weight:700}
+.litho-stone .lost-tag{color:#fda4af;font-style:normal;font-size:9.5px}
+.litho-note{font-size:10.5px;color:#a5b4fc;opacity:.95;text-align:center;line-height:2}
+.litho-shadow{background:rgba(30,27,75,.55);border:1px solid rgba(165,180,252,.4);border-radius:12px;padding:8px 14px;font-size:11.5px;line-height:2.1;color:#e0e7ff;max-width:520px;text-align:center}
+.litho-shadow b{color:#fff}
+/* --- رونزها --- */
+.rune-cross-wrap{display:flex;flex-direction:column;gap:8px}
+.rune-cross{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-areas:'. crown .' 'urder center skuld' '. root .';gap:10px;max-width:560px;margin:0 auto;width:100%;direction:ltr}
+.rune-cell{direction:rtl;min-width:0}
+.rune-cell.pos1{grid-area:urder}.rune-cell.pos2{grid-area:center}.rune-cell.pos3{grid-area:skuld}.rune-cell.pos4{grid-area:root}.rune-cell.pos5{grid-area:crown}
+.rune-tile{background:linear-gradient(165deg,rgba(30,41,59,.92),rgba(15,23,42,.94));border:1px solid rgba(167,139,250,.35);border-radius:16px;padding:10px 8px;text-align:center;display:flex;flex-direction:column;gap:5px;align-items:center;height:100%;justify-content:center}
+.rune-tile.center-cell{border-color:rgba(253,224,71,.6);box-shadow:0 0 26px rgba(253,224,71,.16),inset 0 0 22px rgba(253,224,71,.06)}
+.rune-pos{font-size:9.5px;color:#c4b5fd;font-weight:800;line-height:1.7}
+.rune-pos span{display:block;color:#8b9cc9;font-weight:600;font-size:8.5px}
+.rune-glyph-big{font-size:50px;line-height:1.15;color:#f1f5ff;text-shadow:0 0 20px rgba(129,140,248,.5)}
+.rune-glyph-big.merk{transform:rotate(180deg);color:#fda4af;text-shadow:0 0 20px rgba(244,63,94,.45)}
+.rune-name{font-size:12px;color:#fff;font-weight:800}
+.rune-fa{color:#c4b5fd;font-weight:600;font-size:10.5px}
+.rune-meta{font-size:9px;color:#9fb3d8;line-height:1.9}
+.aett-badge{display:inline-block;font-size:8.5px;border-radius:999px;padding:0 8px;border:1px solid rgba(147,197,253,.4);color:#bfdbfe;background:rgba(59,130,246,.15)}
+.pol-up,.pol-merk,.pol-symL,.pol-symD{display:inline-block;font-size:9.5px;border-radius:999px;padding:2px 10px;font-weight:800;line-height:1.8}
+.pol-up{background:rgba(52,211,153,.16);color:#6ee7b7;border:1px solid rgba(52,211,153,.45)}
+.pol-merk{background:rgba(244,63,94,.16);color:#fda4af;border:1px solid rgba(244,63,94,.45)}
+.pol-symL{background:rgba(250,204,21,.13);color:#fde68a;border:1px solid rgba(250,204,21,.4)}
+.pol-symD{background:rgba(168,85,247,.15);color:#d8b4fe;border:1px solid rgba(168,85,247,.42)}
+.rune-kw{font-size:9.5px;color:#cbd5e1;line-height:1.9;min-height:2.4em}
+.rune-cross-note{font-size:10px;color:#8b9cc9;text-align:center;line-height:2}
+.jumper-strip{background:rgba(251,146,60,.1);border:1px solid rgba(251,146,60,.5);border-radius:12px;padding:9px 14px;font-size:11.5px;line-height:2.15;color:#fed7aa}
+.shadow-strip{background:rgba(76,29,149,.22);border:1px solid rgba(196,181,253,.45);border-radius:12px;padding:9px 14px;font-size:11.5px;line-height:2.15;color:#e9d5ff}
+.jumper-strip b,.shadow-strip b{color:#fff}
+.ginnungagap{background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.55);border-radius:12px;padding:9px 14px;font-size:12px;line-height:2.15;color:#fecaca}
+.ginnungagap b{color:#fff}
+.bindrune-card{display:flex;align-items:center;gap:16px;background:radial-gradient(130% 170% at 50% -10%,rgba(124,58,237,.34),rgba(0,0,0,.42));border:1px solid rgba(192,132,252,.5);border-radius:18px;padding:14px 18px}
+.br-glyph{font-size:60px;line-height:1;color:#e9d5ff;text-shadow:0 0 26px rgba(192,132,252,.65);flex:0 0 auto}
+.br-info{display:flex;flex-direction:column;gap:5px;min-width:0}
+.br-title{font-size:11.5px;color:#d8b4fe;font-weight:800}
+.br-formula{font-size:11px;color:#c4b5fd;line-height:2}
+.br-formula b{color:#fff}
+.br-name{font-size:13.5px;color:#fff;font-weight:800}
+.br-name span{color:#c4b5fd;font-weight:600;font-size:11px}
+.br-sub{font-size:10.5px;color:#a5b4fc;line-height:2}
+@media(max-width:560px){
+  .rune-cross{gap:6px}
+  .rune-tile{padding:8px 5px;gap:4px;border-radius:12px}
+  .rune-glyph-big{font-size:36px}
+  .rune-kw{display:none}
+  .rune-name{font-size:10.5px}
+  .br-glyph{font-size:46px}
+  .bindrune-card{gap:12px;padding:12px 14px}
+  .litho-svg{max-width:330px}
+}
+</style>
 </head>
 <body>
 <div class="card">
-  <button id="guideBtn" class="guide-btn" type="button" title="راهنمای همهٔ ۳۵ فال برنامه">📖 راهنمای فال‌ها</button>
+  <button id="guideBtn" class="guide-btn" type="button" title="راهنمای همهٔ ۳۷ فال برنامه">📖 راهنمای فال‌ها</button>
   <button id="historyBtn" class="guide-btn history-btn" type="button" title="تاریخچهٔ فال‌های این ماه — قابل بازیابی با یک لمس">🕘 تاریخچه</button>
   <h1>فال تاروت</h1>
 
@@ -532,7 +597,7 @@
 <div class="overlay" id="guideOverlay" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
   <div class="modal guide-modal">
     <div class="mhead"><b id="guideTitle">📖 راهنمای فال‌ها</b><button class="mclose" id="guideClose">✕ بستن</button></div>
-    <div class="mnote">هر ۳۵ فال برنامه — از سریع و نقطه‌زن تا عمیق و عرفانی، از غربی تا شرقی. جلوی هر اسم، نقطهٔ وضعیت <b>همین لحظه</b> نشسته است؛ اسم انگلیسی زیر هر فال وسط‌چین و توضیحش زیرش راست‌چین است.</div>
+    <div class="mnote">هر ۳۷ فال برنامه — از سریع و نقطه‌زن تا عمیق و عرفانی، از غربی تا شرقی. جلوی هر اسم، نقطهٔ وضعیت <b>همین لحظه</b> نشسته است؛ اسم انگلیسی زیر هر فال وسط‌چین و توضیحش زیرش راست‌چین است.</div>
     <div class="guide-body" id="guideBody"></div>
     <div class="g-foot">🚦 <b>قانون‌های طلایی همهٔ سنت‌ها:</b> ① در اوج هیجان (خشم، گریه، وحشت یا مستی) هرگز فال مگیر — فال همان لحظه را آینه می‌کند؛ اول ۱۰ دقیقه آرام شو. ② با چشم‌های از خستگی‌سوخته (نیمه‌شب به بعد) نیا — شهود خوابیده است. ③ همان سؤال را در همان روز یا همان هفته تکرار مکن (هگزاگرام ۴، Meng): اولین جواب، خالص‌ترین جواب است؛ تکرار یعنی بی‌حرمتی به اوراکل. ④ نقطه‌ها بر پایهٔ ساعت محلی دستگاه، طلوع و غروب واقعی، روز هفته، تقویم شمسی و فاز ماه محاسبه می‌شوند.</div>
     <div class="mbtns"><button id="guideOk" class="primary">فهمیدم 🌙</button></div>
@@ -674,9 +739,11 @@ const READING_NOTE={
   dhyani:'نوع خوانش: چیدمانِ درون‌نگری و کهن‌الگویی (اقتباسِ مدرنِ تاروت از سنتِ شرقی — تمرکز بر کالبدشکافیِ روانی و معنوی، نه پیش‌بینیِ حوادثِ مادی).',
   valleys:'نوع خوانش: چیدمانِ درون‌نگری و کهن‌الگویی (اقتباسِ مدرنِ تاروت از سنتِ شرقی — تمرکز بر کالبدشکافیِ روانی و معنوی، نه پیش‌بینیِ حوادثِ مادی).',
   samsara:'نوع خوانش: چیدمانِ درون‌نگری و کهن‌الگویی (اقتباسِ مدرنِ تاروت از سنتِ شرقی — تمرکز بر کالبدشکافیِ روانی و معنوی، نه پیش‌بینیِ حوادثِ مادی).',
-  loshu:'نوع خوانش: چیدمانِ اقتباسی (مربع جادویی لو شو به‌عنوان قابِ تاروت — نقشهٔ حوزه‌های زندگی و فنگ‌شویی؛ ترکیبی از درون‌نگری و ارزیابیِ زمینه‌های مادی).'
+  loshu:'نوع خوانش: چیدمانِ اقتباسی (مربع جادویی لو شو به‌عنوان قابِ تاروت — نقشهٔ حوزه‌های زندگی و فنگ‌شویی؛ ترکیبی از درون‌نگری و ارزیابیِ زمینه‌های مادی).',
+  litho:'نوع خوانش: سنگ‌خوانیِ هرمسی — نقشهٔ میدان و تکنیک؛ انرژی‌های حاکم بر موقعیت را نشان می‌دهد، نه ضمانتِ یک رویداد خاص؛ برای نیت‌های باز و کیهانی طراحی شده است.',
+  runes:'نوع خوانش: اوراکلِ رونیک — سه نورن (گذشته/اکنون/آینده) و ستونِ ایگدراسیل؛ رونزها مستقیم و بی‌تعارف سخن می‌گویند؛ پاسخ‌ها را با صراحتِ خودشان بپذیر.'
 };
-const SPREAD_EN={free:'Free Draw',one:'One Card',two:'Crossroads',yesno:'Yes or No',blind:'Johari Window',cross5:'Simple Cross',compat:'Compatibility',karma:'Karmic Lessons',horseshoe:'Horseshoe',mirror:'Relationship Mirror',fork:'Fork of Fate',ankh:'Ankh',celtic:'Celtic Cross',tree:'Tree of Life',zodiac:'Year Wheel',houses:'12 Houses',matrix:'Life Matrix',custom:'Custom 3-Card',wealth:'Wealth Path',tetractys:'Tetractys',chakra:'Seven Chakras',dhyani:'Five Dhyani Buddhas',valleys:'Seven Valleys',samsara:'Wheel of Samsara',loshu:'Lo Shu Square',iching:'I Ching (Three-Coin Method)',tmo:'Tibetan Mo (Mipham 36)',portrait9:'Lenormand Portrait',romany:'Romany Spread',decan36:'36 Decans',gt:'Grand Tableau'};
+const SPREAD_EN={free:'Free Draw',one:'One Card',two:'Crossroads',yesno:'Yes or No',blind:'Johari Window',cross5:'Simple Cross',compat:'Compatibility',karma:'Karmic Lessons',horseshoe:'Horseshoe',mirror:'Relationship Mirror',fork:'Fork of Fate',ankh:'Ankh',celtic:'Celtic Cross',tree:'Tree of Life',zodiac:'Year Wheel',houses:'12 Houses',matrix:'Life Matrix',custom:'Custom 3-Card',wealth:'Wealth Path',tetractys:'Tetractys',chakra:'Seven Chakras',dhyani:'Five Dhyani Buddhas',valleys:'Seven Valleys',samsara:'Wheel of Samsara',loshu:'Lo Shu Square',iching:'I Ching (Three-Coin Method)',tmo:'Tibetan Mo (Mipham 36)',litho:'Lithomancy (Sixteen Hermetic Stones)',runes:'Elder Futhark — Three Norns & Yggdrasil',portrait9:'Lenormand Portrait',romany:'Romany Spread',decan36:'36 Decans',gt:'Grand Tableau'};
 
 // کارت‌های ذاتاً تاریک: وارونه‌شدنشان «منفی در منفی» است و از شدت معنیِ سخت می‌کاهد
 const DARK_CARDS=new Set(['The Tower','The Devil','Death','Three of Swords','Nine of Swords','Ten of Swords','Five of Pentacles','Five of Cups']);
@@ -1548,8 +1615,8 @@ const SPREADS = [
    guide:'قفس آماده را کنار بگذار: خودت برای هر کارت تیتر می‌نویسی (مثلاً «وضعیت موتور / وضعیت بدنه / آیا قیمتش منصفانه است؟») و همان تیترها کنار کارت و در خروجی می‌آیند. برای سؤال‌های عجیب‌وغریب که هیچ چیدمانی براشان تعریف نشده — از «این لپ‌تاپ را بخرم؟» تا «وضعیت امتحان نهایی چیست؟» — ساخته شده است.',
    rows:[{label:null, cols:3, pos:[]}], custom:true},
 
-  /* ---------- ⛩️ پیش‌گویی‌های بومی شرق ---------- */
-  {id:'iching', group:'⛩️ پیش‌گویی‌های بومی شرق', name:'ای‌چینگ — کتاب تغییرات (روش ۳ سکه)', icon:'☯️', cards:6, engine:'iching', engineTag:'۶ خط • ۱۸ سکه',
+  /* ---------- ⛩️ پیش‌گویی‌های بومی و باستانی (غیرکارتی) ---------- */
+  {id:'iching', group:'⛩️ پیش‌گویی‌های بومی و باستانی (غیرکارتی)', name:'ای‌چینگ — کتاب تغییرات (روش ۳ سکه)', icon:'☯️', cards:6, engine:'iching', engineTag:'۶ خط • ۱۸ سکه',
    why:'کهن‌ترین متن پیش‌گویی جهان (سوزندِ چین، حدود ۱۲۰۰ پیش از میلاد): شش خط از پرتاب سه سکهٔ باستانی ساخته می‌شود؛ هگزاگرام اصلی، هسته‌ای (互卦)، متحول (之卦)، وارونه (Zong) و متضاد (Cuo) + قانون چو شی + چرخهٔ پنج عنصرِ وو شینگ. هیچ کارتی کشیده نمی‌شود؛ همان سیستم رندوم برنامه سکه‌ها را می‌سازد.',
    intent:'ای‌چینگ «موقعیت و تغییر» می‌دهد، نه پیش‌گوییِ یک رویداد؛ نیت را روی یک وضعیتِ در حال جریان ببند و بپرس «کجای این ماجرا ایستاده‌ام و انرژی به کدام سمت است؟» — انتظار بله/خیر نداشته باش.',
    en:'I Ching — Book of Changes (Three-Coin)', time:'morning',
@@ -1563,7 +1630,7 @@ const SPREADS = [
      {t:'خط ۵ (فرمانروا)', h:'موقعیت مرکزیِ بیرون'},
      {t:'خط ۶ (اوج / بالاترین)', h:'نتیجه و اوج'}]}]},
 
-  {id:'tmo', group:'⛩️ پیش‌گویی‌های بومی شرق', name:'فال مو — تاس مانجوشری (میپام رینپوچه)', icon:'⛩️', cards:2, engine:'mo', engineTag:'۲ پرتاب تاس',
+  {id:'tmo', group:'⛩️ پیش‌گویی‌های بومی و باستانی (غیرکارتی)', name:'فال مو — تاس مانجوشری (میپام رینپوچه)', icon:'⛩️', cards:2, engine:'mo', engineTag:'۲ پرتاب تاس',
    why:'اصیل‌ترین روش پیش‌گویی بودیسمِ تبت (اثرِ جامگون میپام رینپوچه بر پایهٔ مانترای ཨ་ར་པ་ཙ་ན་དྷཱིཿ): یک تاسِ ۶ وجهی با ۶ هجای مقدس، دو بار پیاپی پرتاب می‌شود (ترتیب جابه‌جا نمی‌شود)؛ جدولِ اصیل ۳۶ طالع + تحلیلِ تعاملِ دو عنصر (درون × بیرون) + خانوادهٔ بوداییِ حاکم.',
    intent:'برای یک کار یا تصمیم مشخص («آیا این کار را بکنم یا نه؟ / اوضاع این پیشامد چطور است؟»)؛ یک سؤال روشن در ذهن داشته باش — جهت را نشان می‌دهد، نه ضمانت.',
    en:'Tibetan Mo — The Dice Oracle of Mipham Rinpoche', time:'morning',
@@ -1572,6 +1639,32 @@ const SPREADS = [
    rows:[{label:'دو پرتاب متوالی', cols:2, pos:[
      {t:'پرتاب اول — ریشه / درون / فاعل', h:'ذات و بنیاد'},
      {t:'پرتاب دوم — شاخه / بیرون / نتیجه', h:'بازتاب و شکلِ بیرونی'}]}]},
+
+  {id:'litho', group:'⛩️ پیش‌گویی‌های بومی و باستانی (غیرکارتی)', name:'لیتومانسی — سنگ‌چینیِ هرمسی (۱۶ سنگ)', icon:'🪨', cards:5, engine:'litho', engineTag:'۵ سنگ از ۱۶ • پارچهٔ دایره‌ای',
+   why:'کهن‌ترین سنت سنگ‌خوانیِ غرب (با ریشه در هرمس تریسمجیستوس و کیمیاگرانِ اسکندریه تا اروپای رنسانس): شانزده سنگِ کیهانی — هفت سیاره‌ای (سیترین/خورشید، سنگ‌ماه/ماه، عقیق سربندی/عطارد، کوارتز گلگون/ناهید، یشم سرخ/مریخ، لاجورد/مشتری، ابسیدین سیاه/زحل)، چهار عنصری (کارنلین آتش، آکوامارین آب، فلوریت باد، جید سبز خاک) و پنج سنگِ روح و گره‌های ماه (کوارتز شفاف — تقویت‌کننده، آمیتیست ☊، چشم ببر، مالاکیت، کوارتز دودی ☋) — داخل کیسه تکان داده می‌شوند؛ پنج سنگ به ترتیب برداشته و روی پارچهٔ دایره‌ای به شعاع ۱۰۰ واحد پرتاب می‌شوند. توزیع پرتاب، یکنواختِ مساحتی است (r=۱۰۱·√u؛ سنگی که r>۱۰۰ درآید — احتمال ≈۱٫۹۷٪ — «خارج از کنترل» خوانده می‌شود). برخورد فیزیکی طبق قاعدهٔ جداسازی تا d=۹٫۲ حل می‌شود؛ سه حلقه (مرکز اکنون / میدان تکوین / افق)، چهار ربع (شمال خاک، شرق باد، جنوب آتش، غرب آب)، شأن عنصری، توازن نوری، مرکزِ ثقل و سنگِ تهِ کیسه خودکار خوانده می‌شوند.',
+   intent:'نیت را کیهانی و باز ببند — لیتومانسی «نقشهٔ میدان» می‌دهد نه جوابِ بله/خیر؛ «وضعیتِ کلی این موقعیت چیست و انرژی به کدام سمت است؟» — برای سؤال‌های دقیقِ لحظه‌ای به تاروت برو.',
+   en:'Lithomancy — The Sixteen Hermetic Stones', time:'day',
+   timeNote:'نور روز بهترین دوستِ سنگ‌خوان است؛ آفتاب حقیقتِ هر سنگ را بی‌پرده نشان می‌دهد. شب با شمع ممکن است اما دقتِ خوانش افت می‌کند — هیچ‌وقت با چشم‌های خواب‌آلوده نخوان.',
+   guide:'کهن‌ترین سنت سنگ‌خوانیِ غرب: شانزده سنگِ کیهانی (هفت سیاره‌ای + چهار عنصری + پنج روح/گره) داخل کیسه تکان داده می‌شوند؛ پنج سنگ به ترتیب برداشته و روی پارچهٔ دایره‌ای پرتاب می‌شوند. برنامه موقعیت هر سنگ را با فیزیک واقعی محاسبه می‌کند (توزیع یکنواخت مساحت؛ جداسازی برخوردها تا d=۹٫۲؛ r>۱۰۰ یعنی از پارچه بیرون غلتیده) و سپس خودکار می‌خواند: سنگِ مرجع (نزدیک‌ترین به مرکز)، هم‌جوشی/هم‌نشینی (d≤۱۶ / ۱۶<d≤۳۲)، تقویطِ کوارتز شفاف، سنگ‌های تنها (d>۵۵)، روبه‌رویی قطبی (۱۵۰°–۱۸۰°)، شأن عنصری در ربع‌ها، توازن نوری (شفاف/نیمه‌شفاف/کدر)، مرکزِ ثقل و زاویهٔ غالب، سنگِ تهِ کیسه (سایهٔ فال) و برخوردهای فیزیکی. این فال را برای «تصویرِ کلی» بگیر، نه جوابِ بله/خیر.',
+   rows:[{label:'پنج سنگ — ترتیبِ برداشت (۱ = اولین کشیده‌شده)', cols:5, pos:[
+     {t:'سنگ ۱ — اولین برداشت', h:'انرژیِ آغازینِ میدان'},
+     {t:'سنگ ۲', h:'بنیاد و زمینِ زیر ماجرا'},
+     {t:'سنگ ۳ — میان', h:'نقطهٔ مرکزی خوانش'},
+     {t:'سنگ ۴', h:'شکل‌دهندهٔ مسیر'},
+     {t:'سنگ ۵ — آخرین برداشت', h:'نتیجهٔ ظاهر'}]}]},
+
+  {id:'runes', group:'⛩️ پیش‌گویی‌های بومی و باستانی (غیرکارتی)', name:'رونزهای الدر فوتارک — سه نورن و ستون ایگدراسیل', icon:'🌳', cards:5, engine:'runes', engineTag:'۵ رونز از ۲۴ • صلیب اودین',
+   why:'اصیل‌ترین سنت رونیکِ ژرمنی‌ها و اسکاندیناوی‌های کهن (الدر فوتارک، ~۱۵۰–۸۰۰ میلادی): بیست‌وچهار رونز در سه اِته‌ر ۸تایی (اِته‌ر ۱ فِریر/فِریا — آفرینش و جهانِ مادی • اِته‌ر ۲ هیمدال/هاگال — کارما، آزمون و بحران • اِته‌ر ۳ تیواز — روح، قانون و جامعه) در کیسهٔ آویخته ریخته می‌شوند؛ پنج رونز به ترتیب کشیده و در صلیب اودین می‌نشینند: Urðr (گذشته/ریشه، غرب) • Verðandi (اکنون، مرکز) • Skuld (آینده/بدهی کارمایی، شرق) • ریشهٔ جهان در نیفلهایم (پایین — ترس پنهان) • تاج در آسگارد (بالا — نتیجه). ۱۵ رونز نامتقارن ~۲۸٪ احتمالِ معکوس شدن (مرک‌ستاو) دارند؛ ۹ رونز متقارن هرگز وارونه فهمیده نمی‌شوند و قطبیت‌شان با همسایه‌ها حل می‌شود (همسایهٔ مرک‌ستاو یا یکی از چهار رونزِ زهرآگین #۳ ثوریساز، #۹ هاگالاز، #۱۰ نَوتیث، #۱۱ عیسا ⇒ 🌑 وجه سایه). بعلاوه: رونز جامپر (۲٪ احتمال بیرون پریدن از کیسه — به کیسه بازنگرد)، رونز سایه (Wyrd — تهِ کیسه)، چیرگی اِته‌ر، قطبیت آتش/یخ/ایگدراسیل، گینونگاگاپ در مجاورت مرکز و عصارهٔ رونیک (Bindrune: ((Σn−۱) mod ۲۴)+۱) خودکار محاسبه می‌شوند.',
+   intent:'با نیتِ روشن و بالغ برو؛ رونزها مستقیم سخن می‌گویند. برای تصمیم‌های مشخص («این راه را بروم؟» / «سرنوشتِ این کار چیست؟») عالی است؛ برای شوخی و بازی ممنوع — رونزها به سؤالاتِ بی‌ادب جواب‌های قسم‌خورده می‌دهند.',
+   en:'Elder Futhark — The Three Norns and Yggdrasil (Odin’s Cross)', time:'night',
+   timeNote:'رونزها شب‌زبان‌اند — پس از تاریکی بکش. سه‌شنبه (روز تیواز) و جمعه (روز فِریا) از بقیه قوی‌ترند؛ یکشنبه برای Urðr بهتر است. هیچ‌وقت در اوج هیجان یا با نیتِ شوخی نکش.',
+   guide:'الدر فوتارک — بیست‌وچهار رونز در سه اِته‌ر: اِته‌ر ۱ (فِریر/فِریا — جهان مادی: Fehu تا Wunjo)، اِته‌ر ۲ (هیمدال/هاگال — کارما و آزمون: Hagalaz تا Sowilo)، اِته‌ر ۳ (تیواز — روح، قانون و جامعه: Tiwaz تا Othala). پنج رونز در «صلیب اودین» کشیده می‌شود: Urðr گذشته/ریشه (غرب) • Verðandi اکنون (مرکز) • Skuld آینده/بدهی کارمایی (شرق) • ریشهٔ جهان در نیفلهایم (پایین) • تاج در آسگارد (بالا). برنامه همه‌چیز را خودکار می‌خواند: قطبیت (~۲۸٪ مرک‌ستاو برای ۱۵ نامتقارن؛ ۹ متقارن با همسایه‌ها حل می‌شوند)، رونز جامپر (۲٪ — به کیسه برنمی‌گردد)، رونز سایه (Wyrd — تهِ کیسه)، چیرگی اِته‌ر، شمارش آتش/یخ/ایگدراسیل، گینونگاگاپ در مجاورت مرکز و عصارهٔ رونیک (Bindrune). هیچ «رونزِ بیست‌وپنجمی» وجود ندارد.',
+   rows:[{label:'پنج جایگاهِ صلیب اودین (به ترتیب کشش)', cols:5, pos:[
+     {t:'جایگاه ۱ — Urðr (غرب)', h:'گذشته / ریشه؛ آنچه بود و همچنان می‌سازد'},
+     {t:'جایگاه ۲ — Verðandi (مرکز)', h:'اکنون؛ آنچه همین لحظه هست'},
+     {t:'جایگاه ۳ — Skuld (شرق)', h:'آینده / بدهی کارمایی؛ آنچه می‌آید'},
+     {t:'جایگاه ۴ — ریشهٔ جهان (پایین)', h:'نیفلهایم — ترس پنهانِ زیرِ ماجرا'},
+     {t:'جایگاه ۵ — تاج (بالا)', h:'آسگارد — نتیجه و اوجِ محتمل'}]}]},
 
   /* ---------- شرقی و عرفانی ---------- */
   {id:'dhyani', group:'شرقی و عرفانی', name:'ماندالای پنج بودا (تبت)', icon:'☸️', cards:5,
@@ -2102,24 +2195,466 @@ function renderEngineMo(spread, data, comp){
   resultsDiv.appendChild(ana);
   return ana;
 }
-function finishEngineStats(isI, consumed, apiCalls){
+/* ========== موتور لیتومانسی — Lithomancy (شانزده سنگِ هرمسی) ========== */
+const LITHO_STONES=[
+ {n:1, en:'Citrine', fa:'سیترین', ruler:'خورشید', rulerEn:'Sun · Sol', el:'fire', opt:'transparent', color:'#F59E0B', kw:'شادی، وضوح و ارادهٔ خورشیدی'},
+ {n:2, en:'Moonstone', fa:'سنگ‌ماه', ruler:'ماه', rulerEn:'Moon · Luna', el:'water', opt:'translucent', color:'#E2E8F0', kw:'شهود، رویای کیهانی و جذر و مدِ احساس'},
+ {n:3, en:'Banded Agate', fa:'عقیقِ سربندی', ruler:'عطارد', rulerEn:'Mercury', el:'air', opt:'translucent', color:'#D97706', kw:'گفتار، دادوستد، سفر و چابکیِ ذهن'},
+ {n:4, en:'Rose Quartz', fa:'کوارتزِ گلگون', ruler:'ناهید', rulerEn:'Venus', el:'water', opt:'translucent', color:'#F472B6', kw:'عشق، زیبایی، آشتی و آرامشِ قلب'},
+ {n:5, en:'Red Jasper', fa:'یشمِ سرخ', ruler:'مریخ', rulerEn:'Mars', el:'fire', opt:'opaque', color:'#DC2626', kw:'جرأت، نیروی جسمانی، مرز و اقدام'},
+ {n:6, en:'Lapis Lazuli', fa:'لاجورد', ruler:'مشتری', rulerEn:'Jupiter', el:'air', opt:'opaque', color:'#1D4ED8', kw:'خِرَدِ برتر، گستردگی و خیرِ عام'},
+ {n:7, en:'Black Obsidian', fa:'ابسیدینِ سیاه', ruler:'زحل', rulerEn:'Saturn', el:'earth', opt:'opaque', color:'#1E293B', kw:'حقیقتِ سایه، مرزِ سخت و عمقِ خاموش'},
+ {n:8, en:'Carnelian', fa:'عقیقِ جگری (کارنلین)', ruler:null, rulerEn:null, el:'fire', opt:'translucent', color:'#EA580C', kw:'شورِ زندگی، خلاقیت و شجاعتِ آرام'},
+ {n:9, en:'Aquamarine', fa:'آکوامارین', ruler:null, rulerEn:null, el:'water', opt:'transparent', color:'#06B6D4', kw:'شفافیتِ احساس، صداقت و آرامشِ دریا'},
+ {n:10, en:'Fluorite', fa:'فلوریت', ruler:null, rulerEn:null, el:'air', opt:'transparent', color:'#A855F7', kw:'نظم ذهنی، تمرکز و پاک‌سازیِ فکر'},
+ {n:11, en:'Green Jade', fa:'یشمِ سبز (جید)', ruler:null, rulerEn:null, el:'earth', opt:'opaque', color:'#10B981', kw:'توازن، درستی، رفاه و سلامتِ پایدار'},
+ {n:12, en:'Clear Quartz', fa:'کوارتزِ شفاف', ruler:'روح (تقویت‌کننده)', rulerEn:'Spirit', el:'spirit', opt:'transparent', color:'#F8FAFC', kw:'ذره‌بینِ کیهانی — سنگِ نزدیک را دوچندان می‌کند'},
+ {n:13, en:'Amethyst', fa:'آمیتیستِ بنفش', ruler:'☊ عقدهٔ شمالی', rulerEn:'North Node', el:'spirit', opt:'transparent', color:'#7C3AED', kw:'سلوک، آگاهیِ معنوی و طلبِ ارتقا'},
+ {n:14, en:"Tiger's Eye", fa:'چشمِ ببر', ruler:null, rulerEn:null, el:'fire', opt:'opaque', color:'#B45309', kw:'تمرکزِ عملی، شجاعتِ زمینی و تیزبینی'},
+ {n:15, en:'Malachite', fa:'مالاکیت', ruler:null, rulerEn:null, el:'earth', opt:'opaque', color:'#047857', kw:'تحول، محافظتِ حین تغییر و رهایی از کهنه'},
+ {n:16, en:'Smoky Quartz', fa:'کوارتزِ دودی', ruler:'☋ عقدهٔ جنوبی', rulerEn:'South Node', el:'earth', opt:'translucent', color:'#78716C', kw:'زمین‌گیری، رهاسازی و پذیرشِ ریشه'}
+];
+const LITHO_EL_FA={fire:'آتش',water:'آب',air:'باد',earth:'خاک',spirit:'روح'};
+const LITHO_EL_ICON={fire:'🔥',water:'💧',air:'🌬️',earth:'🌱',spirit:'✨'};
+const LITHO_OPT_SHORT={transparent:'شفاف',translucent:'نیمه‌شفاف',opaque:'کدر'};
+const LITHO_OPT_GLOSS={transparent:'آگاهیِ روشن — پیام‌ها صریح و در دسترس‌اند؛ چیزی زیر پرده نیست.',translucent:'نیمه‌آگاهی — پیام‌ها مه‌آلودند و نیازمند تبدیل و صبر؛ چیزی بین نور و سایه.',opaque:'ناخودآگاه — پیام‌ها زیرپوستی و نیازمند تعمیق؛ ظاهر همه‌چیز را نشان نمی‌دهد.'};
+const LITHO_Q_FA={N:'شمال (خاک 🌱)',E:'شرق (باد 🌬️)',S:'جنوب (آتش 🔥)',W:'غرب (آب 🌊)'};
+const LITHO_Q_EL={N:'earth',E:'air',S:'fire',W:'water'};
+const LITHO_ALLY={fire:'air',air:'fire',water:'earth',earth:'water'};
+const LITHO_ENEMY={fire:'water',water:'fire',air:'earth',earth:'air'};
+function lithoQuarterOf(theta){ const d=(theta*180/Math.PI)%360; if(d<45||d>=315) return 'E'; if(d<135) return 'N'; if(d<225) return 'W'; return 'S'; }
+function lithoDignity(stEl,qEl){
+  if(stEl==='spirit') return {k:'own', t:'هم‌ذات (روح همیشه هم‌ذات است)'};
+  if(stEl===qEl)      return {k:'own', t:'هم‌ذات'};
+  if(LITHO_ALLY[stEl]===qEl)  return {k:'ally', t:'هم‌افزا'};
+  if(LITHO_ENEMY[stEl]===qEl) return {k:'enemy', t:'دشمن'};
+  return {k:'neutral', t:'خنثی'};
+}
+function lithoTextOn(hex){
+  const c=hex.replace('#','');
+  const r=parseInt(c.substr(0,2),16), g=parseInt(c.substr(2,2),16), b=parseInt(c.substr(4,2),16);
+  return (0.2126*r+0.7152*g+0.0722*b) > 150 ? '#0f172a' : '#f8fafc';
+}
+function fa1(x,d){ d=(d===undefined)?1:d; return faNum(x.toFixed(d)).replace('.','٫'); }
+function lithoCompute(rawIn){
+  const raw=rawIn.slice(); let k=0;
+  // ۱) کیسهٔ ۱۶ سنگی — Fisher–Yates کامل با همان اعداد رندومِ منبعِ برنامه
+  const bag=[]; for(let i=0;i<16;i++) bag.push(i);
+  for(let i=15;i>0;i--){ const j=raw[k++]%(i+1); const t=bag[i]; bag[i]=bag[j]; bag[j]=t; }
+  const drawnIdx=bag.slice(0,5);
+  const shadowIdx=bag[15];   // سنگِ تهِ کیسه — هرگز رو نشد
+  // ۲) پرتاب هر سنگ: توزیع یکنواخت مساحت روی پارچهٔ R=۱۰۰
+  const stones=drawnIdx.map(function(si,order){
+    const u=raw[k++]/65536, v=raw[k++]/65536;
+    const theta=v*2*Math.PI;          // 0°=شرق، 90°=شمال — پادساعت‌گرد
+    const rRaw=101.0*Math.sqrt(u);
+    const x=rRaw*Math.cos(theta), y=rRaw*Math.sin(theta);
+    return {order:order+1, idx:si, stone:LITHO_STONES[si], theta:theta, r:Math.hypot(x,y), x:x, y:y, lost:(rRaw>100)};
+  });
+  // ۳) برخورد فیزیکی — نیم‌قطر stone=R/2=4.5 ⇒ حداقل فاصلهٔ مرکز‌به‌مرکز 9.0؛ تا d=9.2 جداسازی تکراری
+  const MIN_D=9.0, PUSH_D=9.2;
+  const collSet=[];
+  for(let iter=0;iter<10;iter++){
+    let any=false;
+    for(let i=0;i<5;i++)for(let j=i+1;j<5;j++){
+      const a=stones[i], b=stones[j];
+      let dx=b.x-a.x, dy=b.y-a.y, d=Math.hypot(dx,dy);
+      if(d<MIN_D){
+        if(d<1e-9){ const ang=(a.theta+b.theta+Math.PI*1.247)%(2*Math.PI); dx=Math.cos(ang); dy=Math.sin(ang); d=1; }
+        const ux=dx/d, uy=dy/d, mv=(PUSH_D-d)/2+1e-9;
+        a.x-=ux*mv; a.y-=uy*mv; b.x+=ux*mv; b.y+=uy*mv;
+        collSet.push(a.order+'↔'+b.order); any=true;
+      }
+    }
+    stones.forEach(s=>{ s.r=Math.hypot(s.x,s.y); let t=Math.atan2(s.y,s.x); if(t<0) t+=2*Math.PI; s.theta=t; });
+    if(!any) break;
+  }
+  stones.forEach(s=>{ s.lost = s.r>100; });
+  const collisions=collSet.filter(function(v,i){ return collSet.indexOf(v)===i; });
+  const consumed=k;
+  // ۴) هندسهٔ جفت‌ها (۱۰ جفت)
+  const byOrder=function(o){ return stones[o-1]; };
+  const pairs=[];
+  for(let i=0;i<5;i++)for(let j=i+1;j<5;j++){
+    const a=stones[i], b=stones[j];
+    const d=Math.hypot(b.x-a.x,b.y-a.y);
+    let sep=Math.abs(a.theta-b.theta)%(2*Math.PI); if(sep>Math.PI) sep=2*Math.PI-sep;
+    pairs.push({i:a.order, j:b.order, d:d, sep:sep, anti:(sep>=150*Math.PI/180 && a.r>30 && b.r>30)});
+  }
+  const fusPairs=pairs.filter(p=>p.d<=16);
+  const sitPairs=pairs.filter(p=>p.d>16 && p.d<=32);
+  const closePairs=pairs.filter(p=>p.d<=32);
+  const oppositions=pairs.filter(p=>p.anti);
+  const isoStones=stones.filter(s=>{ let m=Infinity; pairs.forEach(p=>{ if(p.i===s.order||p.j===s.order) m=Math.min(m,p.d); }); return m>55; });
+  const anchor=stones.reduce((m,s)=> s.r<m.r? s : m, stones[0]);
+  // ۵) کوارتز شفاف — تقویت‌کنندهٔ نزدیک‌ترین سنگ
+  const cq=stones.find(s=>s.stone.en==='Clear Quartz');
+  let cqAmplify=null;
+  if(cq){ let m=Infinity, other=null; stones.forEach(s=>{ if(s===cq) return; const d=Math.hypot(s.x-cq.x,s.y-cq.y); if(d<m){ m=d; other=s; } }); cqAmplify={d:m, target:other}; }
+  // ۶) مرکز ثقل پنج سنگ (سنگ‌های بیرون‌افتاده کنار گذاشته می‌شوند)
+  const onCloth=stones.filter(s=>!s.lost);
+  const bcSet=onCloth.length? onCloth : stones;
+  const bx=bcSet.reduce((a,s)=>a+s.x,0)/bcSet.length, by=bcSet.reduce((a,s)=>a+s.y,0)/bcSet.length;
+  const br=Math.hypot(bx,by);
+  let bt=Math.atan2(by,bx); if(bt<0) bt+=2*Math.PI;
+  const bcQuarter=br<8? 'center' : lithoQuarterOf(bt);
+  // ۷) شأن عنصری بر پایهٔ ربع‌ها (فقط روی پارچه؛ روح همیشه هم‌ذات)
+  const dign=stones.map(s=>{
+    if(s.lost) return {s:s, q:null, r:{k:'out', t:'خارج از پارچه — بیرون از خوانش'}};
+    const q=lithoQuarterOf(s.theta);
+    return {s:s, q:q, r:lithoDignity(s.stone.el, LITHO_Q_EL[q])};
+  });
+  const dignCnt={own:0,ally:0,neutral:0,enemy:0,out:0};
+  dign.forEach(dg=>{ dignCnt[dg.r.k]++; });
+  // ۸) توازن نوری
+  const optCnt={transparent:0, translucent:0, opaque:0};
+  stones.forEach(s=>{ optCnt[s.stone.opt]++; });
+  const optMax=Math.max(optCnt.transparent, optCnt.translucent, optCnt.opaque);
+  const optDom=Object.keys(optCnt).filter(x=>optCnt[x]===optMax);
+  const shadow=LITHO_STONES[shadowIdx];
+  // ---------- گزارش متنی ----------
+  const L=[];
+  L.push('🪨 گزارشِ کاملِ لیتومانسی — Lithomancy (شانزده سنگِ هرمسی)');
+  L.push('روش: شانزده سنگ در کیسهٔ پارچه‌ای تکان داده شد؛ ترتیبِ کیسه با همان اعدادِ رندومِ منبع انتخابی برنامه (Fisher–Yates کامل) ساخته شد. پنج سنگ به ترتیب برداشته و روی پارچهٔ دایره‌ای به شعاع ۱۰۰ واحد پرتاب شدند؛ توزیع مساحت یکنواخت است: r = ۱۰۱ × √u و θ = v × ۳۶۰° (u,v∈[۰,۱)؛ ۰°=شرق، ۹۰°=شمال، پادساعت‌گرد؛ سنگی که r>۱۰۰ درآید — احتمال ≈۱٫۹۷٪ — از پارچه بیرون غلتیده و «بیرون از کنترل» خوانده می‌شود).');
+  L.push('برخورد فیزیکی: نیم‌قطرِ اسمی هر سنگ R=۴٫۵ واحد است ⇒ حداقل فاصلهٔ مرکز‌به‌مرکز ۹٫۰؛ جفت‌هایی که نزدیک‌تر از ۹٫۰ بنشینند طبق قاعده تا d=۹٫۲ از هم دور می‌شوند و پرچم «⚡ برخورد فیزیکی» می‌خورند.');
+  L.push('');
+  L.push('سنگ‌های کشیده‌شده (به ترتیب برداشت):');
+  stones.forEach(s=>L.push('   '+faNum(s.order)+') '+s.stone.fa+' ('+s.stone.en+') — #'+faNum(s.stone.n)+' • '+(s.stone.ruler? ('حاکم: '+s.stone.ruler+' • ') : '')+'عنصرِ '+LITHO_EL_FA[s.stone.el]+' • '+LITHO_OPT_SHORT[s.stone.opt]+' • r='+fa1(s.r)+' • θ='+faNum(Math.round(s.theta*180/Math.PI))+'°'+(s.lost?'  ⚠️ بیرون از پارچه':'')));
+  L.push('');
+  L.push('۱) سنگِ مرجع (Anchor — نزدیک‌ترین به مرکز؛ «اکنونِ» خوانش): '+anchor.stone.fa+' (r='+fa1(anchor.r)+') — نیروی محوری و فوریِ این سؤال؛ پیش از هر چیز به همین سنگ نگاه کن.');
+  L.push('۲) فواصل و هم‌نشینی‌ها (d=فاصلهٔ اقلیدسی روی پارچه):');
+  if(fusPairs.length) fusPairs.forEach(p=>L.push('   🔗 هم‌جوشی (d≤۱۶): سنگِ '+faNum(p.i)+' ('+byOrder(p.i).stone.fa+') ↔ سنگِ '+faNum(p.j)+' ('+byOrder(p.j).stone.fa+') — d='+fa1(p.d)+'؛ پیوندی هم‌ذاتی و پرقدرت؛ دو نیرو در یک جهت می‌فشارند.'));
+  else L.push('   • هیچ جفتی به هم‌جوشی (d≤۱۶) نرسید.');
+  if(sitPairs.length) sitPairs.forEach(p=>L.push('   🤝 هم‌نشینی (۱۶<d≤۳۲): سنگِ '+faNum(p.i)+' ('+byOrder(p.i).stone.fa+') ↔ سنگِ '+faNum(p.j)+' ('+byOrder(p.j).stone.fa+') — d='+fa1(p.d)+'؛ هم‌نشینیِ تسهیل‌کننده؛ انرژی‌ها یکدیگر را تشدید می‌کنند.'));
+  else L.push('   • هیچ جفتی در محدودهٔ هم‌نشینی (۱۶<d≤۳۲) نبود.');
+  if(cqAmplify) L.push('   🔍 کوارتزِ شفاف در فال است — نزدیک‌ترین سنگ به آن، سنگِ '+faNum(cqAmplify.target.order)+' ('+cqAmplify.target.stone.fa+') در d='+fa1(cqAmplify.d)+' است؛ پیام و نیروی آن سنگ در این خوانش دوچندان و شفاف‌تر شنیده می‌شود.');
+  if(isoStones.length) isoStones.forEach(s=>L.push('   🏝️ سنگِ تنها (فاصله تا نزدیک‌ترین همسایه >۵۵): سنگِ '+faNum(s.order)+' — '+s.stone.fa+'؛ تنها حاملِ حوزهٔ خود در این فال است؛ صدایش را بی‌واسطه بشنو.'));
+  else L.push('   • هیچ سنگِ تنها (d>۵۵ از همه) دیده نشد — میدان به‌خوبی در هم تنیده است.');
+  L.push('۳) روبه‌رویی قطبی (فاصلهٔ زاویه‌ای ۱۵۰°–۱۸۰° — به‌شرط هر دو r>۳۰):');
+  if(oppositions.length) oppositions.forEach(p=>L.push('   ⚡ کشمکش: سنگِ '+faNum(p.i)+' ('+byOrder(p.i).stone.fa+') ↔ سنگِ '+faNum(p.j)+' ('+byOrder(p.j).stone.fa+') — زاویهٔ '+faNum(Math.round(p.sep*180/Math.PI))+'°؛ دو قطبِ رودررو؛ تنشِ اساسی و ناتمام که باید آگاهانه جمع شود.'));
+  else L.push('   • روبه‌رویی قطبی دیده نشد — میدان از کشمکشِ باز تهی است (یا هم‌جوشی/هم‌نشینی غالب است).');
+  L.push('۴) شأن عنصری (ربع‌ها: شمال=خاک 🌱 • شرق=باد 🌬️ • جنوب=آتش 🔥 • غرب=آب 🌊؛ روح = هم‌ذاتِ همیشه):');
+  dign.forEach(dg=>L.push('   • سنگِ '+faNum(dg.s.order)+' '+dg.s.stone.fa+' (عنصرِ '+LITHO_EL_FA[dg.s.stone.el]+') در '+(dg.q? LITHO_Q_FA[dg.q] : '—')+' ⇒ '+dg.r.t));
+  L.push('   جمع‌بندی: هم‌ذات '+faNum(dignCnt.own)+' • هم‌افزا '+faNum(dignCnt.ally)+' • خنثی '+faNum(dignCnt.neutral)+' • دشمن '+faNum(dignCnt.enemy)+(dignCnt.out? ' • خارج از پارچه '+faNum(dignCnt.out):''));
+  if(dignCnt.enemy>=2) L.push('   ⚠️ دو یا چند سنگ در ربعِ دشمن نشسته‌اند — میدان مشوش است؛ پیش از هر اقدامی موانع را بشناس.');
+  else if(dignCnt.enemy===1) L.push('   ⚠️ یک سنگ در ربعِ دشمن است — یک اصطکاکِ مشخص وجود دارد؛ آن را بدون شخصی‌سازی حل کن.');
+  else if(dignCnt.ally>=2) L.push('   🟢 میدان به نفعت است — هم‌افزاییِ روشن؛ پیش برو.');
+  L.push('۵) توازن نوری پنج سنگ: شفاف '+faNum(optCnt.transparent)+' • نیمه‌شفاف '+faNum(optCnt.translucent)+' • کدر '+faNum(optCnt.opaque)+' — غالب: '+optDom.map(x=>LITHO_OPT_SHORT[x]).join(' و ')+' ('+optDom.map(x=>LITHO_OPT_GLOSS[x]).join(' / ')+')');
+  L.push('۶) مرکزِ ثقل پنج سنگ: (x='+fa1(bx)+' , y='+fa1(by)+') — محاسبه از '+faNum(bcSet.length)+' سنگِ داخلِ پارچه؛ '+(br<8 ? 'بردار تقریباً صفر است ⇒ مرکزِ مطلق: اکنونِ خالص؛ هیچ ربعی غالب نیست.' : 'زاویهٔ بردار ≈ '+faNum(Math.round(bt*180/Math.PI))+'° ⇒ ربعِ '+LITHO_Q_FA[bcQuarter]+' — نیروی غالبِ این خوانش به آن سمت می‌لغزد.'));
+  L.push('۷) سنگِ تهِ کیسه (Shadow — آخرین سنگِ باقی‌مانده در کیسه که هرگز رو نشد): '+shadow.fa+' ('+shadow.en+')'+(shadow.ruler? ' — حاکمِ '+shadow.ruler : '')+'؛ «'+shadow.kw+'». آنچه کیسه هرگز رو نکرد: بخشِ پنهانِ داستان که همچنان در پس‌زمینه سنگینی می‌کند؛ اگر خودت را در آن دیدی، پیامی که هرگز به زبانت نیامده همین‌جاست.');
+  L.push('');
+  if(collisions.length) L.push('⚡ برخورد فیزیکی رخ داد (جفت‌ها: '+collisions.join('، ')+') — طبق قاعده تا d=۹٫۲ جدا شدند؛ برخورد یعنی موضوعاتِ «در همان نزدیکی» در هم تداخل کرده‌اند — آن‌ها را یکی نکن.');
+  else L.push('برخورد فیزیکی رخ نداد — سنگ‌ها در آرامشِ هندسی پخش شدند.');
+  const outs=stones.filter(s=>s.lost);
+  if(outs.length) outs.forEach(s=>L.push('⚪ بیرون از پارچه: سنگِ '+faNum(s.order)+' ('+s.stone.fa+') — خودِ غلتیدنش پیام است: این حوزه از محدودهٔ این خوانش بیرون است («ورای کنترل»)؛ نادیده‌اش نگیر اما طبق معمول باز نکن.'));
+  else L.push('هیچ سنگی از پارچه بیرون نغلتید — تمام صحنه داخلِ میدان بود.');
+  L.push('');
+  L.push('روش (خلاصه): کیسهٔ ۱۶ سنگی • ترتیب از همان سیستم رندوم برنامه • ۵ برداشت به ترتیب • پرتاب روی پارچهٔ R=۱۰۰ (توزیع یکنواخت مساحت) • جداسازی برخورد تا d=۹٫۲ • حلقه‌ها: ≤۳۳٫۳ اکنون | ≤۷۰ میدانِ تکوین | ≤۱۰۰ افق | >۱۰۰ بیرون • ربع‌ها از θ • منبع رندوم: همان سیستم Q/A/O همین برنامه.');
+  return {stones:stones, pairs:pairs, closePairs:closePairs, oppositions:oppositions, isolations:isoStones, anchor:anchor, cqAmplify:cqAmplify, bx:bx, by:by, br:br, bt:bt, bcQuarter:bcQuarter, dign:dign, dignCnt:dignCnt, optCnt:optCnt, optDom:optDom, shadow:shadow, collisions:collisions, consumed:consumed, bcCount:bcSet.length, reportLines:L};
+}
+
+/* ========== موتور رونزهای الدر فوتارک (Elder Futhark) — مثلث اودین ========== */
+const RUNES=[
+ {n:1, sym:'ᚠ', en:'Fehu', fa:'فِهو', aett:1, cosm:'fire', polar:'asym', kw:'داراییِ زاینده و دسترنج',
+  up:'ثروتِ زاینده، دسترنج، هدیه‌های مادی و جریانِ فراوانی — اما بخشنده باش وگرنه راکد می‌شود.',
+  shadow:'حرص، از دست دادنِ مال، وابستگیِ طمع‌آلود به دارایی و استهلاک.'},
+ {n:2, sym:'ᚢ', en:'Uruz', fa:'اوُروز', aett:1, cosm:'ice', polar:'asym', kw:'توانِ خام و ارادهٔ جسمانی',
+  up:'نیروی خامِ زندگی، توانِ جسم، سلامت و ارادهٔ فولادین — بیدارش کن اما بی‌مهار رها مکن.',
+  shadow:'نیروی لگام‌گسیخته؛ ضعفِ جسم، بی‌توجهی به بدن یا خشونتِ خام.'},
+ {n:3, sym:'ᚦ', en:'Thurisaz', fa:'ثوریساز', aett:1, cosm:'fire', polar:'asym', kw:'خارِ دگرگونی — تیغِ ایگدراسیل', harsh:true,
+  up:'خار و تیغ؛ دفاعِ سخت، شوکِ سازنده و دگرگونیِ اجباری — هرسی که درخت را راست می‌کند.',
+  shadow:'خشونتِ کور و انتقام؛ دردِ بدون درس، واکنشِ مخرب.'},
+ {n:4, sym:'ᚨ', en:'Ansuz', fa:'آنسوز', aett:1, cosm:'tree', polar:'asym', kw:'کلام، خردِ الهی و الهام',
+  up:'نَفَسِ اودین؛ کلام، پیامِ الهی، الهام و خردِ سخن — گوش کن؛ سرنوشت با صدا سخن می‌گوید.',
+  shadow:'کلامِ آلوده؛ دروغ، سوءتفاهم، فریبِ فصاحت و پیامِ گم‌شده.'},
+ {n:5, sym:'ᚱ', en:'Raidho', fa:'رَیذو', aett:1, cosm:'fire', polar:'asym', kw:'جادهٔ درست و چرخشِ زندگی',
+  up:'اسبِ اودین؛ سفر، نظم و ریتمِ درستِ هستی — هر قدم در مسیرِ صحیح برکت دارد.',
+  shadow:'راهِ اشتباه؛ آشوبِ مسیر، سفرِ بی‌مقصد و بی‌نظمی.'},
+ {n:6, sym:'ᚲ', en:'Kenaz', fa:'کِناز', aett:1, cosm:'fire', polar:'asym', kw:'مشعلِ دانش و روشناییِ درون',
+  up:'مشعل؛ دانش، خلاقیت، روشناییِ درونی و زخمِ روشنگر — آتش روشن می‌کند حتی وقتی می‌سوزاند.',
+  shadow:'مشعلِ خاموش؛ جهل، بیماری و الهامِ قطع‌شده.'},
+ {n:7, sym:'ᚷ', en:'Gebo', fa:'گِبو', aett:1, cosm:'tree', polar:'sym', kw:'هدیه و دادوستدِ متوازن',
+  up:'🎁 بهترین معامله؛ هدیه‌ای که پیوند می‌سازد — برابری، دادوستد و بخششِ بی‌چشمداشت.',
+  shadow:'هدیه‌ای که با چشمِ حساب و نیتِ آلوده داده می‌شود؛ معامله‌گریِ خودخواهانه و پیوندِ نامتوازن.'},
+ {n:8, sym:'ᚹ', en:'Wunjo', fa:'وونیو', aett:1, cosm:'tree', polar:'asym', kw:'شادمانی و هماهنگیِ جان',
+  up:'شادی؛ کامیابی، هماهنگی و نورِ دل — جشنِ وحدتِ بیرون و درون.',
+  shadow:'شادیِ توخالی؛ تضاد، اندوه و ناهماهنگیِ جان.'},
+ {n:9, sym:'ᚺ', en:'Hagalaz', fa:'هاگالاز', aett:2, cosm:'ice', polar:'sym', kw:'تگرگِ سرنوشت — شکستِ لازم', harsh:true,
+  up:'تگرگ؛ فروپاشیِ لازم و آزمونِ سخت — آنچه فرومی‌ریزد، سقفِ کاذب بود.',
+  shadow:'تگرگِ بی‌معنا؛ تخریبی که درسی با خود ندارد — یا رفضِ همان بحرانِ لازم.'},
+ {n:10, sym:'ᚾ', en:'Nauthiz', fa:'نَوتیث', aett:2, cosm:'ice', polar:'sym', kw:'نیاز و اضطرارِ سازنده', harsh:true,
+  up:'نیاز؛ محدودیتِ آموزنده — اصطکاکِ کمان که تیر را پرتاب می‌کند.',
+  shadow:'نیازی که خفه می‌شود؛ ناچاریِ فرساینده و غفلت از هشدارهای بدن و جان.'},
+ {n:11, sym:'ᛁ', en:'Isa', fa:'عیسا', aett:2, cosm:'ice', polar:'sym', kw:'سکون، صبر و تمرکزِ یخین', harsh:true,
+  up:'یخ؛ سکون و صبر — در سکوت حقیقت رسوب می‌کند؛ بگذار یخ آب شود.',
+  shadow:'انجمادی که زلال نیست؛ خودفریبیِ سکون، توقفِ آرزو و یخ‌زدگیِ احساس.'},
+ {n:12, sym:'ᛃ', en:'Jera', fa:'یِرا', aett:2, cosm:'tree', polar:'sym', kw:'چرخهٔ برداشت و پاداشِ صبر',
+  up:'برداشت؛ چرخهٔ کار و پاداش — هر چیز در فصلِ خود می‌رسد؛ نه زودتر، نه دیرتر.',
+  shadow:'بُردباریِ شکسته؛ عجله‌ای که برداشت را نابود می‌کند یا سال‌های انتظارِ بی‌ثمر.'},
+ {n:13, sym:'ᛇ', en:'Eihwaz', fa:'اَیحواز', aett:2, cosm:'tree', polar:'sym', kw:'محورِ ایگدراسیل — صبرِ بین دو جهان',
+  up:'سرخ‌دار؛ مقاومت، تغییر و محورِ محورها — پایداری میان مرگ و رستاخیز.',
+  shadow:'محوری که از هم می‌پاشد؛ تردیدِ فلج‌کننده بین دو جهان.'},
+ {n:14, sym:'ᛈ', en:'Perthro', fa:'پِرترو', aett:2, cosm:'ice', polar:'asym', kw:'جامِ سرنوشت و راز',
+  up:'جامِ سرنوشت؛ راز، پیشگویی و اقبال — آنچه ناشناخته است، در حال شکل‌گیری است.',
+  shadow:'رازِ تلخ؛ اقبالِ کور، پنهان‌کاری و اعتیاد به ناشناخته.'},
+ {n:15, sym:'ᛉ', en:'Algiz', fa:'آلگیث', aett:2, cosm:'tree', polar:'asym', kw:'پناهِ الهی و دفاعِ غریزی',
+  up:'گوزنِ شاخ‌بلند؛ محافظت، پناه و دفاعِ غریزی — سرت را بالا نگه دار.',
+  shadow:'سپرِ شکسته؛ آسیب‌پذیری از غرور یا غفلت از پناهِ الهی.'},
+ {n:16, sym:'ᛊ', en:'Sowilo', fa:'سوویلو', aett:2, cosm:'fire', polar:'sym', kw:'خورشیدِ پیروزی',
+  up:'خورشید؛ پیروزی، شفا و نیروی حیات — نور همیشه راهش را باز می‌کند.',
+  shadow:'تیغِ خورشیدی که می‌سوزاند؛ غرورِ پیروزی، فرسودگی و داغِ غرور.'},
+ {n:17, sym:'ᛏ', en:'Tiwaz', fa:'تیواز', aett:3, cosm:'fire', polar:'asym', kw:'عدالت و فداکاریِ درست',
+  up:'نیزهٔ تیر؛ عدالت، فداکاری و قانون — حقیقت حتی اگر بهایی داشته باشد، می‌ارزد.',
+  shadow:'عدالتِ لجوجانه؛ فداکاریِ بی‌جا و جنگی که ارزشش را ندارد.'},
+ {n:18, sym:'ᛒ', en:'Berkano', fa:'بِرکانو', aett:3, cosm:'tree', polar:'asym', kw:'توسِ زایش و تجدید',
+  up:'توس؛ رشد، زایش و تجدید — زندگی حتی پس از هرس، سر می‌زند.',
+  shadow:'رشدِ ناقص؛ وابستگیِ آسیب‌زا و تولدی نیمه‌کاره.'},
+ {n:19, sym:'ᛖ', en:'Ehwaz', fa:'اِخواز', aett:3, cosm:'tree', polar:'asym', kw:'اسب — اعتماد و همکاری',
+  up:'اسب؛ اعتماد، همکاری و حرکتِ همسو — گام‌های هماهنگ مسافت را کوتاه می‌کنند.',
+  shadow:'اعتمادِ شکسته؛ گسستِ همکاری و رکودِ اسب.'},
+ {n:20, sym:'ᛗ', en:'Mannaz', fa:'مَناز', aett:3, cosm:'tree', polar:'asym', kw:'انسان — خود و جامعه',
+  up:'انسان؛ خودآگاهی، جامعه و آینهٔ همنوع — تو دیگران را می‌خوانی چون خودت را می‌شناسی.',
+  shadow:'خودگم‌کردگی؛ خودخواهی، تنهایی و داوریِ ناسالم از خود و دیگران.'},
+ {n:21, sym:'ᛚ', en:'Laguz', fa:'لاگوز', aett:3, cosm:'ice', polar:'asym', kw:'آب، جریان و شهود',
+  up:'آب؛ جریان، شهود و عمقِ احساس — به جریان اعتماد کن، نه به سد.',
+  shadow:'طغیان؛ احساساتِ آشفته، توهم و غرق‌شدن در آبِ شورِ هوس.'},
+ {n:22, sym:'ᛜ', en:'Ingwaz', fa:'اینگواز', aett:3, cosm:'tree', polar:'sym', kw:'بذرِ باروریِ نهفته',
+  up:'بذرِ انگی؛ باروری و بالقوگی — آنچه کاشته‌ای هنوز زیر خاک است؛ بگذار برسد.',
+  shadow:'باروریِ خفه‌شده؛ انرژیِ انباشته‌ای که راهی بیرون نمی‌یابد.'},
+ {n:23, sym:'ᛞ', en:'Dagaz', fa:'داگاز', aett:3, cosm:'fire', polar:'sym', kw:'سپیدهٔ دگرگونیِ کامل',
+  up:'سپیده؛ دگرگونیِ کامل و آگاهی — شب تمام شد؛ روشنایی بیدار است.',
+  shadow:'روشناییِ کورکننده؛ انکارِ تغییر یا پایانی که هنوز ندیده‌اش.'},
+ {n:24, sym:'ᛟ', en:'Othala', fa:'اوثالا', aett:3, cosm:'tree', polar:'asym', kw:'میراث و سرزمینِ ریشه',
+  up:'میراث؛ خانه، ریشه و هویتِ خانوادگی — گنجی که نسل‌ها برایت نگه داشته‌اند.',
+  shadow:'ریشهٔ بریده؛ تعصب، میراثِ ناسفرکرده و حبس در گذشته.'}
+];
+const RUNE_COSM_FA={fire:'آتش 🔥 (موسپلهایم)', ice:'یخ 🧊 (نیفلهایم)', tree:'ایگدراسیل 🌳'};
+const RUNE_COSM_SHORT={fire:'آتش 🔥', ice:'یخ 🧊', tree:'ایگدراسیل 🌳'};
+const RUNE_HARSH=[3,9,10,11];   // چهار رونزِ آزمون‌دهندهٔ سخت
+const AETT_META={1:{name:'اِته‌ر ۱ — فِریر/فِریا (آفرینش و جهانِ مادی)', dom:'اِته‌ر مادی/آفرینش غالب است — موضوع این فال در قلمروِ جسم، دارایی، لذت و ارادهٔ زندگی است؛ با انرژیِ زمینی و خواستِ زیستن کار کن.'},
+                 2:{name:'اِته‌ر ۲ — هیمدال/هاگال (کارما، آزمون و بحران)', dom:'اِته‌ر آزمون غالب است — در دلِ کارما، کفاره یا عبور از بحران هستی؛ تسلیم به فرآیند لازم است، نه فرار از آن.'},
+                 3:{name:'اِته‌ر ۳ — تیواز (روح، قانون و جامعه)', dom:'اِته‌ر قانون و روح غالب است — موضوع در قلمروِ اخلاق، جامعه، هویت و تعهدِ برتر است؛ عدالت ملاک است.'}};
+function runeNeighbors(order){ return order===2 ? [1,3,4,5] : [2]; }   // مرکز به همه؛ دیگران فقط با مرکز
+function runesCompute(rawIn){
+  const raw=rawIn.slice(); let k=0;
+  // ۱) کیسهٔ ۲۴ رونزی — Fisher–Yates کامل
+  const bag=[]; for(let i=0;i<24;i++) bag.push(i);
+  for(let i=23;i>0;i--){ const j=raw[k++]%(i+1); const t=bag[i]; bag[i]=bag[j]; bag[j]=t; }
+  const drawnIdx=bag.slice(0,5);
+  const shadowIdx=bag[23];   // رونزِ تهِ کیسه — Wyrd؛ هرگز رو نشد
+  // ۲) رونز جامپر — ۲٪ احتمالِ بیرون پریدن از کیسه (جایگاه ندارد)
+  const jumpRoll=raw[k++]/65536;
+  let jumper=null;
+  if(jumpRoll<0.02){
+    const pool=bag.slice(5,23);
+    jumper={ idx: pool[raw[k++]%pool.length] };
+    jumper.rune=RUNES[jumper.idx];
+  }
+  // ۳) قطبیت — ۱۵ رونز نامتقارن ~۲۸٪ معکوس (بازهٔ سنتی ۲۵–۳۰٪)
+  const MERK_P=0.28;
+  const mkRune=function(si,order,isJumper){
+    const R=RUNES[si];
+    let merkstave=false, sym=R.polar==='sym';
+    if(!sym){ merkstave=(raw[k++]/65536)<MERK_P; }
+    return {order:order, idx:si, rune:R, sym:sym, merkstave:merkstave, jumper:!!isJumper};
+  };
+  const drawn=drawnIdx.map((si,i)=>mkRune(si, i+1, false));
+  if(jumper){ jumper = mkRune(jumper.idx, 0, true); }
+  const consumed=k;
+  // ۴) حلال قطبیت رونزهای متقارن — با همسایه‌ها (مرک‌ستاو یا چهار رونزِ زهرآگین ⇒ وجه سایه)
+  drawn.forEach(d=>{
+    if(!d.sym){ d.symResolution=null; d.symReasons=null; return; }
+    const nbrs=drawn.filter(o=>o!==d && runeNeighbors(d.order).indexOf(o.order)>=0);
+    const dark=nbrs.filter(n=>n.merkstave || RUNE_HARSH.indexOf(n.rune.n)>=0);
+    d.symResolution = dark.length? 'shadow' : 'light';
+    d.symReasons = dark.length
+      ? dark.map(n=>(n.merkstave? 'همسایهٔ مرک‌ستاو: ' : 'همسایهٔ زهرآگین (#'+faNum(n.rune.n)+') — ')+n.rune.en+' (جایگاه '+faNum(n.order)+')')
+      : ['هیچ همسایهٔ مرک‌ستاو یا زهرآگینی در مجاورت نبود'];
+  });
+  // ۵) چیرگی اِته‌ر
+  const aettCnt={1:0,2:0,3:0};
+  drawn.forEach(d=>{ aettCnt[d.rune.aett]++; });
+  let domAett=0; [1,2,3].forEach(a=>{ if(aettCnt[a]>=3) domAett=a; });
+  // ۶) قطبیت آتش/یخ/ایگدراسیل + گینونگاگاپ (مجاورت با مرکز)
+  const cosmCnt={fire:0, ice:0, tree:0};
+  drawn.forEach(d=>{ cosmCnt[d.rune.cosm]++; });
+  const centerPairs=[[1,2],[2,3],[2,4],[2,5]];
+  const ginnung=[];
+  centerPairs.forEach(pr=>{
+    const A=drawn[pr[0]-1], B=drawn[pr[1]-1];
+    if((A.rune.cosm==='fire' && B.rune.cosm==='ice') || (A.rune.cosm==='ice' && B.rune.cosm==='fire')) ginnung.push({a:A, b:B});
+  });
+  // ۷) عصارهٔ رونیک (Bindrune) — ((مجموع شماره‌ها − ۱) mod ۲۴) + ۱
+  const sum=drawn.reduce((a,d)=>a+d.rune.n,0);
+  const essenceId=((sum-1)%24)+1;
+  const essence=RUNES[essenceId-1];
+  const shadowRune=RUNES[shadowIdx];
+  // ---------- گزارش متنی ----------
+  const byOrder=function(o){ return drawn[o-1]; };
+  const L=[];
+  L.push('🌳 گزارشِ کاملِ رونزهای الدر فوتارک — Elder Futhark (صلیب اودین: سه نورن و ستون ایگدراسیل)');
+  L.push('روش: کیسهٔ آویختهٔ ۲۴ رونز؛ ترتیبِ کشش با همان اعدادِ رندومِ منبع انتخابی برنامه ساخته شد (Fisher–Yates کامل روی نمایه‌های ۰..۲۳)؛ پنج رونز به ترتیب به جایگاه‌های صلیب نشستند: ۱=گذشته/Urðr (غرب) • ۲=اکنون/Verðandi (مرکز) • ۳=آینده/بدهی کارمایی/Skuld (شرق) • ۴=ریشه/نیفلهایم — ترسِ پنهان (پایین) • ۵=تاج/آسگارد — نتیجه (بالا). هیچ «رونزِ بیست‌وپنجمی» وجود ندارد؛ منبع تقلب و رحمتِ جعلی ممنوع است.');
+  L.push('قطبیت: از ۱۵ رونز نامتقارن هر کدام ~۲۸٪ احتمالِ معکوس شدن (مرک‌ستاو) دارند؛ ۹ رونز متقارن (ᚷ ᚺ ᚾ ᛁ ᛃ ᛇ ᛊ ᛜ ᛞ) هرگز وارونه فهمیده نمی‌شوند و قطبیت‌شان با همسایه‌ها حل می‌شود: همسایهٔ مرک‌ستاو یا یکی از چهار رونزِ زهرآگین (#۳ ثوریساز، #۹ هاگالاز، #۱۰ نَوتیث، #۱۱ عیسا) ⇒ 🌑 وجه سایه؛ در غیر این صورت ☀️ وجه روشن.');
+  L.push('');
+  L.push('رونزهای کشیده‌شده (به ترتیب جایگاه):');
+  drawn.forEach(d=>L.push('   '+faNum(d.order)+') '+d.rune.sym+' '+d.rune.en+' ('+d.rune.fa+') — #'+faNum(d.rune.n)+' • اِته‌ر '+faNum(d.rune.aett)+' • '+RUNE_COSM_SHORT[d.rune.cosm]+' • '+(d.sym? '⚖️ متقارن' : (d.merkstave? '🌑 مرک‌ستاو (معکوس ⟲)':'☀️ راست (اورتایت)'))));
+  L.push('');
+  L.push('۱) رونز جامپر و رونز سایه:');
+  if(jumper) L.push('   🦘 رونز جامپر از کیسه بیرون پرید: '+jumper.rune.sym+' '+jumper.rune.en+' ('+jumper.rune.fa+') — #'+faNum(jumper.rune.n)+'؛ در جایگاهی نمی‌نشیند و به کیسه بازنگشت (returnedToBag=false)؛ پیامش «پیش از موعد رسید» — جدی‌اش بگیر اما وارد پنج جایگاه نکن.');
+  else L.push('   • رونز جامپر نپرید — هیچ صدایی از کیسه بلند نشد.');
+  L.push('   🌑 رونز سایه (Wyrd — تهِ کیسه، هرگز رو نشد): '+shadowRune.sym+' '+shadowRune.en+' ('+shadowRune.fa+') — #'+faNum(shadowRune.n)+' • «'+shadowRune.kw+'»؛ آنچه سرنوشت هنوز به تو بدهکار است همین است — زیرِ همه چیز جریان دارد.');
+  L.push('۲) قطبیت رونزهای متقارن (حل با همسایه‌ها):');
+  const symDrawn=drawn.filter(d=>d.sym);
+  if(symDrawn.length) symDrawn.forEach(d=>L.push('   '+(d.symResolution==='shadow'? '🌑':'☀️')+' جایگاه '+faNum(d.order)+' — '+d.rune.en+' ('+d.rune.fa+') ⇒ وجهِ '+(d.symResolution==='shadow'?'سایه':'روشن')+' — '+d.symReasons.join(' • ')));
+  else L.push('   • هیچ رونز متقارنی در این فال نیست — قطبیت همه مستقیم از خودشان خوانده شد.');
+  L.push('۳) چیرگی اِته‌ر: اِته‌ر ۱ (مادی) '+faNum(aettCnt[1])+' • اِته‌ر ۲ (آزمون/کارما) '+faNum(aettCnt[2])+' • اِته‌ر ۳ (روح/قانون) '+faNum(aettCnt[3])+(domAett? (' ⇒ '+AETT_META[domAett].dom) : ' ⇒ هیچ اِته‌ری بر فال غالب نیست — موزائیکی از هر سه قلمرو.'));
+  L.push('۴) قطب کیهانی: آتش '+faNum(cosmCnt.fire)+' • یخ '+faNum(cosmCnt.ice)+' • ایگدراسیل '+faNum(cosmCnt.tree)+(cosmCnt.fire>cosmCnt.ice+cosmCnt.tree? ' — میدان آتشین است؛ پیش از عجله، مهار کن.' : cosmCnt.ice>cosmCnt.fire+cosmCnt.tree? ' — میدان یخی است؛ صبر لازم است، نه فرار.' : cosmCnt.tree>=3? ' — میدان درختی است؛ رشد و ساختار غالب است.' : ' — قطب‌ها در تعادل نسبی‌اند.'));
+  if(ginnung.length) ginnung.forEach(g=>L.push('   ⚡ تصادم آتش و یخ (Ginnungagap گینونگاگاپ): جایگاه '+faNum(g.a.order)+' ('+g.a.rune.en+') × جایگاه '+faNum(g.b.order)+' ('+g.b.rune.en+') — موسپلهایم و نیفلهایم رودرروی هم‌اند؛ لحظهٔ آفرینش یا فرسودگی؛ تمرکزت را جمع کن.'));
+  else L.push('   • تصادم آتش و یخ در مجاورت مرکز رخ نداد — گینونگاگاپ در این فال باز نشده است.');
+  L.push('۵) عصارهٔ رونیک (Bindrune): مجموع شماره‌های ۱–۲۴ پنج رونز = '+drawn.map(d=>faNum(d.rune.n)).join('+')+' = '+faNum(sum)+'؛  (('+faNum(sum)+' − ۱) mod ۲۴) + ۱ = '+faNum(essenceId)+' ⇒ 🔮 '+essence.sym+' '+essence.en+' ('+essence.fa+') — «'+essence.kw+'»؛ این رونز عصارهٔ کل فال است: همان چیزی که پنج رونز با هم می‌خواهند بگویند.');
+  L.push('۶) شرح هر جایگاه:');
+  const posMeta={1:'Urðr — گذشته/ریشه (غرب)؛ آنچه بود و همچنان می‌سازد', 2:'Verðandi — اکنون (مرکز)؛ آنچه هست، همین لحظه', 3:'Skuld — آینده/بدهی کارمایی (شرق)؛ آنچه می‌آید و آنچه بدهکاری', 4:'ریشه — نیفلهایم (پایین)؛ ترسِ پنهانِ زیرِ ماجرا', 5:'تاج — آسگارد (بالا)؛ نتیجه و اوجِ محتمل'};
+  drawn.forEach(d=>{
+    const shaded=d.sym? (d.symResolution==='shadow') : d.merkstave;
+    const anlam=shaded? d.rune.shadow : d.rune.up;
+    L.push('   '+faNum(d.order)+') '+d.rune.sym+' '+d.rune.en+' ('+d.rune.fa+') — '+posMeta[d.order]+'.');
+    L.push('      '+(shaded? '🌑 وجه سایه':'☀️ وجه روشن')+': '+anlam);
+  });
+  L.push('');
+  L.push('روش (خلاصه): کیسهٔ ۲۴ رونزی بدون رونزِ بیست‌وپنجم • ترتیب از منبع رندوم برنامه (Q/A/O) • ۵ جایگاه صلیب اودین • ۲٪ جامپر (بازنگرد به کیسه) • ~۲۸٪ مرک‌ستاو برای ۱۵ نامتقارن • ۹ متقارن حل با همسایه‌ها • اِته‌رهای ۸تایی • آتش/یخ/درخت • Bindrune=((Σn−۱) mod ۲۴)+۱. منبع رندوم: همان سیستم Q/A/O همین برنامه.');
+  return {drawn:drawn, jumper:jumper, shadowRune:shadowRune, aettCnt:aettCnt, domAett:domAett, cosmCnt:cosmCnt, ginnung:ginnung, sum:sum, essence:essence, essenceId:essenceId, consumed:consumed, reportLines:L};
+}
+
+/* ========== رندر موتورها: لیتومانسی و رونزها ========== */
+function lithoBoardSVG(comp){
+  const S=[];
+  S.push('<svg class="litho-svg" viewBox="-152 -128 304 256" role="img" aria-label="پارچهٔ لیتومانسی">');
+  S.push('<defs><radialGradient id="lbCloth" cx="50%" cy="44%" r="68%"><stop offset="0%" stop-color="#26356a"/><stop offset="65%" stop-color="#1c2547"/><stop offset="100%" stop-color="#131a38"/></radialGradient></defs>');
+  S.push('<circle cx="0" cy="0" r="113" fill="#0c1230" stroke="#36427c" stroke-width="1.4"/>');
+  S.push('<circle cx="0" cy="0" r="100" fill="url(#lbCloth)" stroke="#8ea2ff" stroke-width="1.7"/>');
+  [45,135,225,315].forEach(deg=>{ const a=deg*Math.PI/180; const x=(Math.cos(a)*100).toFixed(1), y=(-Math.sin(a)*100).toFixed(1); S.push('<line x1="'+x+'" y1="'+y+'" x2="'+(-x)+'" y2="'+(-y)+'" stroke="#46538e" stroke-width="0.9" stroke-dasharray="2 5" opacity="0.7"/>'); });
+  S.push('<line x1="-100" y1="0" x2="100" y2="0" stroke="#46538e" stroke-width="0.9" opacity="0.85"/>');
+  S.push('<line x1="0" y1="-100" x2="0" y2="100" stroke="#46538e" stroke-width="0.9" opacity="0.85"/>');
+  for(let deg=0; deg<360; deg+=30){ const a=deg*Math.PI/180; const r1=(deg%90===0)?93.5:95.5; const x1=(Math.cos(a)*r1).toFixed(2), y1=(-Math.sin(a)*r1).toFixed(2), x2=(Math.cos(a)*100).toFixed(2), y2=(-Math.sin(a)*100).toFixed(2); S.push('<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="#93a5e8" stroke-width="'+((deg%90===0)?1.5:0.7)+'" opacity="0.95"/>'); }
+  S.push('<circle cx="0" cy="0" r="70" fill="none" stroke="#5f6fb0" stroke-width="1" stroke-dasharray="4 3" opacity="0.85"/>');
+  S.push('<circle cx="0" cy="0" r="33.33" fill="none" stroke="#5f6fb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.85"/>');
+  // برچسب حلقه‌ها روی قطرِ شمال‌غرب
+  [['اکنون',16.6],['تکوین',51.6],['افق',85]].forEach(function(it){ const a=Math.PI*0.75; const x=(Math.cos(a)*it[1]).toFixed(1), y=(-Math.sin(a)*it[1]).toFixed(1); S.push('<text class="lb-ring-lbl" x="'+x+'" y="'+y+'" text-anchor="middle" dominant-baseline="middle">'+it[0]+'</text>'); });
+  // برچسب‌های ربع‌ها
+  S.push('<text class="lb-card" x="0" y="-103.4" text-anchor="middle">شمال · خاک 🌱</text>');
+  S.push('<text class="lb-card" x="0" y="110.5" text-anchor="middle">جنوب · آتش 🔥</text>');
+  S.push('<text class="lb-card" x="133" y="3.5" text-anchor="middle">شرق · باد 🌬️</text>');
+  S.push('<text class="lb-card" x="-133" y="3.5" text-anchor="middle">غرب · آب 🌊</text>');
+  // خط‌چین بین جفت‌های نزدیک (d≤۳۲)
+  comp.closePairs.forEach(p=>{ const A=comp.stones[p.i-1], B=comp.stones[p.j-1]; S.push('<line x1="'+A.x.toFixed(2)+'" y1="'+(-A.y).toFixed(2)+'" x2="'+B.x.toFixed(2)+'" y2="'+(-B.y).toFixed(2)+'" stroke="#fde68a" stroke-width="1" stroke-dasharray="3 3.4" opacity="0.6"/>'); });
+  // مرکز ثقل «+»
+  if(comp.bcCount){ S.push('<text class="lb-bary" x="'+comp.bx.toFixed(2)+'" y="'+(-comp.by+5.1).toFixed(2)+'" text-anchor="middle">+</text>'); }
+  // سنگ‌ها
+  comp.stones.forEach(s=>{
+    const cx=s.x.toFixed(2), cy=(-s.y).toFixed(2);
+    const light=parseInt(s.stone.color.replace('#','').substr(0,2),16) > 190 && parseInt(s.stone.color.replace('#','').substr(2,2),16) > 150;
+    const stroke = light? '#475569' : '#e8edff';
+    const txt = lithoTextOn(s.stone.color);
+    S.push('<g class="lb-stone'+(s.lost?' lb-lost':'')+'"><title>سنگ '+s.order+': '+s.stone.fa+' ('+s.stone.en+')'+(s.stone.ruler? ' — '+s.stone.ruler : '')+' • '+LITHO_EL_FA[s.stone.el]+' • '+LITHO_OPT_SHORT[s.stone.opt]+'</title>'
+      +'<circle cx="'+cx+'" cy="'+cy+'" r="8.6" fill="'+s.stone.color+'" fill-opacity="0.96" stroke="'+stroke+'" stroke-width="1.4"'+(s.lost?' stroke-dasharray="3.4 2.4" stroke-opacity="0.9"':'')+'/>'
+      +'<text x="'+cx+'" y="'+(+cy+2.55).toFixed(2)+'" text-anchor="middle" font-size="7.2" font-weight="800" fill="'+txt+'">'+s.order+'</text></g>');
+  });
+  S.push('</svg>');
+  return S.join('');
+}
+function renderEngineLithomancy(spread, data, comp){
+  resultsDiv.innerHTML='';
+  const wrap=document.createElement('div'); wrap.className='engine-wrap';
+  let stonesHtml='<div class="litho-legend">';
+  comp.stones.forEach(s=>{
+    stonesHtml+='<span class="litho-stone" title="'+s.stone.en+' — '+(s.stone.ruler? ('حاکم: '+s.stone.ruler+' • ') : '')+'عنصر '+LITHO_EL_FA[s.stone.el]+' • '+LITHO_OPT_SHORT[s.stone.opt]+' • r='+fa1(s.r)+' • θ='+faNum(Math.round(s.theta*180/Math.PI))+'°"><span class="dot" style="background:'+s.stone.color+'"></span><b>'+faNum(s.order)+'. '+s.stone.fa+'</b>'+(s.lost? ' <em class="lost-tag">بیرون ⚠️</em>':'')+'</span>';
+  });
+  stonesHtml+='</div>';
+  const outCount=comp.stones.filter(s=>s.lost).length;
+  wrap.innerHTML='<div class="litho-board-wrap">'+lithoBoardSVG(comp)+stonesHtml
+    +'<div class="litho-note">حلقه‌ها: مرکز «اکنون» r≤۳۳٫۳ &nbsp;•&nbsp; «میدان تکوین» ۳۳٫۳–۷۰ &nbsp;•&nbsp; «افق حاشیه» ۷۰–۱۰۰ &nbsp;•&nbsp; بیرون &gt;۱۰۰ ⚠️<br>ربع‌ها: شمال خاک 🌱 • شرق باد 🌬️ • جنوب آتش 🔥 • غرب آب 🌊 — مرزها در زوایای ۴۵/۱۳۵/۲۲۵/۳۱۵° • «+» = مرکزِ ثقلِ سنگ‌ها</div>'
+    +'<div class="litho-shadow">🕳️ سنگِ تهِ کیسه (سایهٔ فال): <b>'+comp.shadow.fa+'</b> ('+comp.shadow.en+')'+(comp.shadow.ruler? ' — حاکمِ '+comp.shadow.ruler : '')+' — «'+comp.shadow.kw+'»</div>'
+    +(comp.collisions.length? '<div class="ginnungagap" style="border-color:rgba(253,224,71,.45);color:#fef08a;background:rgba(250,204,21,.09)">⚡ برخورد فیزیکی: جفت(های) '+comp.collisions.join('، ')+' — طبق قاعده تا d=۹٫۲ جدا شدند.</div>' : '')
+    +(outCount? '<div class="ginnungagap">⚪ '+faNum(outCount)+' سنگ از پارچه بیرون غلتید — «ورای کنترل»؛ جزئیات در گزارش کامل.</div>' : '')
+    +'</div>';
+  resultsDiv.appendChild(wrap);
+  const ana=analysisBlock('📜 گزارشِ کاملِ لیتومانسی (سنگ‌چینی هرمسی)', comp.reportLines);
+  resultsDiv.appendChild(ana);
+  return ana;
+}
+const RUNE_POS_TILE={
+ 1:{t:'جایگاه ۱ — Urðr', s:'گذشته / ریشه (غرب)'},
+ 2:{t:'جایگاه ۲ — Verðandi', s:'اکنون (مرکز)'},
+ 3:{t:'جایگاه ۳ — Skuld', s:'آینده / بدهی کارمایی (شرق)'},
+ 4:{t:'جایگاه ۴ — ریشهٔ جهان', s:'نیفلهایم · ترس پنهان (پایین)'},
+ 5:{t:'جایگاه ۵ — تاج', s:'آسگارد · نتیجه (بالا)'}};
+function runePolarBadge(d){
+  if(d.sym){ return d.symResolution==='shadow' ? '<span class="pol-symD">⚖️ 🌑 وجه سایه</span>' : '<span class="pol-symL">⚖️ ☀️ وجه روشن</span>'; }
+  return d.merkstave ? '<span class="pol-merk">🌑 معکوس (مرک‌ستاو)</span>' : '<span class="pol-up">☀️ راست (اورتایت)</span>';
+}
+function renderRuneCell(d){
+  const p=RUNE_POS_TILE[d.order];
+  const shaded=d.sym? (d.symResolution==='shadow') : d.merkstave;
+  const anlam=shaded? d.rune.shadow : d.rune.up;
+  return '<div class="rune-cell pos'+d.order+'"><div class="rune-tile'+(d.order===2?' center-cell':'')+'" title="'+anlam.replace(/"/g,'&quot;')+'">'
+    +'<div class="rune-pos">'+p.t+'<span>'+p.s+'</span></div>'
+    +'<div class="rune-glyph-big rune-glyph'+(d.merkstave?' merk':'')+'">'+d.rune.sym+'</div>'
+    +'<div class="rune-name">'+d.rune.en+' <span class="rune-fa">'+d.rune.fa+'</span></div>'
+    +'<div class="rune-meta">#'+faNum(d.rune.n)+' &nbsp;•&nbsp; <span class="aett-badge">اِته‌ر '+faNum(d.rune.aett)+'</span> &nbsp;•&nbsp; '+RUNE_COSM_SHORT[d.rune.cosm]+'</div>'
+    +runePolarBadge(d)
+    +'<div class="rune-kw">'+d.rune.kw+'</div>'
+    +'</div></div>';
+}
+function renderEngineRunes(spread, data, comp){
+  resultsDiv.innerHTML='';
+  const wrap=document.createElement('div'); wrap.className='engine-wrap';
+  let html='<div class="rune-cross-wrap"><div class="rune-cross" dir="ltr">'
+    + renderRuneCell(comp.drawn[4])
+    + renderRuneCell(comp.drawn[0]) + renderRuneCell(comp.drawn[1]) + renderRuneCell(comp.drawn[2])
+    + renderRuneCell(comp.drawn[3])
+    +'</div>'
+    +'<div class="rune-cross-note">🌳 صلیب اودین — مجاورت‌ها: مرکز (Verðandi) با همهٔ چهار جایگاه مجاور است؛ گذشته، آینده، ریشه و تاج فقط با مرکز مجاورند. رک‌روک‌ها (معکوس‌ها) ۱۸۰° چرخانده شده‌اند.</div></div>';
+  if(comp.jumper){
+    html+='<div class="jumper-strip">🦘 <b>رونز جامپر</b> — <span class="rune-glyph">'+comp.jumper.rune.sym+'</span> <b>'+comp.jumper.rune.en+'</b> ('+comp.jumper.rune.fa+') — #'+faNum(comp.jumper.rune.n)+' • '+RUNE_COSM_SHORT[comp.jumper.rune.cosm]+' • '+(comp.jumper.sym? '⚖️ متقارن' : (comp.jumper.merkstave? '🌑 معکوس':'☀️ راست'))+'<br>بی‌دعوت از کیسه بیرون پرید و به آن بازنگشت؛ پیامِ «پیش از موعد» — جدی بگیرش، اما در جایگاه‌ها نمی‌نشیند.</div>';
+  }
+  html+='<div class="shadow-strip">🌑 <b>رونز سایه (Wyrd — تهِ کیسه)</b> — <span class="rune-glyph">'+comp.shadowRune.sym+'</span> <b>'+comp.shadowRune.en+'</b> ('+comp.shadowRune.fa+') — #'+faNum(comp.shadowRune.n)+' • «'+comp.shadowRune.kw+'»<br>هرگز رو نشد؛ آنچه سرنوشت هنوز به تو بدهکار است، زیرِ همه چیز جریان دارد.</div>';
+  html+='<div class="engine-strip">🧮 <b>چیرگی اِته‌ر:</b> اِته‌ر ۱ (مادی) '+faNum(comp.aettCnt[1])+' • اِته‌ر ۲ (آزمون/کارما) '+faNum(comp.aettCnt[2])+' • اِته‌ر ۳ (روح/قانون) '+faNum(comp.aettCnt[3])+(comp.domAett? ' — <b>غالب: '+(comp.domAett===1?'فِریر/فِریا':comp.domAett===2?'هیمدال/هاگال':'تیواز')+'</b>' : ' — هیچ اِته‌ری غالب نیست')+'<br>'
+    +'🔥 آتش '+faNum(comp.cosmCnt.fire)+' • 🧊 یخ '+faNum(comp.cosmCnt.ice)+' • 🌳 ایگدراسیل '+faNum(comp.cosmCnt.tree)+'</div>';
+  if(comp.ginnung.length){
+    comp.ginnung.forEach(g=>{ html+='<div class="ginnungagap">⚡ <b>تصادم آتش و یخ — گینونگاگاپ (Ginnungagap)</b> در مجاورت مرکز: جایگاه '+faNum(g.a.order)+' ('+g.a.rune.en+') × جایگاه '+faNum(g.b.order)+' ('+g.b.rune.en+') — موسپلهایم و نیفلهایم رودرروی هم؛ آفرینش یا فرسودگی؛ تمرکزت را جمع کن.</div>'; });
+  }
+  html+='<div class="bindrune-card"><div class="br-glyph rune-glyph">'+comp.essence.sym+'</div>'
+    +'<div class="br-info"><div class="br-title">🔮 رونز باطنی — عصارهٔ پنج رونز (Bindrune)</div>'
+    +'<div class="br-formula">Σ شماره‌ها (۱–۲۴): '+comp.drawn.map(d=>faNum(d.rune.n)).join('+')+' = <b>'+faNum(comp.sum)+'</b> &nbsp;→&nbsp; (('+faNum(comp.sum)+' − ۱) mod ۲۴) + ۱ = <b>'+faNum(comp.essenceId)+'</b></div>'
+    +'<div class="br-name">'+comp.essence.en+' <span>('+comp.essence.fa+')</span> — «'+comp.essence.kw+'»</div>'
+    +'<div class="br-sub">این رونز را هیچ فالگیری انتخاب نکرد — این خودِ فالت است که فشرده شده — همان چیزی که پنج رونز با هم می‌خواهند بگویند.</div>'
+    +'</div></div>';
+  wrap.innerHTML=html;
+  resultsDiv.appendChild(wrap);
+  const ana=analysisBlock('📜 گزارشِ کاملِ رونزهای الدر فوتارک (صلیب اودین)', comp.reportLines);
+  resultsDiv.appendChild(ana);
+  return ana;
+}
+
+function finishEngineStats(engine, consumed, apiCalls){
   statsDiv.style.display='grid';
-  sCount.textContent=isI? '۶':'۲';
+  const M={iching:{n:'۶',l1:'خط (۶ خط)',l2:'سکه (پرتاب خام)'},mo:{n:'۲',l1:'پرتاب تاس',l2:'تاس (پرتاب خام)'},litho:{n:'۵',l1:'سنگ (از ۱۶)',l2:'پرتاب خام'},runes:{n:'۵',l1:'رونز (از ۲۴)',l2:'کشش خام (کیسه)'}}[engine]||{n:'۵',l1:'مورد',l2:'عملیات خام'};
+  sCount.textContent=M.n;
   sAttempts.textContent=faNum(consumed);
   sColl.textContent='۰';
   sApi.textContent=apiCalls>0? apiCalls : '-';
   const lbl=statsDiv.querySelectorAll('.stat span');
-  lbl[0].textContent=isI? 'خط (۶ خط)':'پرتابِ تاس';
-  lbl[1].textContent=isI? 'سکه (پرتاب خام)':'تاس (پرتاب خام)';
+  lbl[0].textContent=M.l1;
+  lbl[1].textContent=M.l2;
   lbl[2].textContent='تکرار دور ریخته';
   lbl[3].textContent='درخواست API';
 }
-function renderEngineResult(spread, data, isI, comp){
-  const ana = isI? renderEngineIChing(spread, data, comp) : renderEngineMo(spread, data, comp);
-  finishEngineStats(isI, comp.consumed, data.apiCalls);
+function renderEngineResult(spread, data, engine, comp){
+  const ana = ENGINE_RENDER[engine](spread, data, comp);
+  finishEngineStats(engine, comp.consumed, data.apiCalls);
   const ts=new Date().toISOString();
   const now=Date.now();
-  if(isI){
+  if(engine==='iching'){
     const mkCard=(ord,pos,kw)=> ({order:ord, position:pos, number:kw.n, en:kw.ch+' '+kw.en+' — '+kw.enFull, fa:kw.fa});
     const tail = comp.changed? [mkCard(2,'هگزاگرام متحول (Zhi Gua 之卦)', comp.changed)] : [{order:2, position:'حالت ایستا — بدون خط متغیر', number:comp.main.n, en:comp.main.ch+' '+comp.main.en+' — '+comp.main.enFull, fa:comp.main.fa}];
     const cards=[mkCard(1,'هگزاگرام اصلی (Ben Gua 本卦)', comp.main)].concat(tail)
@@ -2138,7 +2673,7 @@ function renderEngineResult(spread, data, isI, comp){
       iching:{lines:comp.lines.map(l=>({line:l.idx, coins:l.coins, sum:l.sum, bit:l.bit, future:l.future, movable:l.movable, trad:icTrad(l)})),
         moving:comp.moving, zhuXi:comp.zhuXi, mainBits:comp.bitsKey, huBits:comp.huKey, changedBits:comp.changed? comp.futKey : null}
     };
-  }else{
+  }else if(engine==='mo'){
     const o=MO_OMENS[comp.omenIndex-1];
     const cards=[
       {order:1, position:'پرتاب اول (ریشه / درون / فاعل)', number:comp.throws[0]+1, en:comp.f1.syl+' ('+comp.f1.en+') — '+comp.f1.el, fa:'خانوادهٔ: '+comp.f1.family},
@@ -2158,20 +2693,58 @@ function renderEngineResult(spread, data, isI, comp){
       extraLines:['⛩️ روش: یک تاسِ ۶ وجهی با ۶ هجای مانجوشری، دو بار پیاپی؛ AH/RA/PA/TSA/NA/DHI. منبع رندوم: '+data.source],
       mo:{throws:[comp.f1.en, comp.f2.en], omen:{n:comp.omenIndex, en:o.en, fa:o.fa, grade:o.g}, double:comp.isDouble, rel:comp.rel.t}
     };
+  }else if(engine==='litho'){
+    const cards=comp.stones.map(s=>({order:s.order, position:'سنگ '+faNum(s.order)+' (ترتیب برداشت)', number:s.stone.n, en:s.stone.en+' — #'+s.stone.n+' • '+(s.stone.ruler? s.stone.ruler+' • ' : '')+'عنصر '+LITHO_EL_FA[s.stone.el]+' • '+LITHO_OPT_SHORT[s.stone.opt]+(s.lost?' • بیرون از پارچه':''), fa:s.stone.fa+' ('+s.stone.kw+')'}));
+    const lines=cards.map(c=> c.order+'. ['+c.position+'] '+c.en+' - '+c.fa);
+    lastResult={
+      spread:{id:spread.id, name:spreadLabel(spread), cards:5}, deck:'litho-16', requested:5,
+      positions:cards.map(c=>c.position),
+      numbers:comp.stones.map(s=>s.stone.n),
+      cards:cards,
+      attempts:comp.consumed, collisions:comp.collisions.length, apiCalls:data.apiCalls,
+      source:data.source, timestamp:ts,
+      drawMethod:'لیتومانسی هرمسی — ۵ سنگ از کیسهٔ ۱۶ سنگی، پرتاب روی پارچهٔ R=۱۰۰',
+      formattedLines:lines,
+      extraLines:['🪨 روش: کیسهٔ ۱۶ سنگی، ترتیب از منبع رندوم (Q/A/O) • برداشتِ ۵ سنگ • r=۱۰۱·√u، θ=v·۲π (۰°=شرق؛ پادساعت‌گرد) • جداسازی برخورد تا d=۹٫۲ • منبع رندوم: '+data.source],
+      litho:{stones:comp.stones.map(s=>({order:s.order, n:s.stone.n, en:s.stone.en, fa:s.stone.fa, el:s.stone.el, opt:s.stone.opt, r:Math.round(s.r*10)/10, thetaDeg:Math.round(s.theta*180/Math.PI), lost:s.lost, x:Math.round(s.x*10)/10, y:Math.round(s.y*10)/10})), shadow:{en:comp.shadow.en, fa:comp.shadow.fa, n:comp.shadow.n}, bary:{x:Math.round(comp.bx*10)/10, y:Math.round(comp.by*10)/10, quarter:comp.bcQuarter}, collisions:comp.collisions}
+    };
+  }else{
+    const cards=comp.drawn.map(d=>{
+      const shaded=d.sym? (d.symResolution==='shadow') : d.merkstave;
+      return {order:d.order, position:['','جایگاه ۱ — Urðr (گذشته/ریشه، غرب)','جایگاه ۲ — Verðandi (اکنون، مرکز)','جایگاه ۳ — Skuld (آینده/بدهی کارمایی، شرق)','جایگاه ۴ — ریشهٔ جهان (نیفلهایم)','جایگاه ۵ — تاج (آسگارد)'][d.order], number:d.rune.n, orientation:(d.sym? 'sym' : (d.merkstave? 'rev':'up')), en:d.rune.sym+' '+d.rune.en+' — #'+d.rune.n+' • اِته‌ر '+d.rune.aett+' • '+RUNE_COSM_SHORT[d.rune.cosm], fa:d.rune.fa+' — '+(d.sym? (d.symResolution==='shadow'?'⚖️ متقارن، وجه سایه':'⚖️ متقارن، وجه روشن') : (d.merkstave?'🌑 مرک‌ستاو':'☀️ راست'))};
+    });
+    const lines=cards.map(c=> c.order+'. ['+c.position+'] '+c.en+' - '+c.fa);
+    lastResult={
+      spread:{id:spread.id, name:spreadLabel(spread), cards:5}, deck:'futhark-24', requested:5,
+      positions:cards.map(c=>c.position),
+      numbers:comp.drawn.map(d=>d.rune.n),
+      cards:cards,
+      attempts:comp.consumed, collisions:0, apiCalls:data.apiCalls,
+      source:data.source, timestamp:ts,
+      drawMethod:'الدر فوتارک — ۵ رونز از کیسهٔ ۲۴ رونزی در صلیب اودین',
+      formattedLines:lines,
+      extraLines:['🌳 روش: کیسهٔ ۲۴ رونزی (بدون رونز بیست‌وپنجم) • ترتیب از منبع رندوم (Q/A/O) • ۵ جایگاه صلیب اودین • ~۲۸٪ مرک‌ستاو • متقارن‌ها با همسایه‌ها • رونز جامپر '+(comp.jumper? ('🦘 '+comp.jumper.rune.en+' بیرون پرید') : 'نپرید')+' • Bindrune ((Σn−۱) mod ۲۴)+۱ = #'+comp.essence.n+' '+comp.essence.en+' • منبع رندوم: '+data.source],
+      runes:{drawn:comp.drawn.map(d=>({order:d.order, n:d.rune.n, en:d.rune.en, sym:d.rune.sym, merkstave:d.merkstave, symResolution:d.symResolution})), jumper:comp.jumper? {n:comp.jumper.rune.n, en:comp.jumper.rune.en} : null, shadow:{n:comp.shadowRune.n, en:comp.shadowRune.en}, essence:{n:comp.essence.n, en:comp.essence.en}, sum:comp.sum, aettCnt:comp.aettCnt, cosmCnt:comp.cosmCnt, ginnungagap:comp.ginnung.length}
+    };
   }
-  if(ana && ana.textContent) lastResult.analysis=(isI? '— گزارش ای‌چینگ —\n' : '— گزارش فال مو —\n')+comp.reportLines.join('\n');
+  if(ana && ana.textContent) lastResult.analysis=({iching:'— گزارش ای‌چینگ —\n', mo:'— گزارش فال مو —\n', litho:'— گزارش لیتومانسی —\n', runes:'— گزارش رونزها —\n'})[engine]+comp.reportLines.join('\n');
 }
+const ENGINE_COMPUTE={iching:ichingCompute, mo:moCompute, litho:lithoCompute, runes:runesCompute};
+const ENGINE_RENDER={iching:renderEngineIChing, mo:renderEngineMo, litho:renderEngineLithomancy, runes:renderEngineRunes};
+const ENGINE_DECK_UNIT={'iching-64':'خط (۶ خط × ۳ سکه)','mo-36':'پرتاب تاس','litho-16':'سنگ (از ۱۶)','futhark-24':'رونز (از ۲۴)'};
 async function runEngine(spread, src){
-  const isI=spread.engine==='iching';
+  const engine=spread.engine;
+  const btnTxt={iching:'⏳ در حال ریختن سکه‌ها...', mo:'⏳ در حال پرتاب تاس...', litho:'⏳ در حال پرتاب سنگ‌ها روی پارچه...', runes:'⏳ در حال کشیدن رونزها از کیسه...'};
+  const srcTxt={iching:'در حال اتصال به سرور رندوم برای پرتاب ۱۸ سکه...', mo:'در حال اتصال به سرور رندوم برای ۲ پرتاب تاس...', litho:'در حال اتصال به سرور رندوم برای چینش کیسه و پرتاب ۵ سنگ...', runes:'در حال اتصال به سرور رندوم برای چینش کیسه و کشیدن ۵ رونز...'};
   btn.disabled=true;
-  btn.textContent=isI? '⏳ در حال ریختن سکه‌ها...' : '⏳ در حال پرتاب تاس...';
+  btn.textContent=btnTxt[engine]||'⏳ در حال کشیدن...';
   if(src!=='local' && !navigator.onLine){ showError('اینترنت وصل نیست؛ منبع آفلاین را انتخاب کن.'); btn.disabled=false; btn.textContent=defaultBtnLabel(); return; }
-  if(src!=='local') showStatus(isI? 'در حال اتصال به سرور رندوم برای پرتاب ۱۸ سکه...' : 'در حال اتصال به سرور رندوم برای ۲ پرتاب تاس...');
+  if(src!=='local') showStatus(srcTxt[engine]||'در حال اتصال به سرور رندوم...');
   try{
     const data=await acquireEngineRaw(src);
-    const comp=isI? ichingCompute(data.raw) : moCompute(data.raw);
+    const comp=ENGINE_COMPUTE[engine](data.raw);
     lastData=data;
-    renderEngineResult(spread, data, isI, comp);
+    renderEngineResult(spread, data, engine, comp);
     recordHistory();
     hideStatus();
     if(src!=='local') showStatus('✅ از '+data.source+' — '+data.apiCalls+' درخواست خام.');
@@ -2183,7 +2756,7 @@ async function runEngine(spread, src){
 }
 function defaultBtnLabel(){
   const e=(typeof activeSpread!=='undefined' && activeSpread)? activeSpread.engine : null;
-  return e==='iching'? '☯️ سکه‌ها رو بریز' : e==='mo'? '🎲 تاس رو پرتاب کن' : '🔮 کارت‌ها رو بکش';
+  return e==='iching'? '☯️ سکه‌ها رو بریز' : e==='mo'? '🎲 تاس رو پرتاب کن' : e==='litho'? '🪨 سنگ‌ها رو روی پارچه بریز' : e==='runes'? '🌳 رونزها رو از کیسه بکش' : '🔮 کارت‌ها رو بکش';
 }
 
 const btn=document.getElementById('generateBtn');
@@ -3247,9 +3820,9 @@ document.getElementById('dlTxt').addEventListener('click', ()=>{
   if(!lastResult){ toast('اول کارت بکش','bad'); return; }
   const head='فال: '+lastResult.spread.name+'\n'
     +(READING_NOTE[lastResult.spread.id]? 'ⓘ '+READING_NOTE[lastResult.spread.id]+'\n' : '')
-    +((lastResult.deck==='iching-64'||lastResult.deck==='tmo-36')? 'واحد: '+lastResult.requested+(lastResult.deck==='iching-64'?' خط (۶ خط × ۳ سکه)':' پرتاب تاس')+'\n' : 'تعداد: '+lastResult.requested+' کارت\n')
+    +(ENGINE_DECK_UNIT[lastResult.deck] ? 'واحد: '+lastResult.requested+' '+ENGINE_DECK_UNIT[lastResult.deck]+'\n' : 'تعداد: '+lastResult.requested+' کارت\n')
     +'منبع: '+lastResult.source+'\n'
-    +'روش کشیدن: '+(lastResult.drawMethod==='fan-pick'? 'بادبزنی — انتخاب تصادفی از دستهٔ پهن‌شده' : 'متوالی از بالای دستهٔ بُرخورده')+'\n'
+    +'روش: '+(lastResult.drawMethod==='fan-pick' ? 'بادبزنی — انتخاب تصادفی از دستهٔ پهن‌شده' : lastResult.drawMethod==='sequential-top-of-deck' ? 'متوالی از بالای دستهٔ بُرخورده' : (lastResult.drawMethod||'—'))+'\n'
     +'تاریخ: '+lastResult.timestamp+'\n'
     +'کل تلاش: '+lastResult.attempts+' | تکرار دور ریخته: '+lastResult.collisions+'\n\n';
   downloadFile(head+lastResult.formattedLines.join('\n')
@@ -3805,9 +4378,9 @@ function restoreHistory(id){
     applySpread(e.spreadId, {silent:true, titlesReady:true, gtReady:true});
     lastData = JSON.parse(JSON.stringify(e.data));
     if(sp.engine){
-      const isI = sp.engine === 'iching';
-      const comp = isI ? ichingCompute(lastData.raw) : moCompute(lastData.raw);
-      renderEngineResult(sp, lastData, isI, comp);
+      const engine = sp.engine;
+      const comp = ENGINE_COMPUTE[engine](lastData.raw);
+      renderEngineResult(sp, lastData, engine, comp);
     }else{
       render(lastData, e.requested || sp.cards || lastData.numbers.length);
     }
