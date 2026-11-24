@@ -40,7 +40,57 @@
     box-shadow: 0 20px 80px rgba(0,0,0,0.5);
   }
   .badge{display:inline-flex;gap:6px;background: rgba(168,85,247,0.18);border:1px solid rgba(168,85,247,0.3);color:#d8b4fe;font-size:11px;padding:6px 12px;border-radius:999px;margin-bottom:12px}
-  h1{font-size:26px;font-weight:900;margin-bottom:16px;letter-spacing:-0.5px}
+  h1{font-size:26px;font-weight:900;margin-bottom:2px;letter-spacing:-0.5px;background:linear-gradient(120deg,#fde68a 0%,#f6d67c 25%,#c9a227 50%,#f6d67c 75%,#fde68a 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .brand{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px}
+  .brand-sub{text-align:center;width:100%;font-size:10.5px;color:#a5b4fc;margin-bottom:14px;letter-spacing:.6px}
+  .mandala{flex:0 0 auto;opacity:.92;filter:drop-shadow(0 0 6px rgba(246,214,124,.35))}
+  .spin-slow{animation:spinMandala 110s linear infinite;transform-origin:50% 50%}
+  .spin-rev{animation:spinMandala 140s linear infinite reverse;transform-origin:50% 50%}
+  @keyframes spinMandala{to{transform:rotate(360deg)}}
+  @media(max-width:560px){.mandala{width:44px;height:44px}.brand-sub{font-size:9px;padding:0 8px}}
+  .ornament{display:flex;justify-content:center;margin:18px 0 4px;opacity:.9}
+  /* ===== v1.6.0: هیرو و تم‌های تصویری خوانش ===== */
+  .hero{position:relative;overflow:hidden;border-radius:20px;margin-bottom:16px;height:158px;border:1px solid rgba(246,214,124,.3);
+    background:#17112a url('assets/art/hero-fate.jpg') center/cover no-repeat;
+    box-shadow:0 16px 44px rgba(0,0,0,.55), inset 0 0 70px rgba(0,0,0,.6)}
+  .hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,8,32,.08) 0%,rgba(18,8,32,.38) 52%,rgba(13,5,24,.9) 100%)}
+  .hero-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:12px 10px 13px;text-align:center}
+  .hero h1{font-size:30px;margin:0;background:linear-gradient(120deg,#fff6c9 0%,#f6d67c 22%,#c9a227 48%,#f9e08a 72%,#fff6c9 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 2px 6px rgba(0,0,0,.7))}
+  .hero-sub{font-size:10px;color:#eadfb8;opacity:.96;letter-spacing:.35px;margin-top:3px;text-shadow:0 1px 4px #000}
+  .hero-tag{font-size:8.5px;color:#cdb87f;opacity:.9;letter-spacing:1.1px;margin-top:2px;text-shadow:0 1px 4px #000}
+  @media(max-width:560px){.hero{height:126px}.hero h1{font-size:22px}.hero-sub{font-size:8px}.hero-tag{display:none}}
+  #results.res-tarot{background:linear-gradient(rgba(28,13,34,.8),rgba(22,11,29,.85)),url('assets/art/tarot-cloth.jpg') center/cover;border:1px solid rgba(246,214,124,.24);border-radius:18px;padding:10px}
+  #results.res-gt{background:linear-gradient(rgba(9,33,21,.8),rgba(6,25,16,.86)),url('assets/art/gt-table.jpg') center/cover;border:1px solid rgba(52,211,153,.28);border-radius:18px;padding:10px}
+  .litho-board-wrap{background:linear-gradient(rgba(9,13,32,.52),rgba(9,13,32,.68)),url('assets/art/litho-cloth.jpg') center/cover;border-radius:18px;border:1px solid rgba(110,231,183,.22);padding:12px}
+  .rune-cross-wrap{border-radius:18px;border:1px solid rgba(214,164,92,.3);padding:10px;background:linear-gradient(rgba(22,11,4,.62),rgba(22,11,4,.72)),url('assets/art/rune-yggdrasil.jpg') center 18%/cover no-repeat}
+  .mo-tiles{border-radius:18px;border:1px solid rgba(250,204,21,.25);padding:12px 14px;background:linear-gradient(rgba(36,11,21,.74),rgba(36,11,21,.8)),url('assets/art/mo-thangka.jpg') center/cover}
+  #results.res-iching{background:linear-gradient(rgba(13,20,44,.82),rgba(9,14,32,.88)),url('assets/art/trigram-qian.jpg') center/cover;border:1px solid rgba(125,211,252,.25);border-radius:18px;padding:10px}
+  #results.res-litho{background:linear-gradient(rgba(9,13,32,.82),rgba(9,13,32,.88)),url('assets/art/litho-cloth.jpg') center/cover;border:1px solid rgba(110,231,183,.3);border-radius:18px;padding:10px}
+  #results.res-runes{background:linear-gradient(rgba(22,11,4,.78),rgba(22,11,4,.87)),url('assets/art/rune-yggdrasil.jpg') center 18%/cover no-repeat;border:1px solid rgba(214,164,92,.3);border-radius:18px;padding:10px}
+  #results.res-mo{background:linear-gradient(rgba(36,11,21,.8),rgba(36,11,21,.88)),url('assets/art/mo-thangka.jpg') center/cover;border:1px solid rgba(250,204,21,.25);border-radius:18px;padding:10px}
+  /* ای‌چینگ: نمایش تصویری سه‌خطی‌هایِ همان فال */
+  .iching-tris{display:flex;justify-content:center;gap:22px;margin:12px 0 4px;flex-wrap:wrap}
+  .iching-tri{margin:0;display:flex;flex-direction:column;align-items:center;gap:5px;background:rgba(10,16,40,.55);border:1px solid rgba(125,211,252,.32);border-radius:14px;padding:8px 10px;box-shadow:0 10px 26px rgba(0,0,0,.45)}
+  .iching-tri img{width:96px;height:172px;object-fit:cover;border-radius:9px;border:1px solid rgba(246,214,124,.55)}
+  .iching-tri figcaption{display:flex;flex-direction:column;align-items:center;font-size:9.5px;color:#dbeafe;text-align:center;line-height:1.9;max-width:110px}
+  .iching-tri figcaption b{color:#fde68a;font-size:10px}
+  .iching-tri-chg{background:transparent;border-style:dashed;box-shadow:none}
+  @media(max-width:560px){.iching-tri img{width:72px;height:130px}.iching-tri figcaption{max-width:84px}}
+  /* تم تصویری فال‌های شرقی-عرفانی */
+  #results.res-dhyani{background:linear-gradient(rgba(30,10,40,.7),rgba(20,7,28,.84)),url('assets/art/art-dhyani.jpg') center/cover;border:1px solid rgba(216,180,254,.34);border-radius:18px;padding:10px}
+  #results.res-valleys{background:linear-gradient(rgba(46,22,8,.62),rgba(32,15,6,.8)),url('assets/art/art-valleys.jpg') center/cover;border:1px solid rgba(251,191,36,.35);border-radius:18px;padding:10px}
+  #results.res-samsara{background:linear-gradient(rgba(40,8,12,.66),rgba(28,6,9,.82)),url('assets/art/art-samsara.jpg') center/cover;border:1px solid rgba(248,113,113,.32);border-radius:18px;padding:10px}
+  #results.res-loshu{background:linear-gradient(rgba(8,20,38,.66),rgba(6,14,28,.82)),url('assets/art/art-loshu.jpg') center/cover;border:1px solid rgba(110,231,183,.3);border-radius:18px;padding:10px}
+  /* ===== v1.6.1: اورلیٔ پیشرفت خروجی‌ها ===== */
+  .export-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(7,4,14,.72);backdrop-filter:blur(6px)}
+  .export-overlay.on{display:flex}
+  .export-card{background:linear-gradient(160deg,#2a1836,#171029);border:1px solid rgba(246,214,124,.42);border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,.6), inset 0 0 40px rgba(201,162,39,.07);padding:22px 30px;min-width:280px;max-width:88vw;text-align:center}
+  .export-title{font-size:15px;font-weight:800;color:#fde68a}
+  .export-bar{height:10px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(246,214,124,.25);overflow:hidden;margin:14px auto 10px;width:240px}
+  .export-fill{height:100%;width:0%;background:linear-gradient(90deg,#c9a227,#fde68a,#c9a227);background-size:200% 100%;animation:exportShimmer 1.6s linear infinite;transition:width .2s ease}
+  @keyframes exportShimmer{0%{background-position:0% 0}100%{background-position:200% 0}}
+  .export-sub{font-size:11px;color:#c7c2e8;line-height:1.9;min-height:22px}
+  @media(prefers-reduced-motion:reduce){.spin-slow,.spin-rev{animation:none}}
 
   .controls{display:grid;grid-template-columns:1.5fr 0.8fr 1.1fr;gap:12px;margin-bottom:14px}
   @media(max-width:760px){.controls{grid-template-columns:1fr}}
@@ -97,6 +147,13 @@
   /* ---- نوار تب‌های تاریخچه (اسوایپ افقی) ---- */
   .htabs{display:flex;gap:8px;overflow-x:auto;padding:6px 2px 12px;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .htabs::-webkit-scrollbar{display:none}
+  .htabs{cursor:grab;user-select:none;-webkit-user-select:none;scroll-behavior:auto;mask-image:linear-gradient(90deg,transparent 0,#000 22px,#000 calc(100% - 22px),transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22px,#000 calc(100% - 22px),transparent 100%)}
+  .htabs.dragging{cursor:grabbing}
+  .htabs.dragging .htab{pointer-events:none}
+  .hrestore[hidden]{display:none !important}
+  .hrestore{background:rgba(16,185,129,.08);border:1px dashed rgba(52,211,153,.4);border-radius:14px;padding:10px 12px;margin:4px 0 2px;display:flex;flex-direction:column;gap:8px}
+  .hrestore-t{font-size:11px;color:#a7f3d0;line-height:2}
+  .hrestore-btns{display:flex;gap:8px;flex-wrap:wrap}
   .htab{flex:0 0 auto;scroll-snap-align:start;padding:7px 14px;border-radius:999px;border:1px solid rgba(167,139,250,.3);background:rgba(255,255,255,.05);color:#c9c4ee;font-size:11px;cursor:pointer;white-space:nowrap;transition:.2s;display:inline-flex;align-items:center;gap:6px;font-family:inherit}
   .htab b{color:#a78bfa;font-size:10px}
   .htab:hover{border-color:rgba(167,139,250,.55)}
@@ -315,6 +372,40 @@
   .tarot-card.fcs{border-color:rgba(34,211,238,0.85);box-shadow:0 0 0 2px rgba(34,211,238,0.35)}
   .tarot-card.itx{border-style:dashed;border-color:rgba(192,132,252,0.9);box-shadow:0 0 0 2px rgba(192,132,252,0.3)}
   .tarot-card.own::after{content:'⭐';position:absolute;top:5px;inset-inline-end:7px;font-size:13px;filter:drop-shadow(0 0 6px rgba(251,191,36,0.9))}
+
+  /* ===== v1.5.0: کارت تصویری (آرت کامل + نوار نام) ===== */
+  .tarot-card.art-card{flex-direction:column;align-items:stretch;gap:6px;padding:7px;overflow:hidden}
+  .tarot-card.art-card .order{position:absolute;top:10px;inset-inline-start:10px;z-index:5;box-shadow:0 2px 8px rgba(0,0,0,0.55)}
+  .art-btn{display:block;width:100%;border:0;background:transparent;padding:0;cursor:pointer;perspective:900px;-webkit-tap-highlight-color:transparent;border-radius:12px}
+  .art-btn:focus-visible{outline:2px solid #fbbf24;outline-offset:2px}
+  .flip-inner{position:relative;display:block;width:100%;aspect-ratio:400/688;transition:transform .55s cubic-bezier(.2,.7,.3,1);transform-style:preserve-3d}
+  .art-btn.flipped .flip-inner{transform:rotateY(180deg)}
+  .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.12)}
+  .face.front{background:#1a1030}
+  .face.back{transform:rotateY(180deg);background:#2a0a14}
+  .face.front img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .3s}
+  .tarot-card.rev .face.front img{transform:rotate(180deg)}
+  .cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:0;padding:4px 6px 5px;background:linear-gradient(180deg,transparent,rgba(5,2,12,0.88) 38%);direction:rtl;text-align:center}
+  .cap b{font-size:11px;color:#fff;line-height:1.7;font-weight:800;text-shadow:0 1px 3px #000}
+  .cap i{font-style:normal;font-size:8.5px;color:#c4b5fd;letter-spacing:.4px;direction:ltr}
+  .face.back .backface-svg{display:block;width:100%;height:100%}
+  .face.back img{display:block;width:100%;height:100%;object-fit:cover}
+  .art-card .meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px;direction:rtl}
+  .art-card .meta .pos{margin-bottom:0}
+  .art-card .meta .num{margin-top:0;width:100%}
+  .art-card .meta .hint{display:block;width:100%}
+  .art-card .info{display:none}
+  .img-failed .art-btn{display:none}
+  .img-failed .info{display:flex}
+  .img-failed{flex-direction:row !important;gap:10px !important;padding:12px 13px !important}
+  .ggrid.dense .art-card{padding:4px;gap:3px;border-radius:10px}
+  .ggrid.dense .face,.ggrid.dense .flip-inner{border-radius:8px}
+  .ggrid.dense .cap b{font-size:8px;line-height:1.5}
+  .ggrid.dense .cap i{display:none}
+  .ggrid.dense .cap{padding:2px 3px 3px}
+  .ggrid.dense .art-card .meta .num,.ggrid.dense .art-card .meta .hint{display:none}
+  .ggrid.dense .art-card .meta .ori{font-size:8px;padding:1px 5px;margin-top:0}
+  @media(prefers-reduced-motion:reduce){.flip-inner{transition:none}}
   .analysis{background:rgba(0,0,0,0.35);border:1px solid rgba(167,139,250,0.3);border-radius:18px;padding:14px 16px;direction:rtl}
   .analysis h3{font-size:13.5px;color:#fbbf24;margin-bottom:10px}
   .analysis .aline{font-size:12px;line-height:2.2;color:#ddd6fe;margin-bottom:6px}
@@ -345,7 +436,8 @@
   .hexcard{background:rgba(0,0,0,0.35);border:1px solid rgba(251,191,36,0.35);box-shadow:0 0 26px rgba(251,191,36,0.08) inset;border-radius:18px;padding:14px 18px;min-width:225px;text-align:center;display:flex;flex-direction:column;gap:8px}
   .hexcard-t{font-size:12.5px;color:#fcd34d;font-weight:800;line-height:1.9}
   .hexsub{font-size:10.5px;color:#a5b4fc;font-weight:600}
-  .hexbig{font-size:62px;line-height:1.05;color:#fde68a}
+  .hexbig{font-size:44px;line-height:1.05;color:#fde68a}
+  .hxsl{display:block;width:172px;max-width:100%;height:auto;margin:0 auto}
   .hexlines{display:flex;flex-direction:column;gap:7px}
   .hxl{display:flex;align-items:center;gap:9px}
   .hxl-vis{width:112px}
@@ -368,9 +460,19 @@
   .engine-rule{background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.4);border-radius:12px;padding:9px 13px;font-size:12px;line-height:2.15;color:#fef3c7}
   .mo-tiles{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
   .mo-tile{flex:1;min-width:230px;max-width:340px}
-  .mo-syl{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:62px;gap:2px}
-  .mo-syl-t{font-size:52px;line-height:1.1;color:#fde68a;font-family:'Microsoft Himalaya','Noto Serif Tibetan','Noto Sans Tibetan','Kailasa',serif}
-  .mo-syl-en{font-size:15px;font-weight:800;color:#a5b4fc;letter-spacing:2px}
+  .mo-syl{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:96px;gap:2px;padding:16px 10px 10px;border-radius:15px;
+    background-color:#efe3bd;
+    background-image:
+      radial-gradient(circle at 13px 13px, #33270f 2.7px, transparent 3.4px),
+      radial-gradient(circle at calc(100% - 13px) 13px, #33270f 2.7px, transparent 3.4px),
+      radial-gradient(circle at 13px calc(100% - 13px), #33270f 2.7px, transparent 3.4px),
+      radial-gradient(circle at calc(100% - 13px) calc(100% - 13px), #33270f 2.7px, transparent 3.4px),
+      radial-gradient(circle at calc(100% - 13px) 50%, #33270f 2.7px, transparent 3.4px),
+      linear-gradient(155deg,#fdf6dd 0%,#efe3bd 45%,#cdb87f 100%);
+    border:1.5px solid #7d6125;
+    box-shadow:inset 0 2px 5px #fffdf0, inset 0 -5px 9px rgba(90,70,20,.55), 0 8px 18px rgba(0,0,0,.5)}
+  .mo-syl-t{font-size:46px;line-height:1.1;color:#33270f;text-shadow:0 1px 0 #fffdf0, 0 -1px 2px rgba(60,40,5,.65);font-family:'Microsoft Himalaya','Noto Serif Tibetan','Noto Sans Tibetan','Kailasa',serif}
+  .mo-syl-en{font-size:13px;font-weight:800;color:#4a3a14;letter-spacing:2px;text-shadow:0 1px 0 rgba(255,253,240,.7)}
   .mo-arrow{align-self:center;font-size:26px;color:#fbbf24;font-weight:900}
   .mo-omen{border-radius:18px;text-align:center;padding:16px 18px;border:1px solid;display:flex;flex-direction:column;gap:6px;background:rgba(0,0,0,0.35)}
   .mo-omen-n{font-size:11px;color:#c4b5fd;font-weight:700}
@@ -408,22 +510,42 @@
 .rune-cross{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-areas:'. crown .' 'urder center skuld' '. root .';gap:10px;max-width:560px;margin:0 auto;width:100%;direction:ltr}
 .rune-cell{direction:rtl;min-width:0}
 .rune-cell.pos1{grid-area:urder}.rune-cell.pos2{grid-area:center}.rune-cell.pos3{grid-area:skuld}.rune-cell.pos4{grid-area:root}.rune-cell.pos5{grid-area:crown}
-.rune-tile{background:linear-gradient(165deg,rgba(30,41,59,.92),rgba(15,23,42,.94));border:1px solid rgba(167,139,250,.35);border-radius:16px;padding:10px 8px;text-align:center;display:flex;flex-direction:column;gap:5px;align-items:center;height:100%;justify-content:center}
-.rune-tile.center-cell{border-color:rgba(253,224,71,.6);box-shadow:0 0 26px rgba(253,224,71,.16),inset 0 0 22px rgba(253,224,71,.06)}
-.rune-pos{font-size:9.5px;color:#c4b5fd;font-weight:800;line-height:1.7}
-.rune-pos span{display:block;color:#8b9cc9;font-weight:600;font-size:8.5px}
-.rune-glyph-big{font-size:50px;line-height:1.15;color:#f1f5ff;text-shadow:0 0 20px rgba(129,140,248,.5)}
-.rune-glyph-big.merk{transform:rotate(180deg);color:#fda4af;text-shadow:0 0 20px rgba(244,63,94,.45)}
-.rune-name{font-size:12px;color:#fff;font-weight:800}
-.rune-fa{color:#c4b5fd;font-weight:600;font-size:10.5px}
-.rune-meta{font-size:9px;color:#9fb3d8;line-height:1.9}
+.rune-tile{
+  background:linear-gradient(160deg, rgba(248,240,222,.28), rgba(196,178,142,.42) 45%, rgba(120,100,70,.55)), url('assets/textures/bone.jpg') center/cover;
+  border:1.5px solid rgba(233,213,163,.75);
+  border-radius:14px;
+  padding:10px 8px;text-align:center;display:flex;flex-direction:column;gap:5px;align-items:center;height:100%;justify-content:center;
+  box-shadow:inset 0 2px 6px rgba(255,255,255,.55), inset 0 -3px 8px rgba(84,62,32,.45), 0 6px 16px rgba(0,0,0,.45), 0 0 0 1px rgba(84,62,32,.35);
+}
+.rune-tile.rune-wood{
+  background:linear-gradient(160deg, rgba(64,38,16,.52), rgba(34,19,8,.66) 50%, rgba(12,6,2,.78)), url('assets/textures/wood.jpg') center/cover;
+  border-color:rgba(214,164,92,.7);
+  box-shadow:inset 0 2px 6px rgba(255,214,140,.28), inset 0 -4px 10px rgba(0,0,0,.6), 0 6px 16px rgba(0,0,0,.5), 0 0 18px rgba(214,164,92,.18);
+}
+.rune-tile.center-cell{border-color:rgba(253,224,71,.85);box-shadow:0 0 26px rgba(253,224,71,.28),inset 0 0 22px rgba(255,240,180,.22),inset 0 2px 6px rgba(255,255,255,.5),0 6px 16px rgba(0,0,0,.45)}
+.rune-pos{font-size:9.5px;color:#4a3a1e;font-weight:800;line-height:1.7}
+.rune-pos span{display:block;color:#6b5a34;font-weight:700;font-size:8.5px}
+.rune-wood .rune-pos{color:#f3d9a4;text-shadow:0 1px 3px rgba(0,0,0,.7)}
+.rune-wood .rune-pos span{color:#d8b878}
+.rune-glyph-big{font-size:50px;line-height:1.15;color:#3d2c12;text-shadow:0 1px 0 rgba(255,252,235,.75), 0 -1px 2px rgba(40,24,4,.9), 0 0 1px rgba(40,24,4,.8)}
+.rune-glyph-big.merk{transform:rotate(180deg);color:#5e1d12;text-shadow:0 1px 0 rgba(255,235,225,.5), 0 -1px 2px rgba(30,6,2,.95)}
+.rune-wood .rune-glyph-big{color:#ffd98a;text-shadow:0 0 14px rgba(255,190,80,.75), 0 0 4px rgba(255,230,160,.9), 0 -1px 2px rgba(0,0,0,.85)}
+.rune-wood .rune-glyph-big.merk{color:#ff9d6b;text-shadow:0 0 16px rgba(255,110,60,.85), 0 0 5px rgba(255,180,120,.9), 0 -1px 2px rgba(0,0,0,.85)}
+.rune-name{font-size:12px;color:#2e2312;font-weight:800}
+.rune-wood .rune-name{color:#fbe8bd;text-shadow:0 1px 3px rgba(0,0,0,.7)}
+.rune-fa{color:#54401e;font-weight:700;font-size:10.5px}
+.rune-wood .rune-fa{color:#e8c887}
+.rune-meta{font-size:9px;color:#453723;line-height:1.9;font-weight:600}
+.rune-wood .rune-meta{color:#e3cd9f}
+.rune-wood .aett-badge{border-color:rgba(255,214,130,.5);color:#ffe1a6;background:rgba(140,80,10,.35)}
 .aett-badge{display:inline-block;font-size:8.5px;border-radius:999px;padding:0 8px;border:1px solid rgba(147,197,253,.4);color:#bfdbfe;background:rgba(59,130,246,.15)}
 .pol-up,.pol-merk,.pol-symL,.pol-symD{display:inline-block;font-size:9.5px;border-radius:999px;padding:2px 10px;font-weight:800;line-height:1.8}
 .pol-up{background:rgba(52,211,153,.16);color:#6ee7b7;border:1px solid rgba(52,211,153,.45)}
 .pol-merk{background:rgba(244,63,94,.16);color:#fda4af;border:1px solid rgba(244,63,94,.45)}
 .pol-symL{background:rgba(250,204,21,.13);color:#fde68a;border:1px solid rgba(250,204,21,.4)}
 .pol-symD{background:rgba(168,85,247,.15);color:#d8b4fe;border:1px solid rgba(168,85,247,.42)}
-.rune-kw{font-size:9.5px;color:#cbd5e1;line-height:1.9;min-height:2.4em}
+.rune-kw{font-size:9.5px;color:#3b2f1c;line-height:1.9;min-height:2.4em;font-weight:600}
+.rune-wood .rune-kw{color:#f0ddb0}
 .rune-cross-note{font-size:10px;color:#8b9cc9;text-align:center;line-height:2}
 .jumper-strip{background:rgba(251,146,60,.1);border:1px solid rgba(251,146,60,.5);border-radius:12px;padding:9px 14px;font-size:11.5px;line-height:2.15;color:#fed7aa}
 .shadow-strip{background:rgba(76,29,149,.22);border:1px solid rgba(196,181,253,.45);border-radius:12px;padding:9px 14px;font-size:11.5px;line-height:2.15;color:#e9d5ff}
@@ -455,7 +577,14 @@
 <div class="card">
   <button id="guideBtn" class="guide-btn" type="button" title="راهنمای همهٔ ۳۷ فال برنامه">📖 راهنمای فال‌ها</button>
   <button id="historyBtn" class="guide-btn history-btn" type="button" title="تاریخچهٔ فال‌های این ماه — قابل بازیابی با یک لمس">🕘 تاریخچه</button>
-  <h1>فال تاروت</h1>
+  <div class="hero" role="img" aria-label="فال تاروت — اسطرلاب، کرهٔ بلورین و کارت‌های زیر مهتاب">
+    <div class="hero-veil"></div>
+    <div class="hero-inner">
+      <h1>فال تاروت</h1>
+      <div class="hero-sub">تاروت • لنورماند • ای‌چینگ • فال مو • لیتومانسی • رونزهای الدر فوتارک</div>
+      <div class="hero-tag">آنتروپیِ واقعی — آفلاین و صادق</div>
+    </div>
+  </div>
 
   <div class="controls">
     <div class="field">
@@ -535,7 +664,10 @@
     <button id="dlTxt">⬇️ دانلود TXT</button>
     <button id="dlCsv">⬇️ دانلود CSV</button>
     <button id="dlJson">⬇️ دانلود JSON</button>
+    <button id="dlHtml">🎨 خروجی تصویری (HTML)</button>
+    <button id="dlPng">🖼️ خروجی تصویر (PNG)</button>
   </div>
+  <div class="ornament" aria-hidden="true"><svg width="420" height="34" viewBox="0 0 420 34" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="orL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9a227" stop-opacity="0"/><stop offset="1" stop-color="#c9a227"/></linearGradient><linearGradient id="orR" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#c9a227" stop-opacity="0"/><stop offset="1" stop-color="#c9a227"/></linearGradient></defs><line x1="6" y1="17" x2="168" y2="17" stroke="url(#orL)" stroke-width="1.4"/><line x1="252" y1="17" x2="414" y2="17" stroke="url(#orR)" stroke-width="1.4"/><g fill="none" stroke="#e9c96a" stroke-width="1.5"><circle cx="210" cy="17" r="12.5"/><circle cx="210" cy="17" r="4.6" stroke-width="1.1"/><path d="M210 4.5v6 M210 23.5v6 M197.5 17h6 M216.5 17h6 M201.2 8.2l4.2 4.3 M218.8 25.8l-4.2-4.3 M218.8 8.2l-4.2 4.3 M201.2 25.8l4.2-4.3"/></g><circle cx="180" cy="17" r="1.6" fill="#e9c96a"/><circle cx="240" cy="17" r="1.6" fill="#e9c96a"/></svg></div>
 </div>
 
 <div class="overlay" id="overlay">
@@ -609,11 +741,22 @@
   <div class="modal guide-modal">
     <div class="mhead"><b id="historyTitle">🕘 تاریخچه</b>
       <span style="display:flex;gap:8px;align-items:center">
+        <button id="hExport" type="button" class="caltoggle" title="دانلود کل تاریخچهٔ فال‌های ذخیره‌شده به‌صورت فایل پشتیبان JSON (قابل ورود مجدد)">⬇️ بکاپ</button>
+        <button id="hImportBtn" type="button" class="caltoggle" title="ورود فایل پشتیبان JSON — با انتخاب «ادغام» یا «جایگزینی»">⬆️ ورود بکاپ</button>
         <button id="calToggle" type="button" class="caltoggle" title="تغییر تقویم مرجع ماه (شمسی / میلادی)">📅 تغییر به میلادی</button>
         <button class="mclose" id="historyClose">✕ بستن</button>
       </span>
     </div>
     <div class="mnote" id="historyMonthLabel">فال‌های این ماه</div>
+    <input type="file" id="hImportFile" accept="application/json,.json" style="display:none">
+    <div id="hRestorePanel" class="hrestore" hidden>
+      <div class="hrestore-t" id="hRestoreInfo"></div>
+      <div class="hrestore-btns">
+        <button type="button" id="hDoMerge" class="caltoggle">🔗 ادغام با تاریخچهٔ فعلی</button>
+        <button type="button" id="hDoReplace" class="caltoggle" style="border-color:rgba(248,113,113,.5);color:#fecaca;background:rgba(248,113,113,.12)">♻️ جایگزینی کامل</button>
+        <button type="button" id="hCancelRestore" class="caltoggle">✕ لغو</button>
+      </div>
+    </div>
     <div class="htabs" id="htabs" role="tablist" aria-label="فیلتر بر اساس فال"></div>
     <div class="guide-body hlist" id="historyList"></div>
     <div class="hfoot"><span id="hfTotal">در این ماه: <b>۰</b> فال</span><span id="hfCat">در «همه»: <b>۰</b> فال</span></div>
@@ -637,6 +780,13 @@
   </div>
 </div>
 
+<div id="exportOverlay" class="export-overlay" role="alertdialog" aria-live="assertive" aria-label="در حال انجام خروجی">
+  <div class="export-card">
+    <div class="export-title">⏳ در حال دریافت تصاویر…</div>
+    <div class="export-bar"><div class="export-fill"></div></div>
+    <div class="export-sub">صبر کنید تا دانلود کامل شود…</div>
+  </div>
+</div>
 <script>
 const tarotCards = [
   {en:"Ace of Cups", fa:"آس جام (تک جام)"},
@@ -2133,19 +2283,53 @@ function moCompute(rawIn){
 
 /* ---------- رندر موتورهای بومی ---------- */
 function engineHexCard(titleHtml, kw, lines, isChanged){
+  // هگزاگرامِ وکتوری از بیت‌های موتور (۱=یانگ ⚊ ، ۰=یین ⚋) — اصلی/متحول
+  let bars='';
+  for(let i=5;i>=0;i--){
+    const l=lines[i];
+    const row=(5-i);
+    const y=row*28;
+    const col = l.movable ? (isChanged? '#67e8f9' : '#fbbf24') : '#e7e5f4';
+    if(l.bit===1){
+      bars+='<rect x="4" y="'+y+'" width="150" height="13" rx="3.6" fill="'+col+'"/>';
+    }else{
+      bars+='<rect x="4" y="'+y+'" width="65" height="13" rx="3.6" fill="'+col+'"/>'
+           +'<rect x="89" y="'+y+'" width="65" height="13" rx="3.6" fill="'+col+'"/>';
+    }
+    if(l.movable){
+      bars+='<text x="182" y="'+(y+13.5)+'" font-size="17" font-weight="800" fill="'+col+'" text-anchor="middle">'+(l.sum===9?'○':'×')+'</text>';
+    }
+  }
+  const svg='<svg class="hxsl" viewBox="0 0 200 168" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="هگزاگرام '+kw.en+'">'
+    +'<rect x="0" y="0" width="200" height="168" rx="12" fill="rgba(251,191,36,0.05)" stroke="rgba(251,191,36,0.28)" stroke-width="1"/>'
+    + bars +'</svg>';
   let rows='';
   for(let i=5;i>=0;i--){
     const l=lines[i];
-    const bar=l.bit===1? '<div class="hyb"></div>' : '<div class="hyi"><span></span><span></span></div>';
     const mk=l.movable? (l.sum===9? ' ○':' ×') : '';
-    rows+='<div class="hxl'+(l.movable&&!isChanged?' mv':(l.movable?' chg':''))+'"><div class="hxl-vis">'+bar+'</div><div class="hxl-cap">خط '+faNum(l.idx)+' · '+(l.bit===1?'یانگ ⚊':'یین ⚋')+mk+'</div></div>';
+    rows+='<div class="hxl'+(l.movable&&!isChanged?' mv':(l.movable?' chg':''))+'"><div class="hxl-cap">خط '+faNum(l.idx)+' · '+(l.bit===1?'یانگ ⚊':'یین ⚋')+mk+'</div></div>';
   }
-  return '<div class="hexcard"><div class="hexcard-t">'+titleHtml+'</div><div class="hexbig">'+kw.uni+'</div><div class="hexlines">'+rows+'</div><div class="hexkw">#'+faNum(kw.n)+' · '+kw.ch+' '+kw.en+'<span>'+kw.enFull+'</span></div></div>';
+  return '<div class="hexcard"><div class="hexcard-t">'+titleHtml+'</div><div class="hexbig">'+kw.uni+'</div>'+svg+'<div class="hexlines">'+rows+'</div><div class="hexkw">#'+faNum(kw.n)+' · '+kw.ch+' '+kw.en+'<span>'+kw.enFull+'</span></div></div>';
 }
 function renderEngineIChing(spread, data, comp){
+  setResultsTheme('iching');
   resultsDiv.innerHTML='';
   const wrap=document.createElement('div'); wrap.className='engine-wrap';
   let changedHtml;
+  const triFile=t=> 'assets/art/trigram-'+String(t.en).toLowerCase()+'.jpg';
+  const triFig=(t,posFa)=>'<figure class="iching-tri"><img loading="lazy" src="'+triFile(t)+'" alt="'+t.uni+' '+t.en+'"><figcaption><b>'+posFa+'</b><span>'+t.uni+' '+t.ch+' '+t.en+'</span><span>'+t.fa+'</span></figcaption></figure>';
+  let triRows='<div class="iching-tris" aria-label="سه‌خطی‌های هگزاگرام اصلی">'
+    + triFig(comp.lower,'پایینی — Ti (خود/درون)')
+    + triFig(comp.upper,'بالایی — Yong (محیط/بیرون)')
+    + '</div>';
+  if(comp.changed && comp.futKey){
+    const cLo=I_CHING_TRIGRAMS[comp.futKey.slice(0,3)], cUp=I_CHING_TRIGRAMS[comp.futKey.slice(3)];
+    triRows+='<div class="iching-tris" style="margin-top:2px" aria-label="سه‌خطی‌های هگزاگرام متحول">'
+      + '<figure class="iching-tri iching-tri-chg"><figcaption><b>هگزاگرام متحول</b><span>#'+faNum(comp.changed.n)+' '+comp.changed.uni+'</span></figcaption></figure>'
+      + triFig(cLo,'پایینیِ متحول')
+      + triFig(cUp,'بالاییِ متحول')
+      + '</div>';
+  }
   if(comp.changed){
     const chgLines=comp.lines.map(l=>({idx:l.idx, coins:l.coins, sum:l.sum, bit:l.future, future:l.future, movable:l.movable}));
     changedHtml=engineHexCard('هگزاگرام متحول <b>Zhi Gua</b> 之卦<br><span class="hexsub">مقصد / آینده</span>', comp.changed, chgLines, true);
@@ -2156,6 +2340,7 @@ function renderEngineIChing(spread, data, comp){
     + engineHexCard('هگزاگرام اصلی <b>Ben Gua</b> 本卦<br><span class="hexsub">وضعیتِ حال</span>', comp.main, comp.lines, false)
     + '<div class="hex-arrow">➜<span>خطوط متغیر<br>تبدیل</span></div>'
     + changedHtml + '</div>'
+    + triRows
     + '<div class="engine-strip">🧬 <b>هسته‌ای (Hu Gua 互卦 — ریشهٔ درونی):</b> '+comp.hu.uni+' #'+faNum(comp.hu.n)+' «'+comp.hu.ch+'» '+comp.hu.en+' — '+comp.hu.fa+'</div>'
     + '<div class="engine-strip">🔁 <b>وارونه (Zong Gua 綜卦 — زاویهٔ مقابل):</b> '+comp.zong.uni+' #'+faNum(comp.zong.n)+' «'+comp.zong.ch+'» '+comp.zong.en+' — '+comp.zong.fa
     + ' &nbsp;•&nbsp; <b>متضاد (Cuo Gua 錯卦 — سایه/مکمل):</b> '+comp.cuo.uni+' #'+faNum(comp.cuo.n)+' «'+comp.cuo.ch+'» '+comp.cuo.en+' — '+comp.cuo.fa+'</div>'
@@ -2175,6 +2360,7 @@ function moTileHtml(f, which, label, desc){
     + '</div></div>';
 }
 function renderEngineMo(spread, data, comp){
+  setResultsTheme('mo');
   resultsDiv.innerHTML='';
   const wrap=document.createElement('div'); wrap.className='engine-wrap';
   const g=MO_GRADE[comp.omen.g];
@@ -2526,10 +2712,22 @@ function runesCompute(rawIn){
 }
 
 /* ========== رندر موتورها: لیتومانسی و رونزها ========== */
+function lithoShade(hex, f){
+  // f>0 روشن‌تر (ترکیب با سفید) ، f<0 تیره‌تر (ترکیب با سیاه)
+  const n=parseInt(hex.replace('#',''),16);
+  let r=(n>>16)&255, g=(n>>8)&255, b=n&255;
+  if(f>=0){ r=Math.round(r+(255-r)*f); g=Math.round(g+(255-g)*f); b=Math.round(b+(255-b)*f); }
+  else { const k=1+f; r=Math.round(r*k); g=Math.round(g*k); b=Math.round(b*k); }
+  return 'rgb('+r+','+g+','+b+')';
+}
 function lithoBoardSVG(comp){
   const S=[];
   S.push('<svg class="litho-svg" viewBox="-152 -128 304 256" role="img" aria-label="پارچهٔ لیتومانسی">');
-  S.push('<defs><radialGradient id="lbCloth" cx="50%" cy="44%" r="68%"><stop offset="0%" stop-color="#26356a"/><stop offset="65%" stop-color="#1c2547"/><stop offset="100%" stop-color="#131a38"/></radialGradient></defs>');
+  let gemDefs='<radialGradient id="lbCloth" cx="50%" cy="44%" r="68%"><stop offset="0%" stop-color="#26356a"/><stop offset="65%" stop-color="#1c2547"/><stop offset="100%" stop-color="#131a38"/></radialGradient>';
+  comp.stones.forEach(st=>{
+    gemDefs+='<radialGradient id="lbGem'+st.order+'" cx="38%" cy="33%" r="75%"><stop offset="0%" stop-color="'+lithoShade(st.stone.color,0.78)+'"/><stop offset="30%" stop-color="'+lithoShade(st.stone.color,0.22)+'"/><stop offset="72%" stop-color="'+st.stone.color+'"/><stop offset="100%" stop-color="'+lithoShade(st.stone.color,-0.52)+'"/></radialGradient>';
+  });
+  S.push('<defs>'+gemDefs+'</defs>');
   S.push('<circle cx="0" cy="0" r="113" fill="#0c1230" stroke="#36427c" stroke-width="1.4"/>');
   S.push('<circle cx="0" cy="0" r="100" fill="url(#lbCloth)" stroke="#8ea2ff" stroke-width="1.7"/>');
   [45,135,225,315].forEach(deg=>{ const a=deg*Math.PI/180; const x=(Math.cos(a)*100).toFixed(1), y=(-Math.sin(a)*100).toFixed(1); S.push('<line x1="'+x+'" y1="'+y+'" x2="'+(-x)+'" y2="'+(-y)+'" stroke="#46538e" stroke-width="0.9" stroke-dasharray="2 5" opacity="0.7"/>'); });
@@ -2556,13 +2754,17 @@ function lithoBoardSVG(comp){
     const stroke = light? '#475569' : '#e8edff';
     const txt = lithoTextOn(s.stone.color);
     S.push('<g class="lb-stone'+(s.lost?' lb-lost':'')+'"><title>سنگ '+s.order+': '+s.stone.fa+' ('+s.stone.en+')'+(s.stone.ruler? ' — '+s.stone.ruler : '')+' • '+LITHO_EL_FA[s.stone.el]+' • '+LITHO_OPT_SHORT[s.stone.opt]+'</title>'
-      +'<circle cx="'+cx+'" cy="'+cy+'" r="8.6" fill="'+s.stone.color+'" fill-opacity="0.96" stroke="'+stroke+'" stroke-width="1.4"'+(s.lost?' stroke-dasharray="3.4 2.4" stroke-opacity="0.9"':'')+'/>'
-      +'<text x="'+cx+'" y="'+(+cy+2.55).toFixed(2)+'" text-anchor="middle" font-size="7.2" font-weight="800" fill="'+txt+'">'+s.order+'</text></g>');
+      +'<circle cx="'+cx+'" cy="'+cy+'" r="8.6" fill="url(#lbGem'+s.order+')" stroke="'+stroke+'" stroke-width="1.3"'+(s.lost?' stroke-dasharray="3.4 2.4" stroke-opacity="0.9"':'')+'/>'
+      +'<path d="M '+(+cx-4.6).toFixed(2)+' '+cy+' L '+(+cx-1.6).toFixed(2)+' '+(+cy-3.9).toFixed(2)+' L '+(+cx+3.1).toFixed(2)+' '+(+cy-3.2).toFixed(2)+'" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.75" stroke-linecap="round"/>'
+      +'<ellipse cx="'+(+cx-2.7).toFixed(2)+'" cy="'+(+cy-3.1).toFixed(2)+'" rx="2.6" ry="1.45" fill="rgba(255,255,255,0.72)" transform="rotate(-22 '+cx+' '+cy+')"/>'
+      +'<circle cx="'+cx+'" cy="'+cy+'" r="8.6" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="0.5"/>'
+      +'<text x="'+cx+'" y="'+(+cy+2.55).toFixed(2)+'" text-anchor="middle" font-size="6.6" font-weight="800" fill="'+txt+'" opacity="0.92">'+s.order+'</text></g>');
   });
   S.push('</svg>');
   return S.join('');
 }
 function renderEngineLithomancy(spread, data, comp){
+  setResultsTheme('litho');
   resultsDiv.innerHTML='';
   const wrap=document.createElement('div'); wrap.className='engine-wrap';
   let stonesHtml='<div class="litho-legend">';
@@ -2596,7 +2798,7 @@ function renderRuneCell(d){
   const p=RUNE_POS_TILE[d.order];
   const shaded=d.sym? (d.symResolution==='shadow') : d.merkstave;
   const anlam=shaded? d.rune.shadow : d.rune.up;
-  return '<div class="rune-cell pos'+d.order+'"><div class="rune-tile'+(d.order===2?' center-cell':'')+'" title="'+anlam.replace(/"/g,'&quot;')+'">'
+  return '<div class="rune-cell pos'+d.order+'"><div class="rune-tile'+(d.merkstave?' rune-wood':'')+(d.order===2?' center-cell':'')+'" title="'+anlam.replace(/"/g,'&quot;')+'">'
     +'<div class="rune-pos">'+p.t+'<span>'+p.s+'</span></div>'
     +'<div class="rune-glyph-big rune-glyph'+(d.merkstave?' merk':'')+'">'+d.rune.sym+'</div>'
     +'<div class="rune-name">'+d.rune.en+' <span class="rune-fa">'+d.rune.fa+'</span></div>'
@@ -2606,6 +2808,7 @@ function renderRuneCell(d){
     +'</div></div>';
 }
 function renderEngineRunes(spread, data, comp){
+  setResultsTheme('runes');
   resultsDiv.innerHTML='';
   const wrap=document.createElement('div'); wrap.className='engine-wrap';
   let html='<div class="rune-cross-wrap"><div class="rune-cross" dir="ltr">'
@@ -2661,7 +2864,7 @@ function renderEngineResult(spread, data, engine, comp){
       .concat([mkCard(3,'هسته‌ای (Hu Gua 互卦)', comp.hu), mkCard(4,'وارونه (Zong Gua 綜卦)', comp.zong), mkCard(5,'متضاد (Cuo Gua 錯卦)', comp.cuo)]);
     const lines=cards.map(c=> c.order+'. ['+c.position+'] '+c.en+' - '+c.fa);
     lastResult={
-      spread:{id:spread.id, name:spreadLabel(spread), cards:6}, deck:'iching-64', requested:6,
+      spread:{id:spread.id, name:spreadLabel(spread), nameFa:spread.name, cards:6}, deck:'iching-64', requested:6,
       positions:cards.map(c=>c.position),
       numbers:[comp.main.n].concat(comp.changed? [comp.changed.n]:[]).concat([comp.hu.n, comp.zong.n, comp.cuo.n]),
       cards:cards,
@@ -2682,7 +2885,7 @@ function renderEngineResult(spread, data, engine, comp){
     ];
     const lines=cards.map(c=> c.order+'. ['+c.position+'] '+c.en+' - '+c.fa);
     lastResult={
-      spread:{id:spread.id, name:spreadLabel(spread), cards:2}, deck:'mo-36', requested:2,
+      spread:{id:spread.id, name:spreadLabel(spread), nameFa:spread.name, cards:2}, deck:'mo-36', requested:2,
       positions:cards.map(c=>c.position),
       numbers:[comp.omenIndex],
       cards:cards,
@@ -2697,7 +2900,7 @@ function renderEngineResult(spread, data, engine, comp){
     const cards=comp.stones.map(s=>({order:s.order, position:'سنگ '+faNum(s.order)+' (ترتیب برداشت)', number:s.stone.n, en:s.stone.en+' — #'+s.stone.n+' • '+(s.stone.ruler? s.stone.ruler+' • ' : '')+'عنصر '+LITHO_EL_FA[s.stone.el]+' • '+LITHO_OPT_SHORT[s.stone.opt]+(s.lost?' • بیرون از پارچه':''), fa:s.stone.fa+' ('+s.stone.kw+')'}));
     const lines=cards.map(c=> c.order+'. ['+c.position+'] '+c.en+' - '+c.fa);
     lastResult={
-      spread:{id:spread.id, name:spreadLabel(spread), cards:5}, deck:'litho-16', requested:5,
+      spread:{id:spread.id, name:spreadLabel(spread), nameFa:spread.name, cards:5}, deck:'litho-16', requested:5,
       positions:cards.map(c=>c.position),
       numbers:comp.stones.map(s=>s.stone.n),
       cards:cards,
@@ -2715,7 +2918,7 @@ function renderEngineResult(spread, data, engine, comp){
     });
     const lines=cards.map(c=> c.order+'. ['+c.position+'] '+c.en+' - '+c.fa);
     lastResult={
-      spread:{id:spread.id, name:spreadLabel(spread), cards:5}, deck:'futhark-24', requested:5,
+      spread:{id:spread.id, name:spreadLabel(spread), nameFa:spread.name, cards:5}, deck:'futhark-24', requested:5,
       positions:cards.map(c=>c.position),
       numbers:comp.drawn.map(d=>d.rune.n),
       cards:cards,
@@ -3010,13 +3213,82 @@ function formatLine(i, card, posTitle, tag, oriTxt){
                  : (i+1)+'. '+name;
 }
 
+/* ===== v1.5.0: نگاشت تصویر کارت‌ها (اسکن‌های مالکیت عمومی) ===== */
+const TAROT_IMG_MAJOR={'The Fool':0,'The Magician':1,'The High Priestess':2,'The Empress':3,'The Emperor':4,'The Hierophant':5,'The Lovers':6,'The Chariot':7,'Strength':8,'The Hermit':9,'Wheel of Fortune':10,'Justice':11,'The Hanged Man':12,'Death':13,'Temperance':14,'The Devil':15,'The Tower':16,'The Star':17,'The Moon':18,'The Sun':19,'Judgement':20,'The World':21};
+const MINOR_IMG_RE=/^(Ace|Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten|Page|Knight|Queen|King) of (Cups|Pentacles|Swords|Wands)$/;
+const MINOR_IMG_RANK={'Ace':1,'Two':2,'Three':3,'Four':4,'Five':5,'Six':6,'Seven':7,'Eight':8,'Nine':9,'Ten':10,'Page':11,'Knight':12,'Queen':13,'King':14};
+let CUR_DECK='tarot';
+function cardImgPath(deck, num, en){
+  if(deck==='lenormand'){
+    return 'assets/cards/lenormand/'+String(num).padStart(2,'0')+'-'+String(en).toLowerCase().replace(/\s+/g,'-')+'.webp';
+  }
+  if(TAROT_IMG_MAJOR[en]!==undefined) return 'assets/cards/tarot/major-'+String(TAROT_IMG_MAJOR[en]).padStart(2,'0')+'.webp';
+  const m=MINOR_IMG_RE.exec(en);
+  if(m) return 'assets/cards/tarot/'+m[2].toLowerCase()+'-'+String(MINOR_IMG_RANK[m[1]]).padStart(2,'0')+'.webp';
+  return null;
+}
+function cardBackHTML(deck){
+  if(deck==='lenormand') return '<img loading="lazy" alt="پشت کارت" src="assets/cards/lenormand/back.webp">';
+  // تاروت: پشت کارت اختصاصیِ امبدشده (گرادیان زرشکی با رز و سوسن طلایی — ادای احترام به طرح اصلی ۱۹۰۹، اثر خودمان)
+  return '<svg class="backface-svg" viewBox="0 0 400 688" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="پشت کارت تاروت">'
+    +'<defs><radialGradient id="rbG" cx="50%" cy="42%" r="75%"><stop offset="0%" stop-color="#5b1224"/><stop offset="55%" stop-color="#3c0a1a"/><stop offset="100%" stop-color="#20040d"/></radialGradient>'
+    +'<linearGradient id="rbGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f6d67c"/><stop offset="45%" stop-color="#c9a227"/><stop offset="100%" stop-color="#8a6a10"/></linearGradient></defs>'
+    +'<rect width="400" height="688" fill="url(#rbG)"/>'
+    +'<rect x="14" y="14" width="372" height="660" fill="none" stroke="url(#rbGold)" stroke-width="5" rx="18"/>'
+    +'<rect x="26" y="26" width="348" height="636" fill="none" stroke="url(#rbGold)" stroke-width="1.6" rx="12" opacity="0.85"/>'
+    +'<g stroke="url(#rbGold)" fill="none" stroke-width="2.4" opacity="0.95">'
+    +'<ellipse cx="200" cy="344" rx="86" ry="128"/><ellipse cx="200" cy="344" rx="66" ry="106" stroke-width="1.4"/>'
+    +'<path d="M200 236 L214 302 L286 302 L228 344 L250 412 L200 368 L150 412 L172 344 L114 302 L186 302 Z" stroke-width="2.6" stroke-linejoin="round"/>'
+    +'<circle cx="200" cy="344" r="17" fill="url(#rbGold)" stroke="none" opacity="0.92"/>'
+    +'<path d="M200 118 C168 148 168 196 200 226 C232 196 232 148 200 118 Z" stroke-width="2.2"/>'
+    +'<path d="M200 570 C168 540 168 492 200 462 C232 492 232 540 200 570 Z" stroke-width="2.2"/>'
+    +'</g>'
+    +'<g fill="url(#rbGold)" opacity="0.95">'
+    +'<path d="M52 60 l14 10 -14 10 -6 -14 Z"/><path d="M348 60 l-14 10 14 10 6 -14 Z"/>'
+    +'<path d="M52 628 l14 -10 -14 -10 -6 14 Z"/><path d="M348 628 l-14 -10 14 -10 6 14 Z"/>'
+    +'</g>'
+    +'<circle cx="200" cy="84" r="4.5" fill="url(#rbGold)"/><circle cx="200" cy="604" r="4.5" fill="url(#rbGold)"/>'
+    +'<circle cx="84" cy="344" r="4.5" fill="url(#rbGold)"/><circle cx="316" cy="344" r="4.5" fill="url(#rbGold)"/>'
+    +'</svg>';
+}
+window.cardImgFail=function(img){
+  const fig=img.closest('.tarot-card');
+  if(fig) fig.classList.add('img-failed');
+};
+document.addEventListener('click', function(e){
+  const b=e.target.closest && e.target.closest('.art-btn');
+  if(b) b.classList.toggle('flipped');
+});
+function metaHTML(idx, num, card, pos, source, deckSize, ori, hintText){
+  return (pos? '<span class="pos">'+pos.t+'</span>':'')
+    +(ori? '<span class="ori '+ori+'">'+oriBadge(ori, card.en)+'</span>' : '')
+    +((ori && gazeOf(card.en, ori))? '<span class="ori gz">'+gazeTxt(gazeOf(card.en, ori))+'</span>' : '')
+    +'<span class="num">کارت شماره '+num+' از '+deckSize+' • '+source+'</span>';
+}
 function cardEl(idx, num, card, pos, source, deckSize, ori){
-  const div=document.createElement('div');
-  div.className='tarot-card';
+  const div=document.createElement('figure');
+  div.className='tarot-card art-card'+((ori==='rev')?' rev':'');
   div.style.animationDelay=(Math.min(idx,20)*0.05)+'s';
   if(pos) div.title=pos.t+(pos.h? ' — '+pos.h : '');
+  const img=cardImgPath(CUR_DECK, num, card.en);
   div.innerHTML=`
     <div class="order">${idx+1}</div>
+    <button type="button" class="art-btn" aria-label="برگرداندن کارت ${card.en}">
+      <span class="flip-inner">
+        <span class="face front">
+          ${img? '<img loading="lazy" src="'+img+'" alt="'+card.en+'" onerror="cardImgFail(this)">' : ''}
+          <span class="cap"><b>${card.fa}</b><i>${card.en}</i></span>
+        </span>
+        <span class="face back">${cardBackHTML(CUR_DECK)}</span>
+      </span>
+    </button>
+    <div class="meta">
+      ${pos? '<span class="pos">'+pos.t+'</span>':''}
+      ${ori? '<span class="ori '+ori+'">'+oriBadge(ori, card.en)+'</span>' : ''}
+      ${(ori && gazeOf(card.en, ori))? '<span class="ori gz">'+gazeTxt(gazeOf(card.en, ori))+'</span>' : ''}
+      <span class="num">کارت شماره ${num} از ${deckSize} • ${source}</span>
+      ${pos && pos.h? '<div class="hint">'+pos.h+'</div>':''}
+    </div>
     <div class="info">
       ${pos? '<span class="pos">'+pos.t+'</span>':''}
       <div class="en">${card.en}</div>
@@ -3026,16 +3298,33 @@ function cardEl(idx, num, card, pos, source, deckSize, ori){
       ${ori? '<div class="ori '+ori+'">'+oriBadge(ori, card.en)+'</div>' : ''}
       ${(ori && gazeOf(card.en, ori))? '<div class="ori gz">'+gazeTxt(gazeOf(card.en, ori))+'</div>' : ''}
     </div>`;
+  if(!img) div.classList.add('img-failed');
   return div;
 }
 
 // کاشی کارت‌های حاشیه‌ای: سایه (زیرِ دسته) و پرنده (حین بُر زدن)
 function xCardEl(mark, hint, num, card, rev, source, deckSize){
-  const div=document.createElement('div');
-  div.className='tarot-card xtile';
+  const div=document.createElement('figure');
+  div.className='tarot-card art-card xtile'+((rev===true)?' rev':'');
   div.title=hint;
+  const img=cardImgPath(CUR_DECK, num, card.en);
   div.innerHTML=`
     <div class="order">${mark}</div>
+    <button type="button" class="art-btn" aria-label="برگرداندن کارت ${card.en}">
+      <span class="flip-inner">
+        <span class="face front">
+          ${img? '<img loading="lazy" src="'+img+'" alt="'+card.en+'" onerror="cardImgFail(this)">' : ''}
+          <span class="cap"><b>${card.fa}</b><i>${card.en}</i></span>
+        </span>
+        <span class="face back">${cardBackHTML(CUR_DECK)}</span>
+      </span>
+    </button>
+    <div class="meta">
+      <span class="pos">${hint}</span>
+      ${rev===null? '' : '<span class="ori '+(rev?'rev':'up')+'">'+oriBadge(rev?'rev':'up', card.en)+'</span>'}
+      ${(rev!==null && gazeOf(card.en, rev?'rev':'up'))? '<span class="ori gz">'+gazeTxt(gazeOf(card.en, rev?'rev':'up'))+'</span>' : ''}
+      <span class="num">کارت شماره ${num} از ${deckSize} • ${source}</span>
+    </div>
     <div class="info">
       <span class="pos">${hint}</span>
       <div class="en">${card.en}</div>
@@ -3044,6 +3333,7 @@ function xCardEl(mark, hint, num, card, rev, source, deckSize){
       ${rev===null? '' : '<div class="ori '+(rev?'rev':'up')+'">'+oriBadge(rev?'rev':'up', card.en)+'</div>'}
       ${(rev!==null && gazeOf(card.en, rev?'rev':'up'))? '<div class="ori gz">'+gazeTxt(gazeOf(card.en, rev?'rev':'up'))+'</div>' : ''}
     </div>`;
+  if(!img) div.classList.add('img-failed');
   return div;
 }
 
@@ -3078,6 +3368,8 @@ function render(data, requested, keepStats){
     }
   }
   const clar = tmeta? data._clar : null;
+  CUR_DECK = (spread.deck==='lenormand') ? 'lenormand' : 'tarot';
+  setResultsTheme(spread.gt ? 'gt' : (({dhyani:'dhyani',valleys:'valleys',samsara:'samsara',loshu:'loshu'})[spread.id]||'tarot'));
   resultsDiv.innerHTML='';
   let idx=0;
   const cells=[];
@@ -3128,14 +3420,16 @@ function render(data, requested, keepStats){
 
   const isLenor = spread.deck==='lenormand';
   lastResult={
-    spread:{id:spread.id, name:spreadLabel(spread), cards:requested},
+    spread:{id:spread.id, name:spreadLabel(spread), nameFa:spread.name, cards:requested},
     deck: isLenor? 'lenormand-36' : 'tarot-78',
     requested:requested,
     positions:positions.map(p=> p? p.t : null),
     numbers:data.numbers,
     cards:cards.map((c,i)=>{
       const g=tmeta? gazeOf(c.en, tmeta.orient[i]) : null;
+      const _img = cardImgPath(isLenor? 'lenormand':'tarot', data.numbers[i], c.en);
       return {order:i+1, position:positions[i]? positions[i].t : null, number:data.numbers[i], en:c.en, fa:c.fa,
+              img: _img || undefined,
               orientation: tmeta? ({up:'upright',rev:'reversed',cross:'crossed-horizontal'})[tmeta.orient[i]] : undefined,
               gaze: g? gazeKey(g) : undefined};
     }),
@@ -3863,6 +4157,266 @@ document.getElementById('dlJson').addEventListener('click', ()=>{
   downloadFile(JSON.stringify(lastResult,null,2), dlName('json'), 'application/json;charset=utf-8');
 });
 
+/* ===== v1.6.0: دادهٔ تصویری تنبل (برای خروجی‌ها) + اسکیپ‌کد سراسری ===== */
+function escHtml(x){ return String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+let __artPending={};
+window.__fateExportProg={done:0,total:0,failed:0,active:false,phase:'idle'};
+function ensureArtData(rel){ /* بارگیری تنبلِ هر تصویر: فایل کوچکِ خودش (assets/artdata/…) */
+  if(!rel) return Promise.resolve(false);
+  window.FATE_ART = window.FATE_ART || {};
+  if(window.FATE_ART[rel]) return Promise.resolve(true);
+  if(__artPending[rel]) return __artPending[rel];
+  __artPending[rel]=new Promise(res=>{
+    const sc=document.createElement('script');
+    sc.src='assets/artdata/'+String(rel).replace(/^assets\//,'')+'.js';
+    const to=setTimeout(()=>res(false), 20000);
+    sc.onload=()=>{ clearTimeout(to); res(!!window.FATE_ART[rel]); };
+    sc.onerror=()=>{ clearTimeout(to); res(false); };
+    document.head.appendChild(sc);
+  });
+  return __artPending[rel];
+}
+function exportProgReset(total){ const p=window.__fateExportProg; p.done=0; p.total=total||0; p.failed=0; p.active=true; p.phase='fetch'; paintExportOverlay(); }
+function exportProgBump(okFlag){ const p=window.__fateExportProg; p.done++; if(!okFlag) p.failed++; paintExportOverlay(); }
+function exportProgPhase(phase){ window.__fateExportProg.phase=phase; paintExportOverlay(); }
+function paintExportOverlay(){
+  const ov=document.getElementById('exportOverlay'); if(!ov) return;
+  const p=window.__fateExportProg;
+  const fill=ov.querySelector('.export-fill'), t=ov.querySelector('.export-title'), sub=ov.querySelector('.export-sub');
+  if(p.phase==='fetch'){
+    t.textContent='⏳ در حال دریافت تصاویر…';
+    const frac=p.total? Math.min(1, p.done/p.total) : 0;
+    fill.style.width=Math.round(frac*100)+'%';
+    sub.textContent=faNum(p.done)+' از '+faNum(p.total)+' تصویر آماده شد — لطفاً تا پایان صبر کنید'+(p.failed? ' ('+faNum(p.failed)+' با خطا)':'');
+  }else if(p.phase==='build'){
+    t.textContent='⏳ در حال ساخت خروجی…';
+    fill.style.width='100%';
+    sub.textContent='چند ثانیه صبر کنید؛ خروجی آماده می‌شود…';
+  }
+}
+function showExportOverlay(show){
+  const ov=document.getElementById('exportOverlay');
+  const p=window.__fateExportProg;
+  if(ov){ if(show){ ov.classList.add('on'); } else { ov.classList.remove('on'); } }
+  if(!show){ p.active=false; p.phase='idle'; }
+  ['dlHtml','dlPng'].forEach(id=>{ const b=document.getElementById(id); if(b) b.disabled=!!show; });
+}
+async function artDataURI(relPath){
+  if(!relPath) return null;
+  const key=String(relPath).split('?')[0];
+  let out=null;
+  const ok=await ensureArtData(key);
+  if(ok && window.FATE_ART && window.FATE_ART[key]) out=window.FATE_ART[key];
+  else{
+    try{
+      const r=await fetch(key);
+      if(r && r.ok){
+        const blob=await r.blob();
+        out=await new Promise(res=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.onerror=()=>res(null); fr.readAsDataURL(blob); });
+      }
+    }catch(e){ out=null; }
+  }
+  if(window.__fateExportProg && window.__fateExportProg.active) exportProgBump(!!out);
+  return out;
+}
+function setResultsTheme(theme){
+  const el=document.getElementById('results'); if(!el) return;
+  ['res-tarot','res-lenormand','res-gt','res-iching','res-litho','res-runes','res-mo','res-dhyani','res-valleys','res-samsara','res-loshu'].forEach(c=>el.classList.remove(c));
+  if(theme) el.classList.add('res-'+theme);
+}
+/* ===== v1.5.0: خروجی تصویری فال — پوستر PNG ساخته‌شده از همان HTML فال =====
+   همه‌چیز آفلاین و سمتِ کلاینت است: تصاویر کارت‌ها fetch و data-URI می‌شوند،
+   SVG دربردارندهٔ HTML (foreignObject) به canvas رسم و PNG دانلود می‌شود. */
+async function exportReadingPNG(){
+  if(!lastResult){ toast('اول کارت بکش','bad'); return; }
+  const btn=document.getElementById('dlPng');
+  const oldTxt=btn? btn.textContent : '';
+  try{
+    showExportOverlay(true);
+    if(btn){ btn.textContent='⏳ در حال ساخت تصویر…'; }
+    const lr=lastResult;
+    // ۱) فهرست مسیرها + ریست شمارندهٔ پیشرفت (درصد واقعی)
+    const triMap={'111':'qian','000':'kun','100':'zhen','010':'kan','001':'gen','011':'xun','101':'li','110':'dui'};
+    const bgBySpread={dhyani:'assets/art/art-dhyani.jpg',valleys:'assets/art/art-valleys.jpg',samsara:'assets/art/art-samsara.jpg',loshu:'assets/art/art-loshu.jpg'};
+    const bgByDeck={'mo-36':'assets/art/mo-thangka.jpg','litho-16':'assets/art/litho-cloth.jpg','futhark-24':'assets/art/rune-yggdrasil.jpg'};
+    let bgPath = bgBySpread[lr.spread.id] || bgByDeck[lr.deck] || null;
+    let icLo=null, icUp=null;
+    if(lr.deck==='iching-64' && lr.iching && lr.iching.mainBits){
+      icLo=triMap[lr.iching.mainBits.slice(0,3)]||null; icUp=triMap[lr.iching.mainBits.slice(3)]||null;
+      if(icLo) bgPath='assets/art/trigram-'+icLo+'.jpg';
+    }
+    const pathSet={};
+    lr.cards.forEach(c=>{ if(c.img) pathSet[c.img]=1; });
+    if(bgPath) pathSet[bgPath]=1;
+    pathSet['assets/art/poster-frame.jpg']=1;
+    if(icLo) pathSet['assets/art/trigram-'+icLo+'.jpg']=1;
+    if(icUp) pathSet['assets/art/trigram-'+icUp+'.jpg']=1;
+    exportProgReset(Object.keys(pathSet).length);
+    // ۲) بارگذاری تصاویر به data-URI — per-image؛ روی file:// هم کار می‌کند
+    const imgCache={};
+    await Promise.all(lr.cards.map(async c=>{ if(c.img && !(c.img in imgCache)){ imgCache[c.img]=await artDataURI(c.img); } }));
+    const themedBg = bgPath ? await artDataURI(bgPath) : null;
+    const posterFrameURI=await artDataURI('assets/art/poster-frame.jpg');
+    let triHead='';
+    if(icLo||icUp){
+      const loU=icLo?await artDataURI('assets/art/trigram-'+icLo+'.jpg'):null;
+      const upU=icUp?await artDataURI('assets/art/trigram-'+icUp+'.jpg'):null;
+      const fig=(u,lbl)=>'<div style="display:flex;flex-direction:column;align-items:center;gap:2px"><img src="'+u+'" style="width:54px;height:92px;object-fit:cover;border-radius:6px;border:1px solid rgba(246,214,124,.65)" /><div style="font-size:8.5px;color:#fde68a">'+lbl+'</div></div>';
+      if(loU||upU) triHead='<div dir="rtl" style="display:flex;justify-content:center;gap:30px;margin-top:8px">'+(loU?fig(loU,'پایینی'):'')+(upU?fig(upU,'بالایی'):'')+'</div>';
+    }
+    exportProgPhase('build');
+    // ۲) چیدمان شبکه
+    const n=lr.cards.length;
+    const W = n>14 ? 1180 : 1080;
+    const cols = n>14 ? 3 : (n===1 ? 1 : 2);
+    const colTpl = n===1 ? 'minmax(0,690px)' : 'repeat('+cols+',1fr)';
+    const cellH = n>14 ? 168 : 176;
+    const headH = triHead ? 336 : 218, footH = 96;
+    const rows = Math.ceil(n/cols);
+    const H = headH + rows*cellH + footH + 26;
+    const esc=escHtml;
+    const dateFa=new Intl.DateTimeFormat('fa-IR',{dateStyle:'full', timeStyle:'short'}).format(new Date(lr.timestamp));
+    const oriFa=o=> o==='reversed' ? 'وارونه ▼' : (o==='crossed-horizontal' ? 'افقی ✚' : (o? 'راست ▲' : ''));
+    const cell=(c)=>{
+      const src=c.img? imgCache[c.img] : null;
+      const rev=c.orientation==='reversed';
+      const imgHtml = src
+        ? '<img src="'+src+'" alt="" style="width:92px;height:158px;object-fit:cover;border-radius:10px;border:1px solid rgba(246,214,124,.55);box-shadow:0 6px 14px rgba(0,0,0,.55);transform:rotate('+(rev?180:0)+'deg)" />'
+        : '<div style="width:92px;height:158px;border-radius:10px;border:1.5px dashed rgba(246,214,124,.5);display:flex;align-items:center;justify-content:center;color:#c9a227;font-size:30px">✦</div>';
+      return '<div dir="rtl" style="box-sizing:border-box;display:flex;align-items:center;gap:12px;background:rgba(255,244,214,.055);border:1px solid rgba(246,214,124,.28);border-radius:16px;padding:9px 10px;height:'+(cellH-14)+'px;overflow:hidden">'
+        + imgHtml
+        + '<div style="min-width:0;display:flex;flex-direction:column;gap:4px">'
+          + (c.position? '<div style="display:inline-block;max-width:100%;font-size:11px;color:#ffd9ec;background:rgba(236,72,153,.22);border:1px solid rgba(236,72,153,.4);border-radius:999px;padding:2px 10px;align-self:flex-start;line-height:1.6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+esc(c.position)+'</div>' : '')
+          + '<div style="font-size:15.5px;font-weight:800;color:#fde68a;line-height:1.55;word-break:break-word">'+esc(c.order)+'. '+esc(c.fa)+'</div>'
+          + '<div style="font-size:11px;color:#c4b5fd;direction:ltr;text-align:right;letter-spacing:.4px">'+esc(c.en)+' &#160;·&#160; #'+esc(c.number)+'</div>'
+          + (c.orientation? '<div style="font-size:10.5px;color:'+(rev?'#fdba74':'#86efac')+'">'+esc(oriFa(c.orientation))+(c.gaze? ' &#160;👁':'')+'</div>' : '')
+        + '</div></div>';
+    };
+    let cells='';
+    lr.cards.forEach(c=>{ cells+=cell(c); });
+    // حاشیهٔ فال: سایه / پرنده / مکمل در یک خط کوچک
+    const extras=[];
+    if(lr.shadowCard) extras.push('🌑 سایه: '+lr.shadowCard.en);
+    if(lr.jumperCard) extras.push('⚡ پرنده: '+lr.jumperCard.en);
+    if(lr.clarifierCard) extras.push('🔓 مکمل: '+lr.clarifierCard.en);
+    const extrasHtml = extras.length? '<div dir="rtl" style="font-size:12px;color:#d8b4fe;text-align:center;margin-top:10px;letter-spacing:.3px">'+esc(extras.join('   •   '))+'</div>' : '';
+    const rootBg = themedBg
+      ? 'background-color:#0c0518;background-image:linear-gradient(rgba(10,6,20,.62),rgba(10,6,20,.8)),url('+themedBg+');background-size:cover;background-position:center;'
+      : (posterFrameURI
+        ? 'background-color:#160a26;background-image:url('+posterFrameURI+');background-size:100% 100%;background-repeat:no-repeat;'
+        : 'background:radial-gradient(120% 90% at 50% -10%, #3b2560 0%, #241239 34%, #160a26 68%, #0c0518 100%);');
+    const html='<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+W+'px;height:'+H+'px;box-sizing:border-box;padding:66px 62px 88px;direction:rtl;font-family:Tahoma,\'Noto Kufi Arabic\',\'Noto Naskh Arabic\',\'Noto Sans Arabic\',sans-serif;'+rootBg+'color:#f3e9c8;position:relative;overflow:hidden">'
+      + '<div dir="rtl" style="position:relative;text-align:center">'
+        + '<div style="font-size:15px;color:#e9c96a;letter-spacing:3px;font-weight:800">☯ F A T E ☯</div>'
+        + '<div style="font-size:32px;font-weight:900;margin-top:2px;background:linear-gradient(120deg,#fde68a,#c9a227,#fde68a);-webkit-background-clip:text;background-clip:text;color:transparent">'+esc(lr.spread.nameFa||lr.spread.name)+'</div>'
+        + '<div style="font-size:13px;color:#c7c2e8;margin-top:4px">'+esc(dateFa)+' &#160;•&#160; منبع: '+esc(histSourceFa(lr.source))+' &#160;•&#160; '+esc(n)+' کارت</div>'
+        + triHead
+        + '<div style="width:220px;height:2px;margin:12px auto 0;background:linear-gradient(90deg,transparent,#c9a227,transparent)"></div>'
+      + '</div>'
+      + '<div style="position:relative;display:grid;grid-template-columns:'+colTpl+';justify-content:center;gap:12px;margin-top:16px">'+cells+'</div>'
+      + extrasHtml
+      + '<div dir="rtl" style="position:absolute;bottom:14px;left:0;right:0;text-align:center">'
+        + '<div style="width:150px;height:1px;margin:0 auto 6px;background:linear-gradient(90deg,transparent,#c9a227,transparent)"></div>'
+        + '<div style="font-size:11.5px;color:#a8978a;letter-spacing:1px">Fate — فالِ دقیق با آنتروپیِ واقعی &#160;✦&#160; تاروت و لنورماند: اسکن‌های مالکیت عمومی &#160;✦&#160; ساخته‌شده به‌شکل آفلاین</div>'
+      + '</div>'
+    + '</div>';
+    const svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'"><foreignObject x="0" y="0" width="100%" height="100%">'+html+'</foreignObject></svg>';
+    const url='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+    const img=await new Promise((res,rej)=>{ const im=new Image(); im.onload=()=>res(im); im.onerror=()=>rej(new Error('رندر پوستر شکست خورد')); im.src=url; });
+    const scale=2;
+    const canvas=document.createElement('canvas'); canvas.width=W*scale; canvas.height=H*scale;
+    const ctx=canvas.getContext('2d');
+    ctx.scale(scale,scale);
+    ctx.drawImage(img,0,0,W,H);
+    const blob=await new Promise(res=>canvas.toBlob(res,'image/png'));
+    if(!blob) throw new Error('ساخت PNG ممکن نشد');
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download=dlName('png');
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+    toast('🖼️ تصویر فال دانلود شد');
+    const failedN=window.__fateExportProg.failed;
+    if(failedN>0) toast('⚠️ '+faNum(failedN)+' تصویر بارگیری نشد؛ برای تصاویر گمشده ✦ گذاشته شد','bad');
+  }catch(e){
+    toast('ساخت تصویر ممکن نشد: '+((e&&e.message)||e),'bad');
+  }finally{
+    showExportOverlay(false);
+    const btn2=document.getElementById('dlPng');
+    if(btn2){ btn2.textContent=oldTxt||'🖼️ خروجی تصویر (PNG)'; }
+  }
+}
+/* ===== v1.6.0: خروجی تصویری HTML — تک‌فایل ایستای آفلاین (ترجیح کاربر) =====
+   همان DOM نتایج را با CSS کل صفحه و تصاویر data-URI ترکیب می‌کند؛
+   بنابراین همهٔ انواع فال (تاروت، لنورماند، GT، ای‌چینگ، فال مو، لیتومانسی، رونز)
+   با همان ظاهرِ صفحه به‌شکل فایلی کاملاً آفلاین ذخیره می‌شوند. */
+async function exportReadingHTML(){
+  if(!lastResult){ toast('اول کارت بکش','bad'); return; }
+  const btn=document.getElementById('dlHtml');
+  const oldTxt=btn? btn.textContent : '';
+  try{
+    showExportOverlay(true);
+    if(btn){ btn.textContent='⏳ در حال ساخت فایل HTML…'; }
+    const lr=lastResult;
+    let cssText='';
+    document.querySelectorAll('style').forEach(function(st){ cssText+=st.textContent+'\n'; });
+    const urlRe=/url\(\s*['"]?(assets\/[^'")]+)['"]?\s*\)/g;
+    const clone0=document.getElementById('results');
+    const innerRaw0=clone0.outerHTML;
+    const allPaths=[...new Set([...cssText.matchAll(urlRe)].map(m=>m[1]).concat([...innerRaw0.matchAll(urlRe)].map(m=>m[1])).concat([...clone0.querySelectorAll('img')].map(im=>String(im.getAttribute('src')||'').replace(/^\.\//,'')).filter(x=>x.startsWith('assets/'))))];
+    exportProgReset(allPaths.length);
+    const dataMap={};
+    await Promise.all(allPaths.map(async p=>{ dataMap[p]=await artDataURI(p); }));
+    exportProgPhase('build');
+    const inlineUrls=function(txt){ return txt.replace(urlRe, function(m,p){ return dataMap[p] ? 'url("'+dataMap[p]+'")' : m; }); };
+    cssText=inlineUrls(cssText);
+    const clone=clone0.cloneNode(true);
+    clone.setAttribute('aria-hidden','false');
+    clone.querySelectorAll('img').forEach(function(im){
+      const src=String(im.getAttribute('src')||'').replace(/^\.\//,'');
+      if(dataMap[src]) im.setAttribute('src', dataMap[src]);
+      im.removeAttribute('loading');
+    });
+    let inner=clone.outerHTML;
+    inner=inlineUrls(inner);
+    const dateFa=new Intl.DateTimeFormat('fa-IR',{dateStyle:'full', timeStyle:'short'}).format(new Date(lr.timestamp));
+    const extraLines=(lr.extraLines||[]).map(escHtml).join('<br>');
+    const exportCss="body{background:#07040e !important;margin:0;padding:26px 12px 44px;display:flex;justify-content:center;font-family:Tahoma,'Noto Kufi Arabic','Noto Naskh Arabic',sans-serif}\n"
+      +".fate-export{width:100%;max-width:1040px}\n"
+      +".fate-export-head{text-align:center;padding:14px 12px 16px;border:1px solid rgba(246,214,124,.35);border-radius:20px;background:radial-gradient(120% 140% at 50% -20%,#33224e 0%,#1a1030 55%,#0c0718 100%);margin-bottom:14px;box-shadow:0 14px 40px rgba(0,0,0,.5)}\n"
+      +".fate-export-head .fe-brand{font-size:12px;color:#e9c96a;letter-spacing:5px;font-weight:800}\n"
+      +".fate-export-head h1{margin:6px 0 4px;font-size:26px;background:linear-gradient(120deg,#fde68a,#c9a227,#fde68a);-webkit-background-clip:text;background-clip:text;color:transparent}\n"
+      +".fate-export-head .fe-meta{font-size:12px;color:#c7c2e8;line-height:2}\n"
+      +".fate-export-foot{text-align:center;font-size:10.5px;color:#a8978a;letter-spacing:.6px;margin-top:14px;line-height:2.1}\n"
+      +".fate-export-foot b{color:#d8b4fe}\n";
+    const doc='<!DOCTYPE html>\n<html lang="fa" dir="rtl">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<meta name="color-scheme" content="dark">\n'
+      +'<title>'+escHtml(lr.spread.nameFa||lr.spread.name)+' — Fate</title>\n<style>\n'+cssText+exportCss+'</style>\n</head>\n<body>\n<div class="fate-export">\n'
+      +'<div class="fate-export-head"><div class="fe-brand">☯ F A T E ☯</div><h1>'+escHtml(lr.spread.nameFa||lr.spread.name)+'</h1><div class="fe-meta">'+escHtml(dateFa)+' &#160;•&#160; منبع: '+escHtml(histSourceFa(lr.source))+(lr.drawMethod? ' &#160;•&#160; '+escHtml(lr.drawMethod):'')+'</div></div>\n'
+      +inner+'\n'
+      +(extraLines? '<div class="fate-export-foot"><b>حاشیهٔ فال</b><br>'+extraLines+'</div>\n' : '')
+      +'<div class="fate-export-foot">Fate — فالِ دقیق با آنتروپیِ واقعی &#160;✦&#160; تاروت و لنورماند: اسکن‌های مالکیت عمومی &#160;✦&#160; خروجی ایستای آفلاین و بدون نیاز به اینترنت</div>\n'
+      +'</div>\n</body>\n</html>';
+    const blob=new Blob([doc],{type:'text/html;charset=utf-8'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download=dlName('html');
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(a.href); },4000);
+    toast('🎨 خروجی HTML دانلود شد');
+    const failedN=window.__fateExportProg.failed;
+    if(failedN>0) toast('⚠️ '+faNum(failedN)+' تصویر بارگیری نشد؛ فایل خروجی ممکن است ناقص باشد','bad');
+  }catch(e){
+    toast('ساخت فایل HTML ممکن نشد: '+((e&&e.message)||e),'bad');
+  }finally{
+    showExportOverlay(false);
+    const btn2=document.getElementById('dlHtml');
+    if(btn2){ btn2.textContent=oldTxt||'🎨 خروجی تصویری (HTML)'; }
+  }
+}
+document.getElementById('dlHtml').addEventListener('click', exportReadingHTML);
+
+document.getElementById('dlPng').addEventListener('click', exportReadingPNG);
+
 document.getElementById('mDownload').addEventListener('click', ()=>{
   downloadFile(mText.value, lastResult? dlName('txt') : ('Fate-'+Date.now()+'.txt'), 'text/plain;charset=utf-8');
 });
@@ -4307,6 +4861,95 @@ function histFmt(ts, cal){
     return {date: d.toLocaleDateString(), time: d.toLocaleTimeString()};
   }
 }
+/* ---------- پشتیبان‌گیریِ تاریخچه: خروجی / ورود ---------- */
+const HIST_BACKUP_TYPE='fate-history-backup';
+function histNowKey(){ try{return localStorage.getItem(HIST_CAL_KEY)||'jalali'}catch(e){return 'jalali'} }
+function histEntrySanitize(e){
+  if(!e || typeof e!=='object') return null;
+  if(typeof e.spreadId!=='string' || !isFinite(+e.ts)) return null;
+  const data=(e.data && typeof e.data==='object' && Array.isArray(e.data.numbers))? e.data : null;
+  if(!data) return null;   // بدون دادهٔ خام، بازیابی عیناً همان فال ممکن نیست
+  const cards=Array.isArray(e.cards)? e.cards.slice(0,80).map(c=>{
+    const cc={position:String(c&&c.position||'').slice(0,300), en:String(c&&c.en||'').slice(0,300), fa:String(c&&c.fa||'').slice(0,300), number:(c&&isFinite(+c.number))? +c.number : null};
+    if(c && c.orientation!=null) cc.orientation=String(c.orientation).slice(0,16);
+    return cc;
+  }) : [];
+  const id=String(e.id||('h'+(+e.ts).toString(36)+Math.random().toString(36).slice(2,7))).slice(0,48);
+  return { id:id, ts:+e.ts, spreadId:String(e.spreadId).slice(0,64), spreadName:String(e.spreadName||'').slice(0,220), icon:String(e.icon||'🔮').slice(0,16), en:String(e.en||'').slice(0,320), group:String(e.group||'').slice(0,140), engine:e.engine? String(e.engine).slice(0,24) : null, requested:(e.requested!=null && isFinite(+e.requested))? +e.requested : null, deck:e.deck? String(e.deck).slice(0,32) : null, cards:cards, source:String(e.source||'').slice(0,64), data:data, gtConfig:(e.gtConfig && typeof e.gtConfig==='object')? e.gtConfig : null, customTitles:Array.isArray(e.customTitles)? e.customTitles.slice(0,3).map(t=>String(t||'').slice(0,200)) : null };
+}
+function exportHistoryBackup(){
+  const entries=loadHistory();
+  const payload={ app:'Fate', type:HIST_BACKUP_TYPE, version:1, exportedAt:new Date().toISOString(), count:entries.length, cal:histNowKey(), entries:entries };
+  downloadFile(JSON.stringify(payload,null,1), 'Fate-History-Backup-'+new Date().toISOString().slice(0,10)+'.json', 'application/json;charset=utf-8');
+  toast('⬇️ پشتیبان دانلود شد — '+faNum(entries.length)+' رکورد','good');
+}
+let pendingImport=null;
+function openRestorePanel(list, skipped){
+  const panel=document.getElementById('hRestorePanel');
+  const cur=loadHistory().length;
+  document.getElementById('hRestoreInfo').innerHTML='📦 <b>'+faNum(list.length)+'</b> رکوردِ معتبر در فایل پیدا شد'+(skipped? ' ('+faNum(skipped)+' رکورد ناقص/تکراری دور ریخته شد)':'')+' • تاریخچهٔ فعلی شما: <b>'+faNum(cur)+'</b> رکورد';
+  pendingImport={list:list};
+  panel.hidden=false;
+  panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+function closeRestorePanel(){ document.getElementById('hRestorePanel').hidden=true; pendingImport=null; }
+function handleImportFile(file){
+  if(!file) return;
+  if(file.size > 60*1024*1024){ toast('فایل بزرگ‌تر از ۶۰ مگابایت است','bad'); return; }
+  const rd=new FileReader();
+  rd.onload=()=>{
+    let parsed=null;
+    try{ parsed=JSON.parse(String(rd.result||'')); }catch(e){ toast('فایل JSON معتبر نیست','bad'); return; }
+    let raw=null;
+    if(parsed && typeof parsed==='object' && Array.isArray(parsed.entries)) raw=parsed.entries;         // فرمت پشتیبان Fate
+    else if(Array.isArray(parsed)) raw=parsed;                                                            // آرایهٔ خام رکوردها
+    if(!raw){ toast('این فایل پشتیبانِ تاریخچهٔ Fate نیست','bad'); return; }
+    const seen=new Set(), list=[]; let skipped=0;
+    raw.forEach(e=>{ const c=histEntrySanitize(e); if(!c){ skipped++; return; } if(seen.has(c.id)){ skipped++; return; } seen.add(c.id); list.push(c); });
+    if(!list.length){ toast('هیچ رکوردِ معتبری در فایل پیدا نشد','bad'); return; }
+    openRestorePanel(list, skipped);
+  };
+  rd.onerror=()=>toast('خواندن فایل ناموفق بود','bad');
+  rd.readAsText(file);
+}
+function applyImportMerge(){
+  if(!pendingImport) return;
+  const cur=loadHistory(); const ids=new Set(cur.map(e=>e.id));
+  const total=pendingImport.list.length;
+  const added=pendingImport.list.filter(e=>!ids.has(e.id));
+  const merged=cur.concat(added).sort((a,b)=>a.ts-b.ts);
+  while(merged.length>HIST_MAX) merged.shift();
+  saveHistory(merged); closeRestorePanel(); renderHistory();
+  toast('🔗 ادغام شد — '+faNum(added.length)+' رکورد جدید اضافه شد ('+faNum(total-added.length)+' تکراری بود)','good');
+}
+function applyImportReplace(){
+  if(!pendingImport) return;
+  const list=pendingImport.list.slice().sort((a,b)=>a.ts-b.ts);
+  while(list.length>HIST_MAX) list.shift();
+  saveHistory(list); closeRestorePanel(); renderHistory();
+  toast('♻️ تاریخچه جایگزین شد — '+faNum(list.length)+' رکورد','good');
+}
+document.getElementById('hExport').addEventListener('click', exportHistoryBackup);
+document.getElementById('hImportBtn').addEventListener('click', ()=>document.getElementById('hImportFile').click());
+document.getElementById('hImportFile').addEventListener('change', e=>{ const f=e.target.files && e.target.files[0]; handleImportFile(f); e.target.value=''; });
+document.getElementById('hDoMerge').addEventListener('click', applyImportMerge);
+document.getElementById('hDoReplace').addEventListener('click', applyImportReplace);
+document.getElementById('hCancelRestore').addEventListener('click', closeRestorePanel);
+/* ---------- اسکرول افقی تب‌های تاریخچه با کشیدن (Mouse) + چرخ‌ماوس؛ لمس: بومی ---------- */
+(function enableHtabsDragScroll(){
+  const el=document.getElementById('htabs'); if(!el) return;
+  let isDown=false, startX=0, startScroll=0, moved=0;
+  const isRtl = (getComputedStyle(el).direction === 'rtl');   // در RTL، اسکرول‌لفت منفی است
+  el.addEventListener('pointerdown', e=>{ if(e.pointerType!=='mouse') return; isDown=true; moved=0; startX=e.clientX; startScroll=el.scrollLeft; el.classList.add('dragging'); try{ el.setPointerCapture(e.pointerId); }catch(err){} });
+  el.addEventListener('pointermove', e=>{ if(!isDown) return; const dx=e.clientX-startX; if(Math.abs(dx)>moved) moved=Math.abs(dx); el.scrollLeft=isRtl? (startScroll+dx) : (startScroll-dx); });
+  const release=()=>{ if(!isDown) return; isDown=false; el.classList.remove('dragging'); };
+  el.addEventListener('pointerup', release);
+  el.addEventListener('pointercancel', release);
+  el.addEventListener('lostpointercapture', release);
+  el.addEventListener('click', e=>{ if(moved>6){ e.preventDefault(); e.stopPropagation(); moved=0; } }, true);
+  el.addEventListener('wheel', e=>{ if(Math.abs(e.deltaY)>Math.abs(e.deltaX) && el.scrollWidth>el.clientWidth){ el.scrollLeft+=e.deltaY; e.preventDefault(); } }, {passive:false});
+})();
+
 function histSourceFa(src){
   const m = {'local-secure':'آفلاین','anu-quantum':'کوانتومی','anu-quantum-key':'کوانتومی (کلید)','random.org-atmospheric':'اتمسفری','randomnumberapi':'اتمسفری (پشتیبان)'};
   return m[src] || src;
